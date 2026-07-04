@@ -43,3 +43,10 @@ input::placeholder { color: var(--brown-lt); }
 .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 12px; }
 .banner-dark { background: var(--navy); color: #EFE9DA; border-radius: 10px; padding: 18px 22px; }
 a { color: var(--red); }
+.md-body { font-size: 13.5px; line-height: 1.75; }
+.md-body h2 { font-family: var(--serif); font-size: 16px; border-left: 3px solid var(--red); padding-left: 10px; margin: 18px 0 8px; }
+.md-body table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+.md-body th, .md-body td { border: 1px solid var(--line); padding: 6px 10px; font-size: 13px; text-align: left; }
+.md-body th { background: rgba(46,58,82,.06); font-weight: 700; }
+.md-body code { background: rgba(41,35,26,.06); border-radius: 4px; padding: 1px 5px; }
+.md-body ul { padding-left: 20px; margin: 6px 0; }
