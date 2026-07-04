@@ -1,0 +1,8 @@
+name = "osaka-dashboard"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "osaka-trip"
+database_id = "6acd0a4c-0705-48db-b864-eda1ac7b4354"
