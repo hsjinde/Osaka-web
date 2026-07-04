@@ -27,16 +27,16 @@
 | 14 | 景點與購物頁 | ⏳ |
 | 15 | 交通票券頁（markdown 渲染） | ⏳ |
 | 16 | 地圖頁 | ⏳ |
-| 17 | Cloudflare Worker + D1 | ⏳ |
+| 17 | Cloudflare Worker + D1 | 🚧 程式碼完成、D1 已建、部署待 token 權限 |
 | 18 | 前端串接 Worker（跨裝置同步） | ⏳ |
 | 19 | CI/CD 與上線（GitHub Pages） | ⏳ |
 | 20 | README 使用說明（最終版） | ⏳ |
 
-**測試狀況**：28 個單元測試全綠（解析器 21 + countdown 2 + store 3 - 重覆計算後）
-— 實際為 text 6 + parse-entity 7 + parse-itinerary 5 + parse-todos 3 + build-data 2 + countdown 2 + store 3 = 28。
+**測試狀況**：32 個單元測試全綠（前端 28 + worker 4）。
 
-**已產出可執行**：`npm run dev` 起得來、`npm run build` 過得了、總覽頁可見、待辦可勾、收藏可按 ♥。
-**尚未完成**：每日行程三檢視、美食/景點/購物/交通/地圖頁內容、Worker 部署、CI/CD 上線。
+**已產出可執行**：`npm run dev` 起得來、`npm run build` 過得了、六個分頁全部有內容、
+總覽/每日行程/美食庫/景點/購物/交通/地圖頁都渲染、待辦可勾、收藏可按 ♥（暫存 localStorage）。
+**尚未完成**：跨裝置同步（Worker 部署）、CI/CD 上線。
 
 ## 日常使用（計畫中的最終流程，目前尚未上線）
 
