@@ -1,5 +1,6 @@
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { entities, todos } from '../data';
+import { configured, fetchState, flushQueue, putState, queuePut } from '../api/state';
 
 const LS_KEY = 'osaka-trip-state';
 type StateMap = Record<string, boolean>;
@@ -10,30 +11,52 @@ function defaults(): StateMap {
   for (const t of todos) if (t.checkedInVault) d[t.key] = true;
   return d;
 }
-
 function loadLocal(): StateMap {
   try { return JSON.parse(localStorage.getItem(LS_KEY) ?? '{}'); } catch { return {}; }
 }
-
-interface TripState {
-  favs: StateMap;
-  todosState: StateMap;
-  toggleFav(entityId: string): void;
-  toggleTodo(key: string): void;
-  isFav(entityId: string): boolean;
-  favCount: number;
-  offline: boolean;
+function saveLocal(s: StateMap) {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(s)); } catch { /* 忽略 */ }
 }
 
+interface TripState {
+  favs: StateMap; todosState: StateMap;
+  toggleFav(entityId: string): void; toggleTodo(key: string): void;
+  isFav(entityId: string): boolean; favCount: number; offline: boolean;
+}
 const Ctx = createContext<TripState | null>(null);
 
 export function TripStateProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<StateMap>(() => ({ ...defaults(), ...loadLocal() }));
+  const [offline, setOffline] = useState(false);
+
+  // 啟動：拉遠端狀態合併（遠端優先），並補送離線佇列
+  useEffect(() => {
+    if (!configured()) { setOffline(true); return; }
+    let cancelled = false;
+    (async () => {
+      try {
+        await flushQueue();
+        const remote = await fetchState();
+        if (cancelled) return;
+        setState((s) => { const merged = { ...s, ...remote }; saveLocal(merged); return merged; });
+        setOffline(false);
+      } catch { if (!cancelled) setOffline(true); }
+    })();
+    const onOnline = () => { flushQueue().then((n) => { if (n > 0) setOffline(false); }); };
+    window.addEventListener('online', onOnline);
+    return () => { cancelled = true; window.removeEventListener('online', onOnline); };
+  }, []);
 
   const toggle = useCallback((key: string) => {
     setState((s) => {
-      const next = { ...s, [key]: !s[key] };
-      try { localStorage.setItem(LS_KEY, JSON.stringify(next)); } catch { /* 忽略 */ }
+      const value = !s[key];
+      const next = { ...s, [key]: value };
+      saveLocal(next);
+      if (configured()) {
+        putState(key, value).then(() => setOffline(false)).catch(() => { queuePut(key, value); setOffline(true); });
+      } else {
+        setOffline(true);
+      }
       return next;
     });
   }, []);
@@ -50,9 +73,9 @@ export function TripStateProvider({ children }: { children: ReactNode }) {
       toggleTodo: (key) => toggle(key),
       isFav: (id) => !!state[`fav:${id}`],
       favCount: Object.entries(favs).filter(([, v]) => v).length,
-      offline: false,
+      offline,
     };
-  }, [state, toggle]);
+  }, [state, toggle, offline]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

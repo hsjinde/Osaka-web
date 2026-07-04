@@ -2,6 +2,8 @@ import { useEffect, useState, type JSX } from 'react';
 import { meta, overview, byCategory } from './data';
 import Chip from './components/Chip';
 import Home from './pages/Home';
+import { useTripState } from './state/store';
+import { getToken, setToken } from './api/state';
 import DailyPlan from './pages/DailyPlan';
 import Food from './pages/Food';
 import Places from './pages/Places';
@@ -31,6 +33,7 @@ function tabFromHash(): TabKey {
 
 export default function App() {
   const [tab, setTab] = useState<TabKey>(tabFromHash);
+  const { offline } = useTripState();
   useEffect(() => {
     const onHash = () => setTab(tabFromHash());
     window.addEventListener('hashchange', onHash);
@@ -74,6 +77,16 @@ export default function App() {
             <span style={{ fontSize: 12, fontWeight: 600 }}>日</span>
           </div>
         </div>
+        <button className="btn-plain" title="設定通行密碼" style={{ fontSize: 18, cursor: 'pointer' }}
+          onClick={() => {
+            const t = window.prompt('輸入儀表板通行密碼（存在此裝置）', getToken() ?? '');
+            if (t) { setToken(t); location.reload(); }
+          }}>⚙</button>
+        {offline && (
+          <span style={{ fontSize: 11, color: 'var(--brown)', border: '1px dashed var(--brown)', borderRadius: 4, padding: '2px 8px' }}>
+            離線模式・變更暫存本機
+          </span>
+        )}
         <nav style={{ maxWidth: 1120, margin: '0 auto', padding: '10px 20px 12px', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           {TABS.map(([k, label]) => (
             <Chip key={k} on={tab === k} red onClick={() => go(k)}>
