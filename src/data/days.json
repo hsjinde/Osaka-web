@@ -1,0 +1,157 @@
+[
+ {
+  "label": "Day 0",
+  "date": "09/30 週三",
+  "theme": "抵達日",
+  "areas": [
+   "難波",
+   "心齋橋"
+  ],
+  "slots": [
+   {
+    "time": "下午",
+    "title": "關西機場 → 難波",
+    "note": "南海 Rapi:t 最快 34 分（見交通頁），航班時段待確認",
+    "pending": false
+   },
+   {
+    "time": "傍晚",
+    "title": "心齋橋格蘭多酒店 Check-in",
+    "note": "長堀橋站步行 5 分",
+    "pending": false
+   },
+   {
+    "time": "夜",
+    "title": "道頓堀夜景散步",
+    "note": "格力高看板・戎橋，順便物色宵夜",
+    "pending": false
+   },
+   {
+    "time": "宵夜",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   }
+  ]
+ },
+ {
+  "label": "Day 1",
+  "date": "10/01 週四",
+  "theme": "環球影城 USJ",
+  "areas": [
+   "此花區"
+  ],
+  "slots": [
+   {
+    "time": "全日",
+    "title": "日本環球影城",
+    "note": "任天堂世界需整理券・Express Pass 建議先買（見景點頁）",
+    "pending": false
+   },
+   {
+    "time": "晚上",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   }
+  ]
+ },
+ {
+  "label": "Day 2",
+  "date": "10/02 週五",
+  "theme": "北部・梅田＋海遊館",
+  "areas": [
+   "梅田",
+   "大阪港"
+  ],
+  "slots": [
+   {
+    "time": "上午",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   },
+   {
+    "time": "中午",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   },
+   {
+    "time": "下午",
+    "title": "海遊館＋天保山摩天輪",
+    "note": "門票 ¥2,700 建議先網購",
+    "pending": false
+   },
+   {
+    "time": "晚上",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   }
+  ]
+ },
+ {
+  "label": "Day 3",
+  "date": "10/03 週六",
+  "theme": "南部・心齋橋筋＋道頓堀＋難波",
+  "areas": [
+   "心齋橋",
+   "難波"
+  ],
+  "slots": [
+   {
+    "time": "上午",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   },
+   {
+    "time": "中午",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   },
+   {
+    "time": "下午",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   },
+   {
+    "time": "晚上",
+    "title": "道頓堀",
+    "note": "週六人多，晚餐建議先訂位",
+    "pending": false
+   }
+  ]
+ },
+ {
+  "label": "Day 4",
+  "date": "10/04 週日",
+  "theme": "回國日",
+  "areas": [
+   "難波"
+  ],
+  "slots": [
+   {
+    "time": "上午",
+    "title": "退房・寄放行李",
+    "note": "",
+    "pending": false
+   },
+   {
+    "time": "中午",
+    "title": "（待安排）",
+    "note": "",
+    "pending": true
+   },
+   {
+    "time": "下午",
+    "title": "難波 → 關西機場",
+    "note": "Rapi:t 或空港急行（¥970 最省）",
+    "pending": false
+   }
+  ]
+ }
+]

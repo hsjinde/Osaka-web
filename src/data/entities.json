@@ -1,0 +1,1997 @@
+[
+ {
+  "id": "餐廳/Bakuro",
+  "category": "餐廳",
+  "name": "Bakuro",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "關東煮",
+   "評分": "4.4",
+   "價位": "¥2,000-5,000"
+  },
+  "summary": "關東煮 4.4 分。",
+  "body": "關東煮 4.4 分。\n\n## 基本資訊\n- 類型：關東煮\n- 評分：4.4\n- 價位：¥2,000-5,000\n\n## 來源\n- Bakuro",
+  "area": "",
+  "rating": 4.4
+ },
+ {
+  "id": "餐廳/BATTEN-YOKATO-AMERIKAMURA",
+  "category": "餐廳",
+  "name": "BATTEN YOKATO AMERIKAMURA",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "日式串燒",
+   "評分": "4.0",
+   "價位": "¥2,000-3,000"
+  },
+  "summary": "日式串燒 4.0 分。",
+  "body": "日式串燒 4.0 分。\n\n## 基本資訊\n- 類型：日式串燒\n- 評分：4.0\n- 價位：¥2,000-3,000\n\n## 來源\n- 博多串焼き バッテンよかとぉ アメリカ村店",
+  "area": "",
+  "rating": 4
+ },
+ {
+  "id": "餐廳/Bear-Paw-Cafe",
+  "category": "餐廳",
+  "name": "Bear Paw Cafe",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "咖啡廳",
+   "評分": "4.5",
+   "價位": "1-1000"
+  },
+  "summary": "咖啡廳 4.5 分。",
+  "body": "咖啡廳 4.5 分。\n\n## 基本資訊\n- 類型：咖啡廳\n- 評分：4.5\n- 價位：1-1000\n\n## 來源\n- Bear Paw Cafe",
+  "area": "",
+  "rating": 4.5
+ },
+ {
+  "id": "餐廳/CANELE-du-JAPON-Nagahoribashi-Store",
+  "category": "餐廳",
+  "name": "CANELE du JAPON Nagahoribashi Store",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "糕點店",
+   "評分": "4.3",
+   "區域": "大阪長堀橋",
+   "描述": "以法式可麗露（Canele）為特色的甜點專賣店。"
+  },
+  "summary": "糕點店 4.3 分。以法式可麗露（Canele）為特色的甜點專賣店。",
+  "body": "糕點店 4.3 分。以法式可麗露（Canele）為特色的甜點專賣店。\n\n## 基本資訊\n- 類型：糕點店\n- 評分：4.3\n- 區域：大阪長堀橋\n- 描述：以法式可麗露（Canele）為特色的甜點專賣店。\n\n## 來源\n- CANELÉ du JAPON Nagahoribashi Store",
+  "area": "",
+  "rating": 4.3
+ },
+ {
+  "id": "餐廳/COBATO-STORE-OSAKA",
+  "category": "餐廳",
+  "name": "COBATO STORE OSAKA",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "糕點店",
+   "評分": "4.5"
+  },
+  "summary": "糕點店 4.5 分。",
+  "body": "糕點店 4.5 分。\n\n## 基本資訊\n- 類型：糕點店\n- 評分：4.5\n\n## 來源\n- COBATO STORE OSAKA",
+  "area": "",
+  "rating": 4.5
+ },
+ {
+  "id": "餐廳/Cobato836",
+  "category": "餐廳",
+  "name": "Cobato836",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "麵包店",
+   "評分": "4.1",
+   "價位": "1-1000"
+  },
+  "summary": "麵包店 4.1 分。",
+  "body": "麵包店 4.1 分。\n\n## 基本資訊\n- 類型：麵包店\n- 評分：4.1\n- 價位：1-1000\n\n## 來源\n- Cobato836",
+  "area": "",
+  "rating": 4.1
+ },
+ {
+  "id": "餐廳/Daiki-Suisan-Kaitenzushi-Whity-Umeda",
+  "category": "餐廳",
+  "name": "Daiki-Suisan Kaitenzushi Whity Umeda",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "迴轉壽司",
+   "評分": "3.8",
+   "價位": "¥2,000-3,000"
+  },
+  "summary": "迴轉壽司 3.8 分。",
+  "body": "迴轉壽司 3.8 分。\n\n## 基本資訊\n- 類型：迴轉壽司\n- 評分：3.8\n- 價位：¥2,000-3,000\n\n## 來源\n- Daiki-suisan kaitenzushi Whity-umeda",
+  "area": "",
+  "rating": 3.8
+ },
+ {
+  "id": "餐廳/Daiko-Sushi-Honten",
+  "category": "餐廳",
+  "name": "Daiko Sushi Honten",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "壽司",
+   "評分": "4.0",
+   "價位": "1000-2000"
+  },
+  "summary": "壽司 4.0 分。",
+  "body": "壽司 4.0 分。\n\n## 基本資訊\n- 類型：壽司\n- 評分：4.0\n- 價位：1000-2000\n\n## 來源\n- 大興壽司 本店",
+  "area": "",
+  "rating": 4
+ },
+ {
+  "id": "餐廳/Dekasan",
+  "category": "餐廳",
+  "name": "Dekasan",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "三文治",
+   "評分": "3.8",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "三文治 3.8 分。",
+  "body": "三文治 3.8 分。\n\n## 基本資訊\n- 類型：三文治\n- 評分：3.8\n- 價位：¥1,000-2,000\n\n## 來源\n- Dekasan",
+  "area": "",
+  "rating": 3.8
+ },
+ {
+  "id": "餐廳/Dorajyu",
+  "category": "餐廳",
+  "name": "Dorajyu",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "御好燒/大阪燒",
+   "評分": "4.3",
+   "價位": "¥1,000-2,000",
+   "備註": "大阪最好吃大阪燒"
+  },
+  "summary": "被譽為大阪最好吃的大阪燒店。",
+  "body": "被譽為大阪最好吃的大阪燒店。\n\n## 基本資訊\n- 類型：御好燒/大阪燒\n- 評分：4.3\n- 價位：¥1,000-2,000\n- 備註：大阪最好吃大阪燒\n\n## 來源\n- Dorajyu",
+  "area": "",
+  "rating": 4.3
+ },
+ {
+  "id": "餐廳/DOTONBORI-KUROFUNE",
+  "category": "餐廳",
+  "name": "DOTONBORI KUROFUNE Higashishinsaibashi",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "鰻魚",
+   "評分": "4.9",
+   "價位": "¥3,000-4,000",
+   "備註": "-"
+  },
+  "summary": "道頓堀區域的鰻魚飯專賣店。",
+  "body": "道頓堀區域的鰻魚飯專賣店。\n\n## 基本資訊\n- 類型：鰻魚\n- 評分：4.9\n- 價位：¥3,000-4,000\n- 備註：-\n\n## 來源\n- DOTONBORI KUROFUNE Higashishinsaibashi",
+  "area": "",
+  "rating": 4.9
+ },
+ {
+  "id": "餐廳/Gokaitachizushi",
+  "category": "餐廳",
+  "name": "Gokaitachizushi",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "壽司",
+   "評分": "4.2",
+   "價位": "1000-3000"
+  },
+  "summary": "壽司 4.2 分。",
+  "body": "壽司 4.2 分。\n\n## 基本資訊\n- 類型：壽司\n- 評分：4.2\n- 價位：1000-3000\n\n## 來源\n- 豪快立ち寿司",
+  "area": "",
+  "rating": 4.2
+ },
+ {
+  "id": "餐廳/GYU-NO-HIGE",
+  "category": "餐廳",
+  "name": "GYU NO HIGE",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "日式燒肉",
+   "評分": "4.7",
+   "價位": "¥4,000-10,000"
+  },
+  "summary": "日式燒肉 4.7 分。",
+  "body": "日式燒肉 4.7 分。\n\n## 基本資訊\n- 類型：日式燒肉\n- 評分：4.7\n- 價位：¥4,000-10,000\n\n## 來源\n- GYU NO HIGE",
+  "area": "",
+  "rating": 4.7
+ },
+ {
+  "id": "餐廳/Gyukatsu-Motomura-LUCUA",
+  "category": "餐廳",
+  "name": "Gyukatsu Motomura LUCUA",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "炸牛排",
+   "評分": "4.9",
+   "價位": "¥2,000-3,000",
+   "備註": "-"
+  },
+  "summary": "炸牛排專門店，位於LUCUA商場。",
+  "body": "炸牛排專門店，位於LUCUA商場。\n\n## 基本資訊\n- 類型：炸牛排\n- 評分：4.9\n- 價位：¥2,000-3,000\n- 備註：-\n\n## 來源\n- Gyukatsu Motomura",
+  "area": "",
+  "rating": 4.9
+ },
+ {
+  "id": "餐廳/Gyutan-Charcoal-grilled-YOSHIJI-Shinsaibashi-branch",
+  "category": "餐廳",
+  "name": "Gyutan Charcoal grilled YOSHIJI Shinsaibashi branch",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "日式牛舌",
+   "評分": "4.4",
+   "價位": "¥2,000-4,000"
+  },
+  "summary": "日式牛舌 4.4 分。",
+  "body": "日式牛舌 4.4 分。\n\n## 基本資訊\n- 類型：日式牛舌\n- 評分：4.4\n- 價位：¥2,000-4,000\n\n## 來源\n- Gyutan Charcoal grilled YOSHIJI Shinsaibashi branch",
+  "area": "",
+  "rating": 4.4
+ },
+ {
+  "id": "餐廳/Gyutan-YOSHIJI-Unagidani",
+  "category": "餐廳",
+  "name": "Gyutan Charcoal grilled YOSHIJI Unagidani branch",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "牛舌",
+   "評分": "4.6",
+   "價位": "¥2,000-3,000",
+   "備註": "推牛舌套餐"
+  },
+  "summary": "炭火牛舌專賣店，推薦牛舌套餐。",
+  "body": "炭火牛舌專賣店，推薦牛舌套餐。\n\n## 基本資訊\n- 類型：牛舌\n- 評分：4.6\n- 價位：¥2,000-3,000\n- 備註：推牛舌套餐\n\n## 來源\n- Gyutan Charcoal grilled YOSHIJI Unagidani branch",
+  "area": "",
+  "rating": 4.6
+ },
+ {
+  "id": "餐廳/Hakata-Kushiyaki-Battenyokato",
+  "category": "餐廳",
+  "name": "Hakata Kushiyaki Battenyokato",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "日式串燒",
+   "評分": "4.0",
+   "價位": "¥2,000-3,000"
+  },
+  "summary": "日式串燒 4.0 分。",
+  "body": "日式串燒 4.0 分。\n\n## 基本資訊\n- 類型：日式串燒\n- 評分：4.0\n- 價位：¥2,000-3,000\n\n## 來源\n- Hakata Kushiyaki Battenyokato",
+  "area": "",
+  "rating": 4
+ },
+ {
+  "id": "餐廳/Hanakujira-honten",
+  "category": "餐廳",
+  "name": "Hanakujira honten",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "關東煮",
+   "評分": "4.3",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "關東煮 4.3 分。本店（honten）。",
+  "body": "關東煮 4.3 分。本店（honten）。\n\n## 基本資訊\n- 類型：關東煮\n- 評分：4.3\n- 價位：¥1,000-2,000\n\n## 相關店家\n- 分店：Hanakujira（同品牌，價位略高）\n\n## 來源\n- Hanakujira honten",
+  "area": "",
+  "rating": 4.3
+ },
+ {
+  "id": "餐廳/Hanakujira",
+  "category": "餐廳",
+  "name": "Hanakujira",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "關東煮",
+   "評分": "4.3",
+   "價位": "¥2,000-3,000"
+  },
+  "summary": "關東煮 4.3 分。",
+  "body": "關東煮 4.3 分。\n\n## 基本資訊\n- 類型：關東煮\n- 評分：4.3\n- 價位：¥2,000-3,000\n\n## 相關店家\n- 本店：Hanakujira honten（同品牌，價位較低）\n\n## 來源\n- Hanakujira",
+  "area": "",
+  "rating": 4.3
+ },
+ {
+  "id": "餐廳/HARBS-心齋橋Parco店",
+  "category": "餐廳",
+  "name": "HARBS 心齋橋Parco店",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "蛋糕/輕食",
+   "評分": "4.1",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "蛋糕/輕食 4.1 分。",
+  "body": "蛋糕/輕食 4.1 分。\n\n## 基本資訊\n- 類型：蛋糕/輕食\n- 評分：4.1\n- 價位：¥1,000-2,000\n\n## 來源\n- HARBS 心齋橋Parco店",
+  "area": "",
+  "rating": 4.1
+ },
+ {
+  "id": "餐廳/Hommachi-seimenjo-honten",
+  "category": "餐廳",
+  "name": "Hommachi-seimenjo honten",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "麵食",
+   "評分": "4.0",
+   "備註": "超高性價比米其林推薦"
+  },
+  "summary": "麵食 4.0 分。超高性價比米其林推薦",
+  "body": "麵食 4.0 分。超高性價比米其林推薦\n\n## 基本資訊\n- 類型：麵食\n- 評分：4.0\n- 備註：超高性價比米其林推薦\n\n## 來源\n- Hommachi-seimenjo honten",
+  "area": "",
+  "rating": 4
+ },
+ {
+  "id": "餐廳/Hon-Sekiguchi---Authentic-Kansai-style-Sukiyaki",
+  "category": "餐廳",
+  "name": "Hon Sekiguchi - Authentic Kansai-style Sukiyaki",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "涮涮鍋",
+   "評分": "4.4",
+   "價位": ">¥10,000",
+   "備註": "創業140多年老字號"
+  },
+  "summary": "涮涮鍋 4.4 分。創業140多年老字號",
+  "body": "涮涮鍋 4.4 分。創業140多年老字號\n\n## 基本資訊\n- 類型：涮涮鍋\n- 評分：4.4\n- 價位：>¥10,000\n- 備註：創業140多年老字號\n\n## 來源\n- Hon Sekiguchi",
+  "area": "",
+  "rating": 4.4
+ },
+ {
+  "id": "餐廳/KANEGURA",
+  "category": "餐廳",
+  "name": "KANEGURA",
+  "tags": [
+   "餐廳",
+   "和牛",
+   "居酒屋",
+   "火鍋"
+  ],
+  "updated": "Fri Jun 12 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "由京都著名和牛懷石名店「肉之匠 三芳」監製的高級和牛居酒屋與火鍋店。",
+  "body": "# KANEGURA\n\n由京都著名和牛懷石名店「肉之匠 三芳」監製的高級和牛居酒屋與火鍋店。\n\n## 主要功能\n- 招牌「肉鍋」與各類和牛料理\n- 高品質和牛居酒屋體驗\n\n## 使用場景\n適合想品嚐頂級和牛火鍋或於居酒屋享受精緻和牛料理的晚餐時光。\n- 價位參考：¥6,000-8,000\n- 評分：4.4（100 則評論）\n\n## 相關工具\n- 相關餐廳清單：晉德的大阪行推薦、餐廳總覽\n\n## 來源\n- KANEGURA",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "餐廳/Kiyosuke",
+  "category": "餐廳",
+  "name": "Kiyosuke",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "涮涮鍋",
+   "評分": "4.7",
+   "備註": "黑毛和牛壽喜燒"
+  },
+  "summary": "涮涮鍋 4.7 分。黑毛和牛壽喜燒",
+  "body": "涮涮鍋 4.7 分。黑毛和牛壽喜燒\n\n## 基本資訊\n- 類型：涮涮鍋\n- 評分：4.7\n- 備註：黑毛和牛壽喜燒\n\n## 來源\n- Kiyosuke",
+  "area": "",
+  "rating": 4.7
+ },
+ {
+  "id": "餐廳/Kobatopankojo",
+  "category": "餐廳",
+  "name": "Kobatopankojo",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "麵包店",
+   "評分": "4.1",
+   "價位": "1-1000"
+  },
+  "summary": "麵包店 4.1 分。",
+  "body": "麵包店 4.1 分。\n\n## 基本資訊\n- 類型：麵包店\n- 評分：4.1\n- 價位：1-1000\n\n## 來源\n- Cobatopan-kojo",
+  "area": "",
+  "rating": 4.1
+ },
+ {
+  "id": "餐廳/MooKEN",
+  "category": "餐廳",
+  "name": "MooKEN",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "點心",
+   "評分": "4.2",
+   "價位": "¥1-1,000"
+  },
+  "summary": "點心 4.2 分。",
+  "body": "點心 4.2 分。\n\n## 基本資訊\n- 類型：點心\n- 評分：4.2\n- 價位：¥1-1,000\n\n## 來源\n- MooKEN",
+  "area": "",
+  "rating": 4.2
+ },
+ {
+  "id": "餐廳/MORITAYA",
+  "category": "餐廳",
+  "name": "MORITAYA",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "壽喜燒",
+   "評分": "3.7",
+   "價位": "$$$",
+   "備註": "1869年創業百年老店"
+  },
+  "summary": "壽喜燒 3.7 分。1869年創業百年老店",
+  "body": "壽喜燒 3.7 分。1869年創業百年老店\n\n## 基本資訊\n- 類型：壽喜燒\n- 評分：3.7\n- 價位：$$$\n- 備註：1869年創業百年老店\n\n## 來源\n- MORITAYA(壽喜燒 MORITAYA )",
+  "area": "",
+  "rating": 3.7
+ },
+ {
+  "id": "餐廳/Naniwa-Omuraisu",
+  "category": "餐廳",
+  "name": "Naniwa Omuraisu",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "蛋包飯",
+   "評分": "3.9",
+   "價位": "¥2,000-3,000"
+  },
+  "summary": "蛋包飯 3.9 分。",
+  "body": "蛋包飯 3.9 分。\n\n## 基本資訊\n- 類型：蛋包飯\n- 評分：3.9\n- 價位：¥2,000-3,000\n\n## 來源\n- Naniwa Omuraisu",
+  "area": "",
+  "rating": 3.9
+ },
+ {
+  "id": "餐廳/neel-nakazakicho",
+  "category": "餐廳",
+  "name": "neel nakazakicho",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "咖啡店",
+   "評分": "4.3",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "咖啡店 4.3 分。",
+  "body": "咖啡店 4.3 分。\n\n## 基本資訊\n- 類型：咖啡店\n- 評分：4.3\n- 價位：¥1,000-2,000\n\n## 來源\n- neel中崎町",
+  "area": "",
+  "rating": 4.3
+ },
+ {
+  "id": "餐廳/Nishiya",
+  "category": "餐廳",
+  "name": "Nishiya",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "烏冬",
+   "評分": "4.1",
+   "價位": "¥1,000-2,000",
+   "備註": "TWICE Sana推薦百年烏冬老店"
+  },
+  "summary": "TWICE Sana推薦的百年烏冬老店。",
+  "body": "TWICE Sana推薦的百年烏冬老店。\n\n## 基本資訊\n- 類型：烏冬\n- 評分：4.1\n- 價位：¥1,000-2,000\n- 備註：TWICE Sana推薦百年烏冬老店\n\n## 來源\n- Nishiya",
+  "area": "",
+  "rating": 4.1
+ },
+ {
+  "id": "餐廳/Oden-no-den-Maki-Sennichimae",
+  "category": "餐廳",
+  "name": "Oden no den Maki Sennichimae",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "關東煮",
+   "評分": "4.0",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "關東煮 4.0 分。",
+  "body": "關東煮 4.0 分。\n\n## 基本資訊\n- 類型：關東煮\n- 評分：4.0\n- 價位：¥1,000-2,000\n\n## 來源\n- Oden no den Maki Sennichimae",
+  "area": "",
+  "rating": 4
+ },
+ {
+  "id": "餐廳/Onigiri-Gorichan-Nankai-Namba",
+  "category": "餐廳",
+  "name": "Onigiri Gorichan Nankai Namba Station",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "飯糰",
+   "評分": "5.0",
+   "價位": "¥1-1,000",
+   "備註": "-"
+  },
+  "summary": "Onigiri Gorichan 的難波站分店，滿分評價。",
+  "body": "Onigiri Gorichan 的難波站分店，滿分評價。\n\n## 基本資訊\n- 類型：飯糰\n- 評分：5.0\n- 價位：¥1-1,000\n- 備註：-\n\n## 來源\n- Onigiri Gorichan Nankai Namba Station",
+  "area": "",
+  "rating": 5
+ },
+ {
+  "id": "餐廳/Onigiri-Gorichan",
+  "category": "餐廳",
+  "name": "Onigiri Gorichan",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "飯糰",
+   "評分": "4.9",
+   "價位": "¥1,000-2,000",
+   "備註": "-"
+  },
+  "summary": "超人氣飯糰專賣店，超過一萬則評論。",
+  "body": "超人氣飯糰專賣店，超過一萬則評論。\n\n## 基本資訊\n- 類型：飯糰\n- 評分：4.9\n- 價位：¥1,000-2,000\n- 備註：-\n\n## 來源\n- Onigiri Gorichan",
+  "area": "",
+  "rating": 4.9
+ },
+ {
+  "id": "餐廳/OSA-COFFEE",
+  "category": "餐廳",
+  "name": "OSA COFFEE",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "咖啡店",
+   "評分": "4.0",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "咖啡店 4.0 分。",
+  "body": "咖啡店 4.0 分。\n\n## 基本資訊\n- 類型：咖啡店\n- 評分：4.0\n- 價位：¥1,000-2,000\n\n## 來源\n- OSA COFFEE",
+  "area": "",
+  "rating": 4
+ },
+ {
+  "id": "餐廳/Pokemon-Cafe-Osaka-Shinsaibashi",
+  "category": "餐廳",
+  "name": "Pokemon Cafe Osaka Shinsaibashi",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "咖啡廳",
+   "評分": "4.1",
+   "價位": "2000-6000",
+   "區域": "大阪心齋橋",
+   "描述": "寶可夢主題咖啡廳，位於心齋橋，需提前預約。"
+  },
+  "summary": "咖啡廳 4.1 分。寶可夢主題咖啡廳，位於心齋橋，需提前預約。",
+  "body": "咖啡廳 4.1 分。寶可夢主題咖啡廳，位於心齋橋，需提前預約。\n\n## 基本資訊\n- 類型：咖啡廳\n- 評分：4.1\n- 價位：2000-6000\n- 區域：大阪心齋橋\n- 描述：寶可夢主題咖啡廳，位於心齋橋，需提前預約。\n\n## 來源\n- 寶可夢咖啡廳 大阪心齋橋",
+  "area": "心齋橋",
+  "rating": 4.1
+ },
+ {
+  "id": "餐廳/Shabucho",
+  "category": "餐廳",
+  "name": "Shabucho",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "涮涮鍋",
+   "評分": "4.5",
+   "價位": "$$"
+  },
+  "summary": "涮涮鍋 4.5 分。",
+  "body": "涮涮鍋 4.5 分。\n\n## 基本資訊\n- 類型：涮涮鍋\n- 評分：4.5\n- 價位：$$\n\n## 來源\n- Shabucho",
+  "area": "",
+  "rating": 4.5
+ },
+ {
+  "id": "餐廳/Shabuzen-Umedaten",
+  "category": "餐廳",
+  "name": "Shabuzen Umedaten",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "涮涮鍋",
+   "評分": "4.4",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "涮涮鍋 4.4 分。",
+  "body": "涮涮鍋 4.4 分。\n\n## 基本資訊\n- 類型：涮涮鍋\n- 評分：4.4\n- 價位：¥1,000-2,000\n\n## 來源\n- Shabuzen Umedaten",
+  "area": "",
+  "rating": 4.4
+ },
+ {
+  "id": "餐廳/SUKIYAKI-FUJIMOTO",
+  "category": "餐廳",
+  "name": "SUKIYAKI FUJIMOTO",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "壽喜燒",
+   "評分": "4.8",
+   "價位": "¥2,000-7,000",
+   "備註": "-"
+  },
+  "summary": "高評價壽喜燒專門店。",
+  "body": "高評價壽喜燒專門店。\n\n## 基本資訊\n- 類型：壽喜燒\n- 評分：4.8\n- 價位：¥2,000-7,000\n- 備註：-\n\n## 來源\n- SUKIYAKI FUJIMOTO",
+  "area": "",
+  "rating": 4.8
+ },
+ {
+  "id": "餐廳/Sumibi-Yakitori-Kibitaki",
+  "category": "餐廳",
+  "name": "Sumibi Yakitori Kibitaki",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "串燒/燒鳥",
+   "評分": "4.7",
+   "價位": "¥4,000-7,000",
+   "備註": "需預約燒鳥omakase"
+  },
+  "summary": "需預約的燒鳥omakase專門店。",
+  "body": "需預約的燒鳥omakase專門店。\n\n## 基本資訊\n- 類型：串燒/燒鳥\n- 評分：4.7\n- 價位：¥4,000-7,000\n- 備註：需預約燒鳥omakase\n\n## 來源\n- Kibitaki",
+  "area": "",
+  "rating": 4.7
+ },
+ {
+  "id": "餐廳/Tachisushi-Maguro",
+  "category": "餐廳",
+  "name": "Tachisushi Maguro Ittetsu Sennichimae",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "壽司",
+   "評分": "4.6",
+   "價位": "¥2,000-4,000",
+   "備註": "-"
+  },
+  "summary": "站食壽司專賣店。",
+  "body": "站食壽司專賣店。\n\n## 基本資訊\n- 類型：壽司\n- 評分：4.6\n- 價位：¥2,000-4,000\n- 備註：-\n\n## 來源\n- Tachisushi Maguro Ittetsu Sennichimae",
+  "area": "",
+  "rating": 4.6
+ },
+ {
+  "id": "餐廳/Takoume-Honten",
+  "category": "餐廳",
+  "name": "Takoume Honten",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "關東煮",
+   "評分": "3.7",
+   "價位": "2000-6000",
+   "備註": "170 年老店",
+   "描述": "擁有 170 年歷史的關東煮老店。"
+  },
+  "summary": "關東煮 3.7 分。170 年老店",
+  "body": "關東煮 3.7 分。170 年老店\n\n## 基本資訊\n- 類型：關東煮\n- 評分：3.7\n- 價位：2000-6000\n- 備註：170 年老店\n- 描述：擁有 170 年歷史的關東煮老店。\n\n## 來源\n- Takoume Honten",
+  "area": "",
+  "rating": 3.7
+ },
+ {
+  "id": "餐廳/Tempura-Tarojiro",
+  "category": "餐廳",
+  "name": "Tempura Tarojiro",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "天婦羅",
+   "評分": "4.3",
+   "價位": "¥1,000-3,000"
+  },
+  "summary": "天婦羅 4.3 分。",
+  "body": "天婦羅 4.3 分。\n\n## 基本資訊\n- 類型：天婦羅\n- 評分：4.3\n- 價位：¥1,000-3,000\n\n## 來源\n- Tempura Tarojiro",
+  "area": "",
+  "rating": 4.3
+ },
+ {
+  "id": "餐廳/Tombe-大阪燒專門店",
+  "category": "餐廳",
+  "name": "Tombe 大阪燒專門店",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "御好燒",
+   "評分": "3.9",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "御好燒 3.9 分。",
+  "body": "御好燒 3.9 分。\n\n## 基本資訊\n- 類型：御好燒\n- 評分：3.9\n- 價位：¥1,000-2,000\n\n## 來源\n- Tombe 大阪燒專門店",
+  "area": "",
+  "rating": 3.9
+ },
+ {
+  "id": "餐廳/Tonkatsu-Minato",
+  "category": "餐廳",
+  "name": "Tonkatsu Minato",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "炸豬排",
+   "評分": "4.7",
+   "價位": "¥3,000-4,000",
+   "備註": "-"
+  },
+  "summary": "炸豬排專門店。",
+  "body": "炸豬排專門店。\n\n## 基本資訊\n- 類型：炸豬排\n- 評分：4.7\n- 價位：¥3,000-4,000\n- 備註：-\n\n## 來源\n- 豬排 Minato",
+  "area": "",
+  "rating": 4.7
+ },
+ {
+  "id": "餐廳/Tsurutontan-Soemoncho",
+  "category": "餐廳",
+  "name": "Tsurutontan Soemoncho",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "烏冬",
+   "評分": "4.0",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "烏冬 4.0 分。",
+  "body": "烏冬 4.0 分。\n\n## 基本資訊\n- 類型：烏冬\n- 評分：4.0\n- 價位：¥1,000-2,000\n\n## 來源\n- Tsurutontan Soemoncho",
+  "area": "",
+  "rating": 4
+ },
+ {
+  "id": "餐廳/Unagi-Kushiyaki-Izumo",
+  "category": "餐廳",
+  "name": "Unagi Kushiyaki Izumo",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "鰻魚料理",
+   "評分": "4.6",
+   "價位": "¥2,000-3,000"
+  },
+  "summary": "鰻魚料理 4.6 分。",
+  "body": "鰻魚料理 4.6 分。\n\n## 基本資訊\n- 類型：鰻魚料理\n- 評分：4.6\n- 價位：¥2,000-3,000\n\n## 來源\n- Unagi Kushiyaki Izumo",
+  "area": "",
+  "rating": 4.6
+ },
+ {
+  "id": "餐廳/Yakiniku-KITAN-Minamisenba-main-store",
+  "category": "餐廳",
+  "name": "Yakiniku KITAN Minamisenba main store",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "日式燒肉",
+   "評分": "4.0"
+  },
+  "summary": "日式燒肉 4.0 分。",
+  "body": "日式燒肉 4.0 分。\n\n## 基本資訊\n- 類型：日式燒肉\n- 評分：4.0\n\n## 來源\n- Yakiniku KITAN Minamisenba main store",
+  "area": "",
+  "rating": 4
+ },
+ {
+  "id": "餐廳/Yakinikuen忍鬨",
+  "category": "餐廳",
+  "name": "Yakinikuen忍鬨",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "燒肉",
+   "評分": "4.7",
+   "價位": "¥3,000-7,000",
+   "備註": "爆蔥厚切牛舌很不錯"
+  },
+  "summary": "爆蔥厚切牛舌很不錯的燒肉店。",
+  "body": "爆蔥厚切牛舌很不錯的燒肉店。\n\n## 基本資訊\n- 類型：燒肉\n- 評分：4.7\n- 價位：¥3,000-7,000\n- 備註：爆蔥厚切牛舌很不錯\n\n## 來源\n- Yakinikuen Ningu(Yakinikuen忍鬨)",
+  "area": "",
+  "rating": 4.7
+ },
+ {
+  "id": "餐廳/Yasaikushimaki-Narutoya",
+  "category": "餐廳",
+  "name": "Yasaikushimaki Narutoya",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "日式串燒",
+   "評分": "4.2",
+   "價位": "¥3,000-5,000"
+  },
+  "summary": "日式串燒 4.2 分。",
+  "body": "日式串燒 4.2 分。\n\n## 基本資訊\n- 類型：日式串燒\n- 評分：4.2\n- 價位：¥3,000-5,000\n\n## 來源\n- やさい串巻き なるとやAo",
+  "area": "",
+  "rating": 4.2
+ },
+ {
+  "id": "餐廳/にくといえばまつだ",
+  "category": "餐廳",
+  "name": "にくといえばまつだ",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "日式燒肉 4.6 分。\r\n\r\n## 基本資訊\r\n- 類型：日式燒肉\r\n- 評分：4.6\r\n- 價位：>¥10,000\r\n\r\n## 來源\r\n- `原始資料/餐廳/#にくといえばまつだ.md`（原始檔名含 # 前綴，Obsidian 無法以 wikilink 連結）",
+  "body": "日式燒肉 4.6 分。\r\n\r\n## 基本資訊\r\n- 類型：日式燒肉\r\n- 評分：4.6\r\n- 價位：>¥10,000\r\n\r\n## 來源\r\n- `原始資料/餐廳/#にくといえばまつだ.md`（原始檔名含 # 前綴，Obsidian 無法以 wikilink 連結）",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "餐廳/伍拾壹製麵所-IKR51",
+  "category": "餐廳",
+  "name": "伍拾壹製麵所 IKR51",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "拉麵",
+   "評分": "4.1",
+   "價位": "¥1,000-2,000"
+  },
+  "summary": "拉麵 4.1 分。",
+  "body": "拉麵 4.1 分。\n\n## 基本資訊\n- 類型：拉麵\n- 評分：4.1\n- 價位：¥1,000-2,000\n\n## 來源\n- 伍拾壹製麵所 IKR51",
+  "area": "",
+  "rating": 4.1
+ },
+ {
+  "id": "餐廳/千代松勝蓋飯",
+  "category": "餐廳",
+  "name": "千代松勝蓋飯",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "勝丼",
+   "評分": "3.9",
+   "價位": "¥2,000-3,000",
+   "備註": "建議點2.5的比較入味"
+  },
+  "summary": "勝丼 3.9 分。建議點2.5的比較入味",
+  "body": "勝丼 3.9 分。建議點2.5的比較入味\n\n## 基本資訊\n- 類型：勝丼\n- 評分：3.9\n- 價位：¥2,000-3,000\n- 備註：建議點2.5的比較入味\n\n## 來源\n- 千代松勝蓋飯",
+  "area": "",
+  "rating": 3.9
+ },
+ {
+  "id": "餐廳/味乃家御好燒",
+  "category": "餐廳",
+  "name": "味乃家御好燒",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "御好燒/大阪燒",
+   "評分": "4.3",
+   "價位": "¥1,000-2,000",
+   "備註": "-"
+  },
+  "summary": "大阪知名御好燒店。",
+  "body": "大阪知名御好燒店。\n\n## 基本資訊\n- 類型：御好燒/大阪燒\n- 評分：4.3\n- 價位：¥1,000-2,000\n- 備註：-\n\n## 來源\n- 味乃家御好燒",
+  "area": "",
+  "rating": 4.3
+ },
+ {
+  "id": "餐廳/喜三郎農場",
+  "category": "餐廳",
+  "name": "喜三郎農場",
+  "tags": [
+   "餐廳",
+   "雞蛋料理",
+   "雞肉"
+  ],
+  "updated": "Fri Jun 12 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "以雞蛋料理與雞肉料理聞名的高評價餐廳，主打生雞蛋拌飯（TKG）與親子丼。",
+  "body": "# 喜三郎農場\n\n以雞蛋料理與雞肉料理聞名的高評價餐廳，主打生雞蛋拌飯（TKG）與親子丼。\n\n## 主要功能\n- 提供多種高品質生雞蛋拌飯（TKG）\n- 招牌親子丼料理\n\n## 使用場景\n適合喜歡日式經典雞蛋料理、想體驗多種生雞蛋拌飯的旅客。\n- 價位參考：¥1,000-2,000\n- 評分：4.1（1,300 則評論）\n\n## 相關工具\n- 相關餐廳清單：晉德的大阪行推薦、餐廳總覽\n\n## 來源\n- 喜三郎農場",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "餐廳/宮田麵児",
+  "category": "餐廳",
+  "name": "宮田麵児",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "日本(無評分)"
+  },
+  "summary": "日本(無評分)。",
+  "body": "日本(無評分)。\n\n## 基本資訊\n- 類型：日本(無評分)\n\n## 來源\n- 宮田麺児",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "餐廳/弁才天",
+  "category": "餐廳",
+  "name": "弁才天",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "和菓子",
+   "評分": "4.4"
+  },
+  "summary": "和菓子 4.4 分。",
+  "body": "和菓子 4.4 分。\n\n## 基本資訊\n- 類型：和菓子\n- 評分：4.4\n\n## 來源\n- Kakuozan Fruit Daifuku Benzaiten",
+  "area": "",
+  "rating": 4.4
+ },
+ {
+  "id": "餐廳/心齋橋-蟹善",
+  "category": "餐廳",
+  "name": "心齋橋 蟹善",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "螃蟹",
+   "評分": "4.7",
+   "價位": ">¥10,000"
+  },
+  "summary": "螃蟹 4.7 分。",
+  "body": "螃蟹 4.7 分。\n\n## 基本資訊\n- 類型：螃蟹\n- 評分：4.7\n- 價位：>¥10,000\n\n## 來源\n- 心齋橋 蟹善",
+  "area": "",
+  "rating": 4.7
+ },
+ {
+  "id": "餐廳/板前燒肉一牛-心齋橋本店",
+  "category": "餐廳",
+  "name": "雌牛專門店 板前燒肉一牛 心齋橋本店",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "燒肉",
+   "評分": "4.8",
+   "價位": "¥4,000-10,000",
+   "備註": "-"
+  },
+  "summary": "雌牛專門的板前燒肉店。",
+  "body": "雌牛專門的板前燒肉店。\n\n## 基本資訊\n- 類型：燒肉\n- 評分：4.8\n- 價位：¥4,000-10,000\n- 備註：-\n\n## 來源\n- 雌牛專門店 板前燒肉一牛 心齋橋本店",
+  "area": "",
+  "rating": 4.8
+ },
+ {
+  "id": "餐廳/炭火烤肉-道頓堀みつる-道頓堀總店",
+  "category": "餐廳",
+  "name": "炭火烤肉 道頓堀みつる 道頓堀總店",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "日式燒肉",
+   "評分": "4.6",
+   "價位": "¥3,000-8,000"
+  },
+  "summary": "日式燒肉 4.6 分。",
+  "body": "日式燒肉 4.6 分。\n\n## 基本資訊\n- 類型：日式燒肉\n- 評分：4.6\n- 價位：¥3,000-8,000\n\n## 來源\n- 炭火烤肉 道頓堀みつる 道頓堀總店",
+  "area": "",
+  "rating": 4.6
+ },
+ {
+  "id": "餐廳/炸牛排-京都勝牛-梅田店",
+  "category": "餐廳",
+  "name": "炸牛排 京都勝牛 梅田店",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "炸牛排",
+   "評分": "4.8",
+   "價位": "¥2,000-3,000",
+   "備註": "-"
+  },
+  "summary": "知名炸牛排連鎖店梅田分店。",
+  "body": "知名炸牛排連鎖店梅田分店。\n\n## 基本資訊\n- 類型：炸牛排\n- 評分：4.8\n- 價位：¥2,000-3,000\n- 備註：-\n\n## 來源\n- 炸牛排 京都勝牛 梅田店",
+  "area": "",
+  "rating": 4.8
+ },
+ {
+  "id": "餐廳/燒肉力丸-難波道頓堀店",
+  "category": "餐廳",
+  "name": "燒肉力丸 難波道頓堀店",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "燒肉",
+   "評分": "4.7",
+   "價位": "¥4,000-6,000",
+   "備註": "-"
+  },
+  "summary": "道頓堀區域的知名燒肉店，力丸燒肉。",
+  "body": "道頓堀區域的知名燒肉店，力丸燒肉。\n\n## 基本資訊\n- 類型：燒肉\n- 評分：4.7\n- 價位：¥4,000-6,000\n- 備註：-\n\n## 來源\n- 燒肉力丸 難波道頓堀店",
+  "area": "",
+  "rating": 4.7
+ },
+ {
+  "id": "餐廳/珈琲専門店-リヴォリ",
+  "category": "餐廳",
+  "name": "珈琲専門店 リヴォリ",
+  "tags": [
+   "餐廳",
+   "咖啡廳",
+   "純喫茶"
+  ],
+  "updated": "Fri Jun 12 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "創業於 1982 年的昭和風復古純喫茶，以虹吸式自家烘焙咖啡與三明治聞名。",
+  "body": "# 珈琲専門店 リヴォリ\n\n創業於 1982 年的昭和風復古純喫茶，以虹吸式自家烘焙咖啡與三明治聞名。\n\n## 主要功能\n- 供應虹吸式自家烘焙咖啡\n- 超人氣週替三明治套餐與早餐\n\n## 使用場景\n適合體驗日本傳統昭和時代咖啡廳氛圍，或是享用悠閒的早餐與下午茶。\n- 價位參考：¥1-1,000\n- 評分：4.3（150 則評論）\n\n## 相關工具\n- 相關清單：晉德的大阪行推薦、餐廳總覽\n\n## 來源\n- 珈琲専門店 リヴォリ",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "餐廳/精肉壽喜燒處-北村",
+  "category": "餐廳",
+  "name": "精肉壽喜燒處 北村",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "壽喜燒",
+   "評分": "4.4",
+   "價位": ">¥10,000",
+   "備註": "1881年創立米其林1星"
+  },
+  "summary": "1881年創立的米其林1星壽喜燒老店。",
+  "body": "1881年創立的米其林1星壽喜燒老店。\n\n## 基本資訊\n- 類型：壽喜燒\n- 評分：4.4\n- 價位：>¥10,000\n- 備註：1881年創立米其林1星\n\n## 來源\n- 精肉壽喜燒處 北村",
+  "area": "",
+  "rating": 4.4
+ },
+ {
+  "id": "餐廳/餐廳總覽",
+  "category": "餐廳",
+  "name": "餐廳總覽",
+  "tags": [
+   "餐廳",
+   "大阪",
+   "美食"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "> 共 57 間餐廳。完整評分/價位詳見各實體頁。\r\n\r\n## 燒肉\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| GYU NO HIGE | 4.7 | ¥4,000-10,000 |  |\r\n| Yakinikuen忍鬨 | 4.7 | ¥3,000-7,000 | 爆蔥厚切牛舌很不錯 |\r\n| にくといえばまつだ | 4.6 | >¥10,000 |  |\r\n| 炭火烤肉 道頓堀みつる 道頓堀總店 | 4.6 | ¥3,000-8,000 |  |\r\n| Yakiniku KITAN Minamisenba main store | 4.0 | — |  |\r\n\r\n## 壽司\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Gokaitachizushi | 4.2 | 1000-3000 |  |\r\n| Daiko Sushi Honten | 4.0 | 1000-2000 |  |\r\n| Daiki-Suisan Kaitenzushi Whity Umeda | 3.8 | ¥2,000-3,000 |  |\r\n\r\n## 牛舌\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Gyutan YOSHIJI Unagidani | 4.6 | ¥2,000-3,000 | 炭火牛舌鰻谷店，推薦牛舌套餐 |\r\n| Gyutan Charcoal grilled YOSHIJI Shinsaibashi branch | 4.4 | ¥2,000-4,000 |  |\r\n\r\n## 壽喜燒/火鍋\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| SUKIYAKI FUJIMOTO | 4.8 | ¥2,000-7,000 |  |\r\n| Kiyosuke | 4.7 | — | 黑毛和牛壽喜燒 |\r\n| Shabucho | 4.5 | $$ |  |\r\n| Hon Sekiguchi - Authentic Kansai-style Sukiyaki | 4.4 | >¥10,000 | 創業140多年老字號 |\r\n| Shabuzen Umedaten | 4.4 | ¥1,000-2,000 |  |\r\n| 精肉壽喜燒處 北村 | 4.4 | >¥10,000 | 1881年創立米其林1星 |\r\n| MORITAYA | 3.7 | $$$ | 1869年創業百年老店 |\r\n| KANEGURA | 4.4 | ¥6,000-8,000 | 和牛懷石名店「肉之匠 三芳」監製肉鍋 |\r\n\r\n## 鰻魚\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Unagi Kushiyaki Izumo | 4.6 | ¥2,000-3,000 |  |\r\n\r\n## 拉麵/麵食\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| 馬鹿一代噴火拉麵 | 4.2 | ¥2,000-8,000 | 噴火拉麵表演 |\r\n| 伍拾壹製麵所 IKR51 | 4.1 | ¥1,000-2,000 |  |\r\n| Hommachi-seimenjo honten | 4.0 | — | 超高性價比米其林推薦 |\r\n\r\n## 烏冬\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Nishiya | 4.1 | ¥1,000-2,000 | TWICE Sana推薦百年烏冬老店，肉つけうどん |\r\n| Tsurutontan Soemoncho | 4.0 | ¥1,000-2,000 |  |\r\n\r\n## 御好燒/大阪燒\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Dorajyu | 4.3 | ¥1,000-2,000 | 大阪最好吃大阪燒 |\r\n| 味乃家御好燒 | 4.3 | ¥1,000-2,000 |  |\r\n| Tombe 大阪燒專門店 | 3.9 | ¥1,000-2,000 |  |\r\n\r\n## 串燒/居酒屋\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Sumibi Yakitori Kibitaki | 4.7 | ¥4,000-7,000 | 需預約燒鳥omakase |\r\n| Yasaikushimaki Narutoya | 4.2 | ¥3,000-5,000 |  |\r\n| BATTEN YOKATO AMERIKAMURA | 4.0 | ¥2,000-3,000 |  |\r\n| Hakata Kushiyaki Battenyokato | 4.0 | ¥2,000-3,000 |  |\r\n\r\n## 關東煮\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Bakuro | 4.4 | ¥2,000-5,000 |  |\r\n| Hanakujira honten | 4.3 | ¥1,000-2,000 |  |\r\n| Hanakujira | 4.3 | ¥2,000-3,000 |  |\r\n| Oden no den Maki Sennichimae | 4.0 | ¥1,000-2,000 |  |\r\n| Takoume Honten | 3.7 | 2000-6000 | 170 年老店 |\r\n\r\n## 炸物\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Gyukatsu Motomura LUCUA | 4.9 | ¥2,000-3,000 |  |\r\n| 炸牛排 京都勝牛 梅田店 | 4.8 | ¥2,000-3,000 |  |\r\n| Tonkatsu Minato | 4.7 | ¥3,000-4,000 |  |\r\n\r\n## 天婦羅\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Tempura Tarojiro | 4.3 | ¥1,000-3,000 |  |\r\n\r\n## 點心\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| MooKEN | 4.2 | ¥1-1,000 |  |\r\n\r\n## 其他主食\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Naniwa Omuraisu | 3.9 | ¥2,000-3,000 |  |\r\n| 千代松勝蓋飯 | 3.9 | ¥2,000-3,000 | 建議點2.5的比較入味 |\r\n| Dekasan | 3.8 | ¥1,000-2,000 |  |\r\n| 喜三郎農場 | 4.1 | ¥1,000-2,000 | 招牌生雞蛋拌飯(TKG)與親子丼 |\r\n\r\n## 咖啡廳\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Bear Paw Cafe | 4.5 | 1-1000 |  |\r\n| neel nakazakicho | 4.3 | ¥1,000-2,000 |  |\r\n| Pokemon Cafe Osaka Shinsaibashi | 4.1 | 2000-6000 |  |\r\n| OSA COFFEE | 4.0 | ¥1,000-2,000 |  |\r\n| 珈琲専門店 リヴォリ | 4.3 | ¥1-1,000 | 昭和風復古純喫茶與招牌三明治 |\r\n\r\n## 甜點/麵包\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| COBATO STORE OSAKA | 4.5 | — |  |\r\n| 弁才天 | 4.4 | — |  |\r\n| CANELE du JAPON Nagahoribashi Store | 4.3 | — |  |\r\n| Cobato836 | 4.1 | 1-1000 |  |\r\n| HARBS 心齋橋Parco店 | 4.1 | ¥1,000-2,000 |  |\r\n| Kobatopankojo | 4.1 | 1-1000 |  |\r\n\r\n## 其他\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Onigiri Gorichan | 4.9 | 1000-2000 |  |\r\n| 燒肉力丸 難波道頓堀店 | 4.7 | ¥4,000-6,000 |  |\r\n| 心齋橋 蟹善 | 4.7 | >¥10,000 |  |\r\n| 宮田麵児 | — | — |  |",
+  "body": "> 共 57 間餐廳。完整評分/價位詳見各實體頁。\r\n\r\n## 燒肉\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| GYU NO HIGE | 4.7 | ¥4,000-10,000 |  |\r\n| Yakinikuen忍鬨 | 4.7 | ¥3,000-7,000 | 爆蔥厚切牛舌很不錯 |\r\n| にくといえばまつだ | 4.6 | >¥10,000 |  |\r\n| 炭火烤肉 道頓堀みつる 道頓堀總店 | 4.6 | ¥3,000-8,000 |  |\r\n| Yakiniku KITAN Minamisenba main store | 4.0 | — |  |\r\n\r\n## 壽司\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Gokaitachizushi | 4.2 | 1000-3000 |  |\r\n| Daiko Sushi Honten | 4.0 | 1000-2000 |  |\r\n| Daiki-Suisan Kaitenzushi Whity Umeda | 3.8 | ¥2,000-3,000 |  |\r\n\r\n## 牛舌\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Gyutan YOSHIJI Unagidani | 4.6 | ¥2,000-3,000 | 炭火牛舌鰻谷店，推薦牛舌套餐 |\r\n| Gyutan Charcoal grilled YOSHIJI Shinsaibashi branch | 4.4 | ¥2,000-4,000 |  |\r\n\r\n## 壽喜燒/火鍋\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| SUKIYAKI FUJIMOTO | 4.8 | ¥2,000-7,000 |  |\r\n| Kiyosuke | 4.7 | — | 黑毛和牛壽喜燒 |\r\n| Shabucho | 4.5 | $$ |  |\r\n| Hon Sekiguchi - Authentic Kansai-style Sukiyaki | 4.4 | >¥10,000 | 創業140多年老字號 |\r\n| Shabuzen Umedaten | 4.4 | ¥1,000-2,000 |  |\r\n| 精肉壽喜燒處 北村 | 4.4 | >¥10,000 | 1881年創立米其林1星 |\r\n| MORITAYA | 3.7 | $$$ | 1869年創業百年老店 |\r\n| KANEGURA | 4.4 | ¥6,000-8,000 | 和牛懷石名店「肉之匠 三芳」監製肉鍋 |\r\n\r\n## 鰻魚\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Unagi Kushiyaki Izumo | 4.6 | ¥2,000-3,000 |  |\r\n\r\n## 拉麵/麵食\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| 馬鹿一代噴火拉麵 | 4.2 | ¥2,000-8,000 | 噴火拉麵表演 |\r\n| 伍拾壹製麵所 IKR51 | 4.1 | ¥1,000-2,000 |  |\r\n| Hommachi-seimenjo honten | 4.0 | — | 超高性價比米其林推薦 |\r\n\r\n## 烏冬\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Nishiya | 4.1 | ¥1,000-2,000 | TWICE Sana推薦百年烏冬老店，肉つけうどん |\r\n| Tsurutontan Soemoncho | 4.0 | ¥1,000-2,000 |  |\r\n\r\n## 御好燒/大阪燒\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Dorajyu | 4.3 | ¥1,000-2,000 | 大阪最好吃大阪燒 |\r\n| 味乃家御好燒 | 4.3 | ¥1,000-2,000 |  |\r\n| Tombe 大阪燒專門店 | 3.9 | ¥1,000-2,000 |  |\r\n\r\n## 串燒/居酒屋\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Sumibi Yakitori Kibitaki | 4.7 | ¥4,000-7,000 | 需預約燒鳥omakase |\r\n| Yasaikushimaki Narutoya | 4.2 | ¥3,000-5,000 |  |\r\n| BATTEN YOKATO AMERIKAMURA | 4.0 | ¥2,000-3,000 |  |\r\n| Hakata Kushiyaki Battenyokato | 4.0 | ¥2,000-3,000 |  |\r\n\r\n## 關東煮\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Bakuro | 4.4 | ¥2,000-5,000 |  |\r\n| Hanakujira honten | 4.3 | ¥1,000-2,000 |  |\r\n| Hanakujira | 4.3 | ¥2,000-3,000 |  |\r\n| Oden no den Maki Sennichimae | 4.0 | ¥1,000-2,000 |  |\r\n| Takoume Honten | 3.7 | 2000-6000 | 170 年老店 |\r\n\r\n## 炸物\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Gyukatsu Motomura LUCUA | 4.9 | ¥2,000-3,000 |  |\r\n| 炸牛排 京都勝牛 梅田店 | 4.8 | ¥2,000-3,000 |  |\r\n| Tonkatsu Minato | 4.7 | ¥3,000-4,000 |  |\r\n\r\n## 天婦羅\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Tempura Tarojiro | 4.3 | ¥1,000-3,000 |  |\r\n\r\n## 點心\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| MooKEN | 4.2 | ¥1-1,000 |  |\r\n\r\n## 其他主食\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Naniwa Omuraisu | 3.9 | ¥2,000-3,000 |  |\r\n| 千代松勝蓋飯 | 3.9 | ¥2,000-3,000 | 建議點2.5的比較入味 |\r\n| Dekasan | 3.8 | ¥1,000-2,000 |  |\r\n| 喜三郎農場 | 4.1 | ¥1,000-2,000 | 招牌生雞蛋拌飯(TKG)與親子丼 |\r\n\r\n## 咖啡廳\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Bear Paw Cafe | 4.5 | 1-1000 |  |\r\n| neel nakazakicho | 4.3 | ¥1,000-2,000 |  |\r\n| Pokemon Cafe Osaka Shinsaibashi | 4.1 | 2000-6000 |  |\r\n| OSA COFFEE | 4.0 | ¥1,000-2,000 |  |\r\n| 珈琲専門店 リヴォリ | 4.3 | ¥1-1,000 | 昭和風復古純喫茶與招牌三明治 |\r\n\r\n## 甜點/麵包\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| COBATO STORE OSAKA | 4.5 | — |  |\r\n| 弁才天 | 4.4 | — |  |\r\n| CANELE du JAPON Nagahoribashi Store | 4.3 | — |  |\r\n| Cobato836 | 4.1 | 1-1000 |  |\r\n| HARBS 心齋橋Parco店 | 4.1 | ¥1,000-2,000 |  |\r\n| Kobatopankojo | 4.1 | 1-1000 |  |\r\n\r\n## 其他\r\n\r\n| 名稱 | 評分 | 價位 | 備註 |\r\n|------|:----:|:----:|------|\r\n| Onigiri Gorichan | 4.9 | 1000-2000 |  |\r\n| 燒肉力丸 難波道頓堀店 | 4.7 | ¥4,000-6,000 |  |\r\n| 心齋橋 蟹善 | 4.7 | >¥10,000 |  |\r\n| 宮田麵児 | — | — |  |",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "餐廳/馬鹿一代噴火拉麵",
+  "category": "餐廳",
+  "name": "馬鹿一代噴火拉麵",
+  "tags": [
+   "餐廳",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "拉麵",
+   "評分": "4.2",
+   "價位": "¥2,000-8,000",
+   "備註": "噴火拉麵表演"
+  },
+  "summary": "以噴火拉麵表演聞名的特色拉麵店。",
+  "body": "以噴火拉麵表演聞名的特色拉麵店。\n\n## 基本資訊\n- 類型：拉麵\n- 評分：4.2\n- 價位：¥2,000-8,000\n- 備註：噴火拉麵表演\n\n## 來源\n- 馬鹿一代噴火拉麵",
+  "area": "",
+  "rating": 4.2
+ },
+ {
+  "id": "景點/Harukas300展望台",
+  "category": "景點",
+  "name": "Harukas300展望台",
+  "tags": [
+   "景點",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "中文名稱": "阿倍野展望台",
+   "類型": "觀景台",
+   "評分": "4.6（22,551 則評論）",
+   "位置": "大阪天王寺"
+  },
+  "summary": "位於阿倍野 HARUKAS 大樓頂層的展望台，可 360 度俯瞰大阪市景。",
+  "body": "位於阿倍野 HARUKAS 大樓頂層的展望台，可 360 度俯瞰大阪市景。\n\n## 基本資訊\n- 中文名稱：阿倍野展望台\n- 類型：觀景台\n- 評分：4.6（22,551 則評論）\n- 位置：大阪天王寺\n\n## 來源\n- Harukas300展望台",
+  "area": "天王寺",
+  "rating": 4.6
+ },
+ {
+  "id": "景點/堂島濱塔",
+  "category": "景點",
+  "name": "堂島濱塔",
+  "tags": [
+   "景點",
+   "大阪",
+   "夜景"
+  ],
+  "updated": "Sat Jul 04 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "夜景觀景 / 拍照點",
+   "門票": "**免費**",
+   "導航": "直接搜尋 **Osaka Dojimahama Tower**",
+   "位置": "堂島濱一帶，鄰近淀屋橋站"
+  },
+  "summary": "大阪市中心一處**免門票**的百萬夜景拍照點（Osaka Dojimahama Tower），位於淀屋橋一帶，適合傍晚順路上去俯瞰市區與河岸夜景。",
+  "body": "大阪市中心一處**免門票**的百萬夜景拍照點（Osaka Dojimahama Tower），位於淀屋橋一帶，適合傍晚順路上去俯瞰市區與河岸夜景。\n\n## 基本資訊\n- 類型：夜景觀景 / 拍照點\n- 門票：**免費**\n- 導航：直接搜尋 **Osaka Dojimahama Tower**\n- 位置：堂島濱一帶，鄰近淀屋橋站\n\n## 交通\n- 大阪地鐵御堂筋線／京阪本線「**淀屋橋站**」步行約 2 分鐘\n\n## 建議\n- 傍晚至入夜時段最佳，超好拍\n- 位置在梅田／北濱商圈附近，可與 梅田 行程串聯\n\n## 來源\n- 大阪堂島濱塔免費夜景\n- 大阪堂島濱塔夜景-IG原文（raymond 瑞門 IG Reel）",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "景點/大阪市天王寺動物園",
+  "category": "景點",
+  "name": "大阪市天王寺動物園",
+  "tags": [
+   "景點",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "動物園",
+   "評分": "4.1",
+   "位置": "天王寺公園內",
+   "門票": "大人 ¥500（高 CP 值）",
+   "開放時間": "9:30–17:00（週二休）"
+  },
+  "summary": "位於天王寺公園內的市立動物園，是日本最古老的動物園之一。",
+  "body": "位於天王寺公園內的市立動物園，是日本最古老的動物園之一。\n\n## 基本資訊\n- 類型：動物園\n- 評分：4.1\n- 位置：天王寺公園內\n- 門票：大人 ¥500（高 CP 值）\n- 開放時間：9:30–17:00（週二休）\n\n## 特色\n- 創立於 1915 年，已有百年歷史\n- 飼養動物超過 1,000 隻（約 200 種）\n- 與通天閣・新世界步行可達，適合半日遊\n\n## 周邊\n- 相連：通天閣（步行 10 分）\n- 相連：Harukas300 展望台（天王寺站）\n- 商圈：天王寺\n\n## 交通\n- 地鐵御堂筋線「動物園前站」步行 5 分\n- JR 環狀線「天王寺站」步行 10 分\n\n## 來源\n- 大阪市天王寺動物園",
+  "area": "天王寺",
+  "rating": 4.1
+ },
+ {
+  "id": "景點/大阪池田杯麵博物館",
+  "category": "景點",
+  "name": "大阪池田杯麵博物館",
+  "tags": [
+   "景點",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "互動博物館",
+   "評分": "4.4",
+   "位置": "大阪府池田市（市區外，需約 30 分車程）",
+   "門票": "免費入場（體驗工坊另計）",
+   "開放時間": "9:30–16:30（週二休）"
+  },
+  "summary": "介紹即食麵發明歷史與文化的互動式博物館，位於大阪府池田市。",
+  "body": "介紹即食麵發明歷史與文化的互動式博物館，位於大阪府池田市。\n\n## 基本資訊\n- 類型：互動博物館\n- 評分：4.4\n- 位置：大阪府池田市（市區外，需約 30 分車程）\n- 門票：免費入場（體驗工坊另計）\n- 開放時間：9:30–16:30（週二休）\n\n## 特色\n- 紀念「雞湯麵」發明人安藤百福\n- **自製泡麵工坊**：設計自己的杯麵包裝（需預約，¥500）\n- **雞湯麵小屋**：復原安藤百福的研究小屋\n- 大量即食麵歷史展示與互動裝置\n\n## 適合對象\n- 親子家庭（強烈推薦）\n- 對日本飲食文化有興趣者\n\n## 交通\n- 阪急寶塚線「池田站」步行 5 分\n\n## 相關景點\n- 可與梅田一日遊結合（阪急電鐵直達）\n\n## 來源\n- 大阪池田杯麵博物館",
+  "area": "",
+  "rating": 4.4
+ },
+ {
+  "id": "景點/日本環球影城",
+  "category": "景點",
+  "name": "日本環球影城（USJ）",
+  "tags": [
+   "景點",
+   "主題樂園",
+   "大阪"
+  ],
+  "updated": "Sun Jul 05 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "**類型**": "主題樂園",
+   "**評分**": "4.7 / 5（51.4K 則評價）",
+   "**門票**": "¥8,000–10,000（另行購買，可透過 Klook 客路旅行 預訂）",
+   "**開放時間**": "依季節浮動，詳見 [官網行事曆](https://www.usj.co.jp/web/zh/tw/park-guide/schedule/park-hour)",
+   "**地圖**": "[USJ 官方地圖](https://www.usj.co.jp/web/zh/tw/service-guide/parkmap)"
+  },
+  "summary": "世界級主題樂園，涵蓋哈利波特、超級任天堂世界、小小兵、侏羅紀公園等超人氣主題園區，評分 4.7／5（51,400 則評價，超過 300 萬人次參加）。",
+  "body": "# 日本環球影城（USJ）\n\n世界級主題樂園，涵蓋哈利波特、超級任天堂世界、小小兵、侏羅紀公園等超人氣主題園區，評分 4.7／5（51,400 則評價，超過 300 萬人次參加）。\n\n## 基本資訊\n\n- **類型**：主題樂園\n- **評分**：4.7 / 5（51.4K 則評價）\n- **門票**：¥8,000–10,000（另行購買，可透過 Klook 客路旅行 預訂）\n- **開放時間**：依季節浮動，詳見 [官網行事曆](https://www.usj.co.jp/web/zh/tw/park-guide/schedule/park-hour)\n- **地圖**：[USJ 官方地圖](https://www.usj.co.jp/web/zh/tw/service-guide/parkmap)\n\n## 主要園區\n\n| 園區 | 特色設施 |\n|------|---------|\n| 超級任天堂世界™ | 瑪利歐賽車：庫巴的挑戰書、耀西冒險 |\n| 咚奇剛國度™ | 咚奇剛的瘋狂礦車™ |\n| 哈利波特魔法世界 | 哈利波特禁忌之旅™、鷹馬的飛行™ |\n| 小小兵樂園 | 小小兵瘋狂乘車遊、小小兵瘋狂任務 |\n| 侏羅紀公園 | 飛天翼龍 |\n\n> [!tip] 超級任天堂世界™ 入場須知\n> 進入需持「區域入場保證券」或「區域入場號碼券（電子）」。人潮多時號碼券可能提前截止，建議購買含保證券的 Express Pass 方案，或提前下載 [USJ 官方 App](https://apps.apple.com/jp/app/id532097000?l=zh-TW) 搶號。\n\n## Express Pass 快速通關券\n\n> [!important] 重要提醒\n> **Express Pass 不含入場門票**，需另行購買 USJ 門票。\n\n越過排隊人龍、保證入場指定設施，部分設施需選擇入場時段（付款時可搶選）。\n\n### 方案總覽\n\n| 方案 | 通關設施數 | 參考價格（NT$） | 特色 |\n|------|-----------|------------|------|\n| **Premium** | 約 15 項全包 | 約 8,171 起 | 無時段限制，自由選擇，彈性最高 |\n| **快速通關 8** | 8 項 | 約 4,786 起 | 重點設施 + 最新小小兵 |\n| **快速通關 7**（推薦） | 7 項 | 約 4,365 起 | 含超級任天堂世界™保證入場，含瘋狂礦車 |\n| **快速通關 5** | 5 項 | 約 2,957 起 | 含超級任天堂世界™保證入場、最新小小兵瘋狂任務 |\n| **快速通關 4** ← 本次查詢 | 4 項 | 約 1,971–2,173 起 | 想節省部分排隊時間、預算有限 |\n| **VIP 導覽體驗**（約 3 小時） | 全園區導覽免排隊 | 約 7,692 起 | 不想排隊、預算最充足 |\n\n### 快速通關 4 常見組合\n\n> [!warning] 浮動票價與季節性\n> Express Pass 為浮動制、季節性販售，通常只開賣未來約 1–2 個月的票，組合會輪替。**10/1 屬秋季（萬聖節檔期）**，實際開賣組合接近日期才公布。\n> - 含「咒術迴戰 The Real 4-D」的期間限定版只到 **2026/8/18，10/1 不適用**。\n> - 下列為「通關4 常見型態」的參考；出發前至 KKday／USJ 官網確認當日實際組合。\n\n| 組合名稱 | 包含的 4 項設施（部分為「擇一」） |\n|---|---|\n| **Minecart & Selection** | 咚奇剛瘋狂礦車、瑪利歐賽車、哈利波特禁忌之旅、大白鯊/侏儸紀擇一 |\n| **Minion & Hollywood Dream** | 咚奇剛瘋狂礦車、哈利波特禁忌之旅、小小兵瘋狂乘車遊、好萊塢美夢/大白鯊擇一 |\n| **Minion & Theater** | 耀西冒險、小小兵瘋狂乘車遊、小小兵瘋狂任務（成為大壞蛋）、柯南4D/大白鯊擇一 |\n| **Flying Dinosaur & Jurassic Park** | 哈利波特禁忌之旅、鷹馬飛行、太空幻想列車、大白鯊/侏儸紀擇一 |\n| **Minecart & JAWS** | 咚奇剛瘋狂礦車、瑪利歐賽車、哈利波特/飛天翼龍擇一、大白鯊/侏儸紀擇一 |\n| **Backdrop & Race** | 瑪利歐卡丁車、太空幻想列車、逆轉世界、哈利波特/飛天翼龍擇一 |\n| **Race & Theater** | 瑪利歐卡丁車、耀西冒險、哈利波特、小小兵乘車/柯南4D擇一 |\n| **Theater & Flying Dinosaur** | 瑪利歐卡丁車、好萊塢美夢、柯南4D、哈利波特/飛天翼龍擇一 |\n| **Thrills・MAX** | 逆轉世界、好萊塢美夢乘車遊、飛天翼龍、侏儸紀/好萊塢/飛天翼龍3選1 |\n| **Classic & Show** | 哈利波特/侏儸紀擇一、大白鯊、環球妖魔鬼怪搖滾秀、水世界 |\n| **One More Race & Flying Dinosaur** | 瑪利歐卡丁車、哈利波特、好萊塢美夢、飛天翼龍 |\n\n> 另有 **Twilight（黃昏版）** 變體（15:00 後入場、較便宜）。\n\n### 選擇建議\n\n- **想玩最多設施、時間最靈活** → Premium（約 15 項，無時段限制）\n- **必玩任天堂世界＋礦車，預算適中** → 快速通關 7 或 8\n- **只鎖定幾個主力設施** → 快速通關 4 或 5\n- **預算有限又想省部分排隊** → 快速通關 4（11 種組合可挑最愛設施）\n\n### 購票注意\n\n- 部分場次僅限指定時段，付款時可搶選偏好場次\n- 快速通關券有限量，建議提早預訂（售罄則無法補購）\n- 票券當日有效，不可取消，使用 Klook App 查看憑證\n- 若指定設施暫停服務，可向現場工作人員詢問替代設施\n\n## 遊樂設施限制\n\n- 部分設施設有**身高或健康條件限制**\n- 詳見 [遊樂設施使用規範](https://www.usj.co.jp/web/zh/tw/service-guide/safe)\n\n## 交通\n\n- 可預訂 [道頓堀↔USJ 接駁巴士](https://www.klook.com/zh-TW/activity/86890-dotonbori-to-usj-oneway-bus-ticket/)（單程或來回）\n- 附近地鐵站：大阪地鐵（JR 夢咲線 ユニバーサルシティ站）\n\n## 待辦\n\n- [ ] 10/1 上架後，至 KKday 或 USJ 官網確認當日實際可買的快速通關4 組合與浮動票價。\n\n## 來源\n\n- 日本環球影城快速通關券USJ Express Pass（Klook 活動頁，2026-06-13）\n- 日本環球影城（原始資料）\n- 大阪環球影城(USJ)「快速通關4」票種整理（CHAT 查詢記錄，2026-07-05；目標入園日 2026/10/1）",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "景點/木津市場",
+  "category": "景點",
+  "name": "木津市場",
+  "tags": [
+   "景點",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "批發市場",
+   "評分": "4.0",
+   "位置": "大阪市浪速區・難波附近",
+   "開放時間": "約 3:00–10:00（清早批發，一般遊客建議 7:00 前往）"
+  },
+  "summary": "大阪的批發市場，以新鮮海鮮和在地食材聞名。",
+  "body": "大阪的批發市場，以新鮮海鮮和在地食材聞名。\n\n## 基本資訊\n- 類型：批發市場\n- 評分：4.0\n- 位置：大阪市浪速區・難波附近\n- 開放時間：約 3:00–10:00（清早批發，一般遊客建議 7:00 前往）\n\n## 特色\n- 大阪僅存的傳統批發市場，又稱「大阪の台所」\n- 部分攤位對一般消費者開放零售\n- 新鮮海鮮、蔬果、乾貨齊全\n- 適合早起者體驗在地市場文化\n\n## 適合對象\n- 早起旅客（搭配早餐計畫）\n- 對食材文化有興趣者\n\n## 交通\n- 地鐵千日前線「難波元町站」步行 5 分\n- 或從難波步行約 10 分\n\n## 相關地點\n- 附近：難波商圈\n- 可結合：難波周邊早餐選擇\n\n## 來源\n- 木津市場",
+  "area": "難波",
+  "rating": 4
+ },
+ {
+  "id": "景點/海遊館",
+  "category": "景點",
+  "name": "海遊館",
+  "tags": [
+   "景點",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "水族館",
+   "評分": "4.5",
+   "位置": "梅田・天保山（大阪港）",
+   "門票": "大人 ¥2,700（建議提前網購）",
+   "開放時間": "10:00–20:00（依季節調整）"
+  },
+  "summary": "大阪天保山的巨型水族館，以環太平洋生態展示著稱。",
+  "body": "大阪天保山的巨型水族館，以環太平洋生態展示著稱。\n\n## 基本資訊\n- 類型：水族館\n- 評分：4.5\n- 位置：梅田・天保山（大阪港）\n- 門票：大人 ¥2,700（建議提前網購）\n- 開放時間：10:00–20:00（依季節調整）\n\n## 特色\n- 主水槽「太平洋」：全球最大水槽之一，飼養鯨鯊\n- 涵蓋日本、南極、北極、厄瓜多等 14 個生態環境\n- 夜間展示（水母區）極受歡迎\n\n## 交通\n- 地鐵中央線「大阪港站」步行 5 分\n- 搭船：從天保山碼頭可抵達\n\n## 相關景點\n- 附近：天保山摩天輪（免費）\n- 附近：梅田（30 分可達）\n\n## 來源\n- 海遊館",
+  "area": "梅田",
+  "rating": 4.5
+ },
+ {
+  "id": "景點/通天閣",
+  "category": "景點",
+  "name": "通天閣",
+  "tags": [
+   "景點",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "觀景塔 / 觀景台",
+   "評分": "4.1",
+   "位置": "天王寺・新世界商圈",
+   "門票": "大人 ¥800（一般展望台）/ 頂部展望台另計"
+  },
+  "summary": "大阪新世界地區的標誌性觀景塔，可俯瞰市區景色。",
+  "body": "大阪新世界地區的標誌性觀景塔，可俯瞰市區景色。\n\n## 基本資訊\n- 類型：觀景塔 / 觀景台\n- 評分：4.1\n- 位置：天王寺・新世界商圈\n- 門票：大人 ¥800（一般展望台）/ 頂部展望台另計\n\n## 特色\n- 高約 103 公尺，大阪象徵之一\n- 頂部有「ビリケン」（幸運神）像，摸腳底可帶來好運\n- 附近為新世界商圈，串炸（kushikatsu）名店聚集\n\n## 交通\n- 地鐵堺筋線「恵美須町站」步行 3 分\n- 地鐵御堂筋線「動物園前站」步行 5 分\n\n## 相關景點\n- 附近：天王寺動物園（步行 10 分）\n- 附近：Harukas300 展望台（天王寺區域）\n- 商圈：天王寺・新世界\n\n## 來源\n- 通天閣",
+  "area": "天王寺",
+  "rating": 4.1
+ },
+ {
+  "id": "購物/BIOTOP-OSAKA",
+  "category": "購物",
+  "name": "BIOTOP OSAKA",
+  "tags": [
+   "購物",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "服飾選品店",
+   "評分": "4.0",
+   "價位": "$$（中高價位）",
+   "區域": "心齋橋・南堀江一帶"
+  },
+  "summary": "位於大阪的設計師服飾選品店，以自然、有機風格著稱。",
+  "body": "位於大阪的設計師服飾選品店，以自然、有機風格著稱。\n\n## 基本資訊\n- 類型：服飾選品店\n- 評分：4.0\n- 價位：$$（中高價位）\n- 區域：心齋橋・南堀江一帶\n\n## 特色\n- 匯集日本及海外設計師品牌\n- 店內空間設計感強，融合植物與工業風\n- 販售服飾、雜貨、咖啡\n\n## 相關商店\n- 附近：Orange Street（南堀江設計師街）\n- 商圈：購物指南\n\n## 來源\n- BIOTOP OSAKA",
+  "area": "心齋橋",
+  "rating": 4
+ },
+ {
+  "id": "購物/Gachagacha-no-mori-Osaka-Umeda-Chayamachi-Store",
+  "category": "購物",
+  "name": "Gachagacha no mori Osaka Umeda Chayamachi Store",
+  "tags": [
+   "購物",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "玩具店",
+   "評分": "4.1",
+   "區域": "大阪梅田茶屋町",
+   "描述": "扭蛋森林，位於梅田茶屋町，以大量扭蛋機為特色的玩具店。"
+  },
+  "summary": "玩具店 商店，評分 4.1。扭蛋森林，位於梅田茶屋町，以大量扭蛋機為特色的玩具店。",
+  "body": "玩具店 商店，評分 4.1。扭蛋森林，位於梅田茶屋町，以大量扭蛋機為特色的玩具店。\n\n## 基本資訊\n- 類型：玩具店\n- 評分：4.1\n- 區域：大阪梅田茶屋町\n- 描述：扭蛋森林，位於梅田茶屋町，以大量扭蛋機為特色的玩具店。\n\n## 來源\n- 扭蛋之森 梅田茶屋町店",
+  "area": "梅田",
+  "rating": 4.1
+ },
+ {
+  "id": "購物/Grand-Front-Osaka",
+  "category": "購物",
+  "name": "Grand Front Osaka",
+  "tags": [
+   "購物",
+   "大阪",
+   "梅田"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "大型購物商場",
+   "位置": "梅田，JR 大阪站周邊",
+   "特色": "從 LUCUA 2F 連廊直通，戶外品牌集中"
+  },
+  "summary": "梅田商圈極具設計感的現代購物空間，分南北兩館，戶外品牌與生活雜貨集中地，從 LUCUA 2F 連廊可直接步行抵達。",
+  "body": "梅田商圈極具設計感的現代購物空間，分南北兩館，戶外品牌與生活雜貨集中地，從 LUCUA 2F 連廊可直接步行抵達。\n\n## 基本資訊\n- 類型：大型購物商場\n- 位置：梅田，JR 大阪站周邊\n- 特色：從 LUCUA 2F 連廊直通，戶外品牌集中\n\n## 樓層導覽\n\n### 南館\n- **無印良品旗艦店**（必逛）\n- **4F**：Arc'teryx 始祖鳥\n- **5F**：The North Face 北面（梅田最大一家）\n\n### 北館\n- **4F**：丸善書店（文具控天堂）\n- **B1**：超大全家超市（必買：水果三明治、布丁）\n\n## 必逛重點\n- 無印良品旗艦店規模大、品項全\n- 戶外品牌（始祖鳥、北面）選擇豐富\n- 北館全家超市可買水果三明治與布丁\n\n## 來源\n- 大阪梅田購物攻略與優惠券",
+  "area": "梅田",
+  "rating": null
+ },
+ {
+  "id": "購物/LUCUA",
+  "category": "購物",
+  "name": "LUCUA",
+  "tags": [
+   "購物",
+   "大阪",
+   "梅田"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "大型購物商場",
+   "位置": "梅田，JR 大阪站直達（LUCUA 1100）",
+   "特色": "日系女裝最全、美妝集合店"
+  },
+  "summary": "梅田商圈核心購物商場，分為 LUCUA（右側）與 LUCUA 1100（左側，JR 大阪站直達），日系女裝與美妝集合地。",
+  "body": "梅田商圈核心購物商場，分為 LUCUA（右側）與 LUCUA 1100（左側，JR 大阪站直達），日系女裝與美妝集合地。\n\n## 基本資訊\n- 類型：大型購物商場\n- 位置：梅田，JR 大阪站直達（LUCUA 1100）\n- 特色：日系女裝最全、美妝集合店\n\n## 樓層導覽\n\n### LUCUA（右側）\n- **B1–2F**：生活方式雜貨（必逛：Afternoon Tea LIVING）\n- **2F**：Lululemon（建議早去，晚了排隊）\n- **3F**：Beams 潮牌集合地\n\n### LUCUA 1100（左側，JR 大阪站直達）\n- **3F**：Cosme 關西最大美妝集合店（貨超全，建議提前做攻略）\n\n### 共通樓層\n- **4F**：Barbour、本土小眾飾品 TEN（款式超好看）、Ralph Lauren 拉夫勞倫\n- **6F**：Montbell（貨很全）\n- **3–6F**：日系女裝集中地（Snidel、Fray I.D、Mila Owen）\n- **7–9F**：餐廳 + 空中花園（推薦：壽喜燒「はり重」）\n\n## 必逛重點\n- Cosme 3F 美妝集合店貨品齊全，建議先列清單\n- Lululemon 2F 建議開門就去，晚了排隊\n- 4F TEN 飾品與 Barbour 值得挖寶\n- 6F Montbell 戶外用品貨量充足\n- 7–9F 餐廳區可順便吃壽喜燒\n\n## 來源\n- 大阪梅田購物攻略與優惠券",
+  "area": "梅田",
+  "rating": null
+ },
+ {
+  "id": "購物/Nintendo-OSAKA",
+  "category": "購物",
+  "name": "Nintendo OSAKA",
+  "tags": [
+   "購物",
+   "大阪",
+   "梅田",
+   "任天堂"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "大阪唯一的任天堂官方直營店，位於 大丸百貨 梅田店 13樓。\r\n\r\n## 基本資訊\r\n- 類型：官方周邊專賣店\r\n- 位置：梅田，大丸百貨 梅田店 13F\r\n- 營業時間：10:00 - 20:00（依商場公告為準）\r\n- 注意事項：遇假日或人潮眾多時可能會發放「整理券」（號碼牌）進行人流管制，建議提早前往或事先查看官方社群公告。\r\n\r\n## 必逛重點\r\n- 各式任天堂角色周邊（超級瑪利歐、動物森友會、薩爾達傳說、斯普拉遁、皮克敏等）\r\n- 遊戲軟體及主機展售\r\n- 與同樓層的寶可夢中心（Pokemon-Center-Osaka）相鄰，可一併安排行程。\r\n\r\n## 來源\r\n- 網路搜尋整理",
+  "body": "大阪唯一的任天堂官方直營店，位於 大丸百貨 梅田店 13樓。\r\n\r\n## 基本資訊\r\n- 類型：官方周邊專賣店\r\n- 位置：梅田，大丸百貨 梅田店 13F\r\n- 營業時間：10:00 - 20:00（依商場公告為準）\r\n- 注意事項：遇假日或人潮眾多時可能會發放「整理券」（號碼牌）進行人流管制，建議提早前往或事先查看官方社群公告。\r\n\r\n## 必逛重點\r\n- 各式任天堂角色周邊（超級瑪利歐、動物森友會、薩爾達傳說、斯普拉遁、皮克敏等）\r\n- 遊戲軟體及主機展售\r\n- 與同樓層的寶可夢中心（Pokemon-Center-Osaka）相鄰，可一併安排行程。\r\n\r\n## 來源\r\n- 網路搜尋整理",
+  "area": "梅田",
+  "rating": null
+ },
+ {
+  "id": "購物/Orange-Street",
+  "category": "購物",
+  "name": "Orange Street",
+  "tags": [
+   "購物",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "商業街（設計師品牌）",
+   "評分": "3.9",
+   "區域": "心齋橋・南堀江"
+  },
+  "summary": "大阪南堀江的設計師品牌聚集街道，以個性小店與選品店為主。",
+  "body": "大阪南堀江的設計師品牌聚集街道，以個性小店與選品店為主。\n\n## 基本資訊\n- 類型：商業街（設計師品牌）\n- 評分：3.9\n- 區域：心齋橋・南堀江\n\n## 特色\n- 大阪版的「裏原宿」，聚集約 100 間個性小店\n- 以家具、服飾、咖啡廳、雜貨為主\n- 適合慢逛，發現隱藏好店\n\n## 附近商店\n- BIOTOP OSAKA（同區域選品店）\n- YAMASTORE\n\n## 交通\n- 地鐵長堀鶴見緑地線「西大橋站」步行 5 分\n\n## 來源\n- Orange Street",
+  "area": "心齋橋",
+  "rating": 3.9
+ },
+ {
+  "id": "購物/Paper-Message-Osaka",
+  "category": "購物",
+  "name": "Paper Message Osaka",
+  "tags": [
+   "購物",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "紙品店 / 文具店",
+   "評分": "4.6",
+   "區域": "心齋橋一帶"
+  },
+  "summary": "大阪特色紙品與文具選品店，評分 4.6，深受設計愛好者喜愛。",
+  "body": "大阪特色紙品與文具選品店，評分 4.6，深受設計愛好者喜愛。\n\n## 基本資訊\n- 類型：紙品店 / 文具店\n- 評分：4.6\n- 區域：心齋橋一帶\n\n## 特色\n- 販售高質感紙製品、信封、卡片、包裝材料\n- 日本設計感強烈，適合買作伴手禮\n- 店員親切，可協助配色選購\n\n## 適合購買\n- 特色明信片、和紙製品\n- 精緻包裝紙、信封組\n- 設計文具\n\n## 相關商店\n- 同商圈：心齋橋 PARCO（文具文創樓層）\n\n## 來源\n- Paper Message Osaka",
+  "area": "心齋橋",
+  "rating": 4.6
+ },
+ {
+  "id": "購物/Pokemon-Center-Osaka-DX",
+  "category": "購物",
+  "name": "寶可夢中心 大阪DX店 (Pokémon Center Osaka DX & Pokémon Café)",
+  "tags": [
+   "購物",
+   "大阪",
+   "寶可夢",
+   "心齋橋"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "動漫周邊專賣店、主題餐廳",
+   "位置": "大丸心齋橋店 本館 9F（心齋橋地區）",
+   "交通": "地下鐵御堂筋線心齋橋站直通",
+   "地址": "大阪市中央區心齋橋筋1-7-1"
+  },
+  "summary": "位於心齋橋的豪華版寶可夢官方專賣店，面積更大，並且附設關西唯一的寶可夢咖啡廳（Pokémon Café）。",
+  "body": "位於心齋橋的豪華版寶可夢官方專賣店，面積更大，並且附設關西唯一的寶可夢咖啡廳（Pokémon Café）。\n\n## 基本資訊\n- 類型：動漫周邊專賣店、主題餐廳\n- 位置：大丸心齋橋店 本館 9F（心齋橋地區）\n- 交通：地下鐵御堂筋線心齋橋站直通\n- 地址：大阪市中央區心齋橋筋1-7-1\n\n## 特色\n- 規模較大，擁有許多DX店專屬設計或限定商品。\n- 附設 **Pokémon Café**（寶可夢咖啡廳），提供豐富的主題造型餐點與飲品。\n- ⚠️ **注意**：Pokémon Café 通常非常熱門，建議必須事前上網預約才能入內用餐。\n\n## 相關地點\n- 大丸百貨\n- 心齋橋PARCO（緊鄰大丸心齋橋店）",
+  "area": "心齋橋",
+  "rating": null
+ },
+ {
+  "id": "購物/Pokemon-Center-Osaka",
+  "category": "購物",
+  "name": "寶可夢中心 大阪店 (Pokémon Center Osaka)",
+  "tags": [
+   "購物",
+   "大阪",
+   "寶可夢",
+   "梅田"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "動漫周邊專賣店",
+   "位置": "大丸梅田店 13F（梅田地區）",
+   "交通": "JR 大阪站步行約 5 分鐘",
+   "地址": "大阪市北區梅田3-1-1"
+  },
+  "summary": "位於梅田的寶可夢官方專賣店，提供豐富的寶可夢周邊商品，包括玩偶、文具、服飾及集換式卡牌。",
+  "body": "位於梅田的寶可夢官方專賣店，提供豐富的寶可夢周邊商品，包括玩偶、文具、服飾及集換式卡牌。\n\n## 基本資訊\n- 類型：動漫周邊專賣店\n- 位置：大丸梅田店 13F（梅田地區）\n- 交通：JR 大阪站步行約 5 分鐘\n- 地址：大阪市北區梅田3-1-1\n\n## 特色\n- 位於交通便利的梅田商圈。\n- 擁有種類齊全的官方寶可夢周邊商品。\n- 適合在梅田周邊逛街時順道前往。\n\n## 相關地點\n- 大丸百貨",
+  "area": "梅田",
+  "rating": null
+ },
+ {
+  "id": "購物/YAMASTORE",
+  "category": "購物",
+  "name": "YAMASTORE",
+  "tags": [
+   "購物",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "服飾選品店",
+   "評分": "4.5",
+   "區域": "心齋橋・南堀江"
+  },
+  "summary": "大阪南堀江的精選服飾店，評分 4.5，以高品質選品著稱。",
+  "body": "大阪南堀江的精選服飾店，評分 4.5，以高品質選品著稱。\n\n## 基本資訊\n- 類型：服飾選品店\n- 評分：4.5\n- 區域：心齋橋・南堀江\n\n## 特色\n- 匯集日本獨立設計師品牌\n- 選品風格偏簡約、質感路線\n- 適合尋找非連鎖的獨特服飾\n\n## 相關商店\n- 同商圈：BIOTOP OSAKA\n- 同街：Orange Street\n\n## 來源\n- YAMASTORE",
+  "area": "心齋橋",
+  "rating": 4.5
+ },
+ {
+  "id": "購物/友都八喜",
+  "category": "購物",
+  "name": "友都八喜",
+  "tags": [
+   "購物",
+   "大阪",
+   "梅田"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "電子產品 / 玩具商場",
+   "位置": "梅田",
+   "特色": "閉店時間較晚，可最後逛"
+  },
+  "summary": "梅田商圈的大型電子產品與玩具專賣商場，閉店時間較晚，適合排在購物行程最後一站。",
+  "body": "梅田商圈的大型電子產品與玩具專賣商場，閉店時間較晚，適合排在購物行程最後一站。\n\n## 基本資訊\n- 類型：電子產品 / 玩具商場\n- 位置：梅田\n- 特色：閉店時間較晚，可最後逛\n\n## 必逛重點\n- 電子產品種類齊全\n- 各類玩具、模型、動漫周邊\n- 營業時間較其他百貨長，適合夜間採買\n\n## 來源\n- 大阪梅田購物攻略與優惠券",
+  "area": "梅田",
+  "rating": null
+ },
+ {
+  "id": "購物/大丸百貨",
+  "category": "購物",
+  "name": "大丸百貨",
+  "tags": [
+   "購物",
+   "大阪",
+   "梅田"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "大型百貨",
+   "位置": "梅田，JR 大阪站直結",
+   "特色": "與 阪神百貨 相鄰，可順路逛"
+  },
+  "summary": "JR 大阪站直結的百貨商場，與 阪神百貨 相鄰，適合帶長輩逛街，任天堂與寶可夢官方商店在此。",
+  "body": "JR 大阪站直結的百貨商場，與 阪神百貨 相鄰，適合帶長輩逛街，任天堂與寶可夢官方商店在此。\n\n## 基本資訊\n- 類型：大型百貨\n- 位置：梅田，JR 大阪站直結\n- 特色：與 阪神百貨 相鄰，可順路逛\n\n## 樓層導覽\n- **13F**：任天堂官方商店（Nintendo-OSAKA）、寶可夢中心（Pokemon-Center-Osaka）\n- **B1**：老舖和菓子（推薦：文明堂蜂蜜蛋糕）\n\n## 必逛重點\n- 13F 任天堂官方商店、寶可夢中心\n- B1 老舖和菓子（文明堂蜂蜜蛋糕）\n\n## 來源\n- 大阪梅田購物攻略與優惠券",
+  "area": "梅田",
+  "rating": null
+ },
+ {
+  "id": "購物/心齋橋PARCO",
+  "category": "購物",
+  "name": "心齋橋PARCO",
+  "tags": [
+   "購物",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "大型購物商場",
+   "評分": "4.2",
+   "位置": "心齋橋筋商店街旁",
+   "樓層": "B2–9F"
+  },
+  "summary": "位於心齋橋筋的大型購物商場，2020 年重新開幕，集合潮流品牌與文化設施。",
+  "body": "位於心齋橋筋的大型購物商場，2020 年重新開幕，集合潮流品牌與文化設施。\n\n## 基本資訊\n- 類型：大型購物商場\n- 評分：4.2\n- 位置：心齋橋筋商店街旁\n- 樓層：B2–9F\n\n## 特色\n- 引進多個日本首次進駐大阪的品牌\n- 低樓層：潮流服飾、運動品牌\n- 高樓層：文創雜貨、書店（BOOKOFF SUPER BAZAAR）、藝廊\n- 頂樓有不定期展覽與快閃活動\n- Nintendo Osaka 官方商店在此（需排隊）\n\n## 推薦樓層\n- 1F：潮牌街頭服飾\n- 4F：生活雜貨、設計小物（含 Paper Message 類型品牌）\n- 9F：展覽・活動空間\n\n## 相關商店\n- 同商圈：扭蛋森林（梅田店）\n\n## 來源\n- 心齋橋PARCO",
+  "area": "心齋橋",
+  "rating": 4.2
+ },
+ {
+  "id": "購物/日本超商指南",
+  "category": "購物",
+  "name": "日本超商指南",
+  "tags": [
+   "購物",
+   "大阪",
+   "超商",
+   "美食"
+  ],
+  "updated": "Sat Jul 04 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "三大超商（LAWSON／全家／7-11）必買零食甜點泡麵清單，含 2026 網路熱門追加與隱藏吃法。價格平易、24 小時營業，是深夜與早餐的補給首選。",
+  "body": "三大超商（LAWSON／全家／7-11）必買零食甜點泡麵清單，含 2026 網路熱門追加與隱藏吃法。價格平易、24 小時營業，是深夜與早餐的補給首選。\n\n## 🏪 LAWSON（羅森）\n- **炸雞君（からあげクン）**：超商炸雞界長青樹，一口大小、多口味，鮮嫩多汁。\n- **生乳卷（Uchi Café）**：招牌甜點，北海道鮮奶油清爽不膩、蛋糕體綿密。\n- **可麗露**：外脆內軟，焦糖與蘭姆酒香，不輸專業甜點店。\n- **Q彈牛奶蛋糕卷／Q彈紅豆奶油銅鑼燒（Doramocchi）**：麻糬般 Q 彈餅皮。\n- **鴨to蔥沖泡杯麵**：還原上野名店風味，鴨油香濃。\n- **2026 熱門**：GODIVA 聯名甜點（CP 值極高，必搶）、NATURAL LAWSON 健康零食（堅果果乾）。\n\n## 🏪 FamilyMart（全家）\n- **Fami chiki 炸雞（ファミチキ）**：日本超商炸雞傳奇，無骨、外酥、肉汁爆發。\n- **牛奶的束縛（ミルクの束縛）**：乳脂香濃、包裝吸睛的特色飲品。\n- **雙層奶油卡士達蛋糕**：卡士達＋鮮奶油雙重夾擊。\n- **2026 熱門**：舒芙蕾布丁（萬年不敗款）、爆餡可麗餅（Famima The Crepe）、BAKAUKE 濃厚4種起司米果（下酒神物）。\n\n## 🏪 7-11（Seven-Eleven）\n- **炭火燒雞胗**：微波後炭香四溢、口感爽脆，居酒屋等級下酒菜。\n- **nana chiki 炸雞（ナナチキ）**：王牌炸雞，麵衣薄、外酥內嫩。\n- **奶油砂糖樹餅乾（Sugar Butter Tree）**：知名伴手禮超商限定平價版，適合當小伴手禮。\n- **Q彈甜甜圈卡士達奶油球**：一口一個，Q 軟香甜。\n- **2026 熱門**：蛋香醬油飯糰、日清「蒙古湯麵中本」味噌拉麵（嗜辣必買）、焦糖烤布蕾冰淇淋（BRULEE）。\n\n## 🥤 綜合推薦\n- **meiji 明治 咖啡牛乳**：泡湯後必喝經典，咖啡與牛奶比例完美。\n\n## 💡 隱藏吃法與購物撇步\n- **自製西西里咖啡**：把「Pokka Sapporo 檸檬碳酸飲」倒入超商冰黑咖啡混搭，PTT／Dcard 熱門喝法。\n- **優先掃季節限定**：冷藏區與零食區的當季新品（夏季麝香葡萄／水蜜桃、冬季草莓系列）最值得買。\n- **退稅注意**：超商伴手禮若符合免稅規定，購物前備好護照並詢問是否提供現場免稅。\n\n## 相關頁面\n- 梅田、心齋橋、難波（各商圈周邊皆有密集超商）\n\n## 來源\n- 2026日本超商必買清單（懶散日記 / Lazy TV YouTube 影片 + PTT／Dcard 評價）",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "購物/門真三井Outlet",
+  "category": "購物",
+  "name": "三井 Outlet Park 大阪門真 + LaLaport 門真",
+  "tags": [
+   "購物",
+   "大阪",
+   "Outlet",
+   "門真"
+  ],
+  "updated": "Sat Jul 04 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "名稱": "LaLaport Kadoma + MITSUI OUTLET PARK Osaka Kadoma",
+   "地址": "〒571-0031 大阪府門真市松尾町 1-11",
+   "營業時間": "商店／美食廣場 10:00–21:00；餐廳 11:00–22:00（不定休）",
+   "官網（TW）": "<https://mitsui-shopping-park.com/lalaport-mop-kadoma/>"
+  },
+  "summary": "2023 年開幕、關西最大規模的購物複合設施，**三井 Outlet（2F）+ LaLaport（1F/3F）**合體，是**離市區最近的 Outlet**，全室內型不受天氣影響，建議預留半天～一天。",
+  "body": "2023 年開幕、關西最大規模的購物複合設施，**三井 Outlet（2F）+ LaLaport（1F/3F）**合體，是**離市區最近的 Outlet**，全室內型不受天氣影響，建議預留半天～一天。\n\n## 基本資訊\n- 名稱：LaLaport Kadoma + MITSUI OUTLET PARK Osaka Kadoma\n- 地址：〒571-0031 大阪府門真市松尾町 1-11\n- 營業時間：商店／美食廣場 10:00–21:00；餐廳 11:00–22:00（不定休）\n- 官網（TW）：<https://mitsui-shopping-park.com/lalaport-mop-kadoma/>\n\n## 交通\n- **電車**：京阪本線／大阪單軌電車「**門真市站**」步行約 8 分\n  - 從 梅田／難波／心齋橋 搭 大阪地鐵 至「天滿橋站」轉京阪本線至門真市站\n- **接駁巴士**：難波（難波 Parks Tower 前）與 心齋橋（Crysta 長堀地下街南 7 段階梯前）出發\n  - 單程 **¥500**、不可預約、車程約 45 分，班次少，建議提早 10–15 分排隊\n- 市區出發整體約 30–45 分鐘\n\n## 樓層概覽\n| 樓層 | 內容 |\n|------|------|\n| 1F | LaLaport — 藥妝、無印良品、Loft、**黑門市場美食街**、GU/Uniqlo、寵物店 |\n| 2F | **三井 Outlet** — 約 100 家名牌折扣店（全室內型） |\n| 3F | LaLaport — **最大美食廣場（16 店）**、親子品牌、Yamada 3C、角落生物樂園 |\n| RF | 空廣場 — 屋頂兒童遊樂區、Logos Coffee（露營主題咖啡廳） |\n\n## Outlet 特色\n- 約 100 家品牌，常態 **5–7 折**；日幣低點部分可達台灣 4–6 折\n- 品牌含 Coach、Garmin、CK、Nike、Puma、Urban Research、Nano Universe、Beams\n- **Modbell**：全日本最大旗艦級規模免稅店\n\n## 退稅 & 服務\n- 滿 **¥5,000** 可退稅（部分店內辦理、部分集中 1F 退稅櫃檯，另有 PIE VAT App）\n- 免費 Wi-Fi（SSID「MSP Free Wi-Fi」）、Seven Bank ATM、置物櫃（¥300–600）\n- 官網有店家優惠券，購物滿額可享 5–10% 折扣\n- 停車每 30 分 ¥200，消費滿額折抵\n\n## 必逛重點\n- 1F **黑門市場美食街**（牛兆牛排定食、生廣百年海鮮壽司、黃色咖哩、二葉烏龍麵）\n- 3F 美食廣場 16 間排隊名店（日本橋天丼、京鼎樓小館等）\n- 屋頂 Logos Coffee 城市露營風咖啡\n\n## 相關\n- 市區購物比較：梅田、心齋橋、難波 商圈\n\n## 來源\n- 門真三井Outlet與Lalaport",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "購物/阪急百貨",
+  "category": "購物",
+  "name": "阪急百貨",
+  "tags": [
+   "購物",
+   "大阪",
+   "梅田"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "高級百貨",
+   "位置": "梅田，梅田站直達",
+   "特色": "關西百貨之王、櫥窗設計絕美、奢侈品與美妝激戰區"
+  },
+  "summary": "梅田站直達的關西百貨之王，奢侈品與美妝聚集地，B1 食品街甜點名店林立。",
+  "body": "梅田站直達的關西百貨之王，奢侈品與美妝聚集地，B1 食品街甜點名店林立。\n\n## 基本資訊\n- 類型：高級百貨\n- 位置：梅田，梅田站直達\n- 特色：關西百貨之王、櫥窗設計絕美、奢侈品與美妝激戰區\n\n## 樓層導覽\n- **1F**：國際大牌美妝區\n- **2F**：日系專櫃美妝（必逛：SUQQU、ADDICTION、Three）\n- **3–5F**：輕奢到高端女裝（推薦：45R、川久保玲、MHL）\n- **男士館**：獨立一棟樓\n- **B1 食品街**：\n  - 芝士工房 KANAE：流心芝士蛋糕\n  - 然花抄院：抹茶卷天花板\n  - Frantz：草莓松露巧克力\n\n## 必逛重點\n- B1 限定甜點：流心芝士蛋糕、抹茶卷、草莓松露巧克力\n- 美妝專櫃品牌極全（SUQQU、ADDICTION、Three）\n- 女裝 3–5F 輕奢到高端選擇豐富\n- 男士館獨立建築，品類完整\n\n## 來源\n- 大阪梅田購物攻略與優惠券",
+  "area": "梅田",
+  "rating": null
+ },
+ {
+  "id": "購物/阪神百貨",
+  "category": "購物",
+  "name": "阪神百貨",
+  "tags": [
+   "購物",
+   "大阪",
+   "梅田"
+  ],
+  "updated": "Mon Jun 15 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "類型": "大型百貨",
+   "位置": "梅田，與 大丸百貨 相鄰",
+   "特色": "美食天堂、B1 小吃豐富"
+  },
+  "summary": "與 大丸百貨 相鄰的百貨商場，美食愛好者的天堂，B1 小吃極其豐富。",
+  "body": "與 大丸百貨 相鄰的百貨商場，美食愛好者的天堂，B1 小吃極其豐富。\n\n## 基本資訊\n- 類型：大型百貨\n- 位置：梅田，與 大丸百貨 相鄰\n- 特色：美食天堂、B1 小吃豐富\n\n## 樓層導覽\n- **2F**：西太后（Vivienne Westwood）\n- **B1**：美食街（烤魷魚等名物）\n\n## 必逛重點\n- 2F 西太后\n- B1 美食街（烤魷魚等名物）\n- 與 大丸百貨 相鄰，可順路逛\n\n## 來源\n- 大阪梅田購物攻略與優惠券",
+  "area": "梅田",
+  "rating": null
+ },
+ {
+  "id": "交通/南海電鐵Rapit",
+  "category": "交通",
+  "name": "南海電鐵 Rapi:t 機場快線",
+  "tags": [
+   "交通",
+   "大阪",
+   "關西機場"
+  ],
+  "updated": "Sat Jul 04 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "路線": "關西機場 → … → 難波（經南海本線，時速最高 120km/h）",
+   "所需時間": "最快約 34 分鐘",
+   "班距": "約每 30 分鐘一班",
+   "車廂": "6 輛編成，全車指定席",
+   "官網": "<https://www.howto-osaka.com/tc/rapit/>"
+  },
+  "summary": "關西機場（KIX）往返大阪難波的機場特急列車，由南海電鐵營運（50000 系車型），最快約 **34 分鐘**直達 難波，全車指定席。",
+  "body": "關西機場（KIX）往返大阪難波的機場特急列車，由南海電鐵營運（50000 系車型），最快約 **34 分鐘**直達 難波，全車指定席。\n\n## 基本資訊\n- 路線：關西機場 → … → 難波（經南海本線，時速最高 120km/h）\n- 所需時間：最快約 34 分鐘\n- 班距：約每 30 分鐘一班\n- 車廂：6 輛編成，全車指定席\n- 官網：<https://www.howto-osaka.com/tc/rapit/>\n\n## α 與 β 差異\n- **Rapi:t α**：停靠站少（不停堺站），較快\n- **Rapi:t β**：各站停靠（多停岸和田、堺）\n\n全停靠站：關西機場 → 臨空城 → 泉佐野 → 岸和田 → 堺 → 天下茶屋 → 新今宮 → 難波\n\n## 票價\n| 種類 | 合計 | 備註 |\n|------|------|------|\n| 普通席（レギュラー） | ¥1,490 | 乘車券 ¥970 + 特急券 ¥520 |\n| 超級座位（スーパーシート） | ¥1,700 | 2+1 配置，更寬敞 |\n\n- 網路購票（チケットレス）比窗口便宜約 ¥150\n- 兒童（小學生）半價；5 歲以下不佔位免費\n\n## 省錢替代方案\n- **關空トク割 ラピートきっぷ**：關西機場→難波 ¥1,490 → **¥1,430**（官方優惠）\n- **空港急行**：同路線免特急券，約 43–50 分、¥970（無指定席、較擁擠，但最省）\n\n## KKday 套票（台幣，供比價）\n- 單程票：$306 起\n- 單程 + 大阪地下鐵 26/48h 暢遊券：$502 起\n- 單程 + 大阪周遊卡：$978 起（含景點免費+地鐵無限）\n\n## 使用重點\n- 對象：12 歲以上、觀光簽證（不適用日本國籍）\n- 套票類非當日票 → 只能搭「購買日隔日起」的列車\n- 購票後須線上預約日期／車次／座位（最晚發車前 5 分鐘），最多變更 2 次\n- 錯過列車：特急券失效不退，但乘車券可轉搭普通列車\n- **QR 碼截圖無效**，須用裝置電子正本走專用檢票機\n\n## 購物折價券\n出示電子車票畫面，乘車日當天可於難波 PARKS 2F／難波 CITY B2F 資訊中心兌換：滿 ¥5,000 領 ¥500 券、滿 ¥10,000 領 ¥1,000 券、滿 ¥30,000 領 ¥3,000 券。\n\n## 轉乘\n難波站可轉 大阪地鐵（御堂筋線／千日前線／四橋線）、JR、近鐵、阪神，前往 心齋橋、道頓堀、梅田、天王寺 及京都、神戶、奈良。\n\n## 相關\n- 近鐵周遊券（往奈良／京都／名古屋方向的替代交通）\n\n## 來源\n- 大阪關西機場南海電鐵Rapit機場快線車票",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "交通/大阪地鐵",
+  "category": "交通",
+  "name": "大阪地鐵",
+  "tags": [
+   "交通",
+   "大阪"
+  ],
+  "updated": "Sun Jun 14 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "大阪市營地下鐵，目前由 Osaka Metro 株式會社營運。",
+  "body": "大阪市營地下鐵，目前由 Osaka Metro 株式會社營運。\n\n## 路線一覽\n- **御堂筋線（M）**：紅色，串連梅田 ↔ 難波 ↔ 天王寺 ↔ 中百舌島\n- **谷町線（T）**：紫色，大阪府轄內路線\n- **四橋線（Y）**：藍色，連接西梅田與住之江\n- **中央線（C）**：綠色，連接大阪港與長田\n- **千日前線（S）**：粉色，南海難波 ↔ 近鐵奈良\n- **堺筋線（K）**：棕色，連接天神橋筋六丁目與動物園前\n- **長堀鶴見綠地線（N）**：金色\n- **今里筋線（I）**：蘋果綠\n- **New Tram（NT）**：單軌\n\n## 主要轉乘站\n- 梅田/東梅田/西梅田：御堂筋+谷町+四橋+堺筋+JR+阪急+阪神\n- 難波/大阪難波：御堂筋+千日前+四橋+近鐵+南海\n- 天王寺：御堂筋+谷町+JR+近鐵\n- 心齋橋/長堀橋：御堂筋+長堀鶴見綠地\n\n## 票券\n- 單程：¥180 起（依距離）\n- 1 日券：¥820（地鐵限定）\n- 大阪周遊券（Osaka Amazing Pass）：1 日／2 日券，含地鐵無限搭＋約 40 處景點免費入場\n\n## 來源\n- 綜合 梅田、難波、天王寺、心齋橋 區域描述",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "交通/近鐵周遊券",
+  "category": "交通",
+  "name": "近鐵電車周遊券 KINTETSU RAIL PASS",
+  "tags": [
+   "交通",
+   "大阪",
+   "近鐵",
+   "關西"
+  ],
+  "updated": "Sat Jul 04 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "近畿日本鐵道發行的外國旅客專用**數位周遊券**，可自由搭乘指定近鐵電車、伊賀鐵道、生駒纜車與部分巴士，適用大阪、京都、奈良、伊勢志摩、名古屋。適合安排 難波 出發的奈良／京都一日遊。",
+  "body": "近畿日本鐵道發行的外國旅客專用**數位周遊券**，可自由搭乘指定近鐵電車、伊賀鐵道、生駒纜車與部分巴士，適用大阪、京都、奈良、伊勢志摩、名古屋。適合安排 難波 出發的奈良／京都一日遊。\n\n## 票種比較\n| 票種 | 天數 | 價格 (JPY) | 範圍重點 |\n|------|:----:|:----------:|----------|\n| 1日券 | 1日 | ¥1,900 | 大阪難波–近鐵奈良、京都–筒井、生駒纜車＋奈良公園區間巴士 |\n| 2日券 | 2日 | ¥3,700 | 大阪／奈良／京都府下全區域（連續2天）＋明日香、室生 |\n| 5日券 | 5日 | ¥4,900 | 近鐵**全線**＋伊賀鐵道＋生駒纜車（大阪→奈良→京都→三重→名古屋） |\n| 5日券 PLUS | 5日 | ¥6,700 | 5日券＋奈良交通／三重交通／鳥羽海鷗巴士（伊勢志摩、名花之里等） |\n\n（小児半價；未滿 6 歲免費）\n\n## 主要景點對應\n- 奈良公園／東大寺／春日大社 → 近鐵奈良站（全票種）\n- 法隆寺、藥師寺 → 轉巴士（全票種）\n- 飛鳥、石舞台 → 飛鳥站（2日以上）\n- 伊勢神宮、鳥羽水族館、志摩西班牙村 → 5日／PLUS\n- 名古屋城 → 近鐵名古屋站（5日／PLUS）\n\n## 特急券須另購\n本券**不含特急券**，搭近鐵特急（全車指定席）需加購：\n- 大阪難波→近鐵奈良約 ¥520；大阪難波→名古屋約 ¥1,990\n- 著名車型：HINOTORI、SHIMAKAZE、Urban Liner\n- 可網路預購或車站「特急券」窗口出示 PASS 購買\n\n## 重要規則\n- 對象：短期滯在觀光簽證外國旅客（不適用日本國籍）\n- 效期以「當日首班～末班車」為一天（**非** 24/48 小時制）\n- **不可**搭乘 JR、地下鐵、其他私鐵（生駒纜車除外）\n- 數位 QR 票（截圖／列印無效）；同筆訂單按下「開始使用」後**全部同時啟用**\n- 進站前關閉 IC 卡感應（Suica/ICOCA），QR 輕觸驗票機\n- 購買後 180 天內未使用可免費取消；遺失不補發\n\n## 相關\n- 南海電鐵Rapit（關西機場↔難波機場特急）\n- 大阪地鐵（近鐵周遊券不含地下鐵，市內移動需另備）\n\n## 來源\n- 關西近鐵電車周遊券",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "住宿/住宿總覽",
+  "category": "住宿",
+  "name": "住宿總覽",
+  "tags": [
+   "住宿",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "大阪住宿區域選擇指南。",
+  "body": "大阪住宿區域選擇指南。\n\n## 已確認住宿\n\n| 飯店 | 日期 | 區域 | 狀態 |\n|---|---|---|---|\n| 大阪心齋橋格蘭多酒店 | 2026/09/30-10/04 | 心齋橋 | ✅ 已確認（ezfly 機加酒） |\n\n## 主要住宿區域\n\n### 難波 / 心齋橋（觀光首選）\n- 優點：購物餐廳密集、機場直達、生活機能強\n- 缺點：觀光客人潮多、價格中等偏高\n- 適合：首次造訪、回國前掃貨\n- ✅ 已確認入住：大阪心齋橋格蘭多酒店\n\n### 梅田（商務 + 交通樞紐）\n- 優點：JR/阪急/阪神/地鐵多線匯聚、新大阪近\n- 缺點：餐廳偏商務、距離難波需搭車\n- 適合：多日遊、善用 JR 移動\n\n### 天王寺（本地 + CP 值）\n- 優點：價格便宜、本地商圈、動物園 + 展望台\n- 缺點：距離難波/梅田較遠\n- 適合：深度遊、預算導向\n\n## 來源\n- 待 Reference 補充具體飯店清單",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "住宿/大阪心齋橋格蘭多酒店",
+  "category": "住宿",
+  "name": "大阪心齋橋格蘭多酒店",
+  "tags": [
+   "住宿",
+   "心齋橋",
+   "大阪"
+  ],
+  "updated": "Wed Jun 10 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {
+   "**位置**": "大阪市中央區（心齋橋區域）",
+   "**最近車站**": "長堀橋站步行 5 分 / 心齋橋站步行 10 分",
+   "**可利用路線**": "御堂筋線、堺筋線、長堀鶴見緑地線",
+   "**房型**": "雙人床房 × 4 晚",
+   "**早餐**": "不含（附近有 LAWSON / 7-11 / 咖啡店）"
+  },
+  "summary": "2026/09/30-10/04 已確認入住飯店（ezfly 機加酒方案）。",
+  "body": "# 大阪心齋橋格蘭多酒店 Shinsaibashi Grand Hotel Osaka\n\n2026/09/30-10/04 已確認入住飯店（ezfly 機加酒方案）。\n\n## 基本資訊\n- **位置**：大阪市中央區（心齋橋區域）\n- **最近車站**：長堀橋站步行 5 分 / 心齋橋站步行 10 分\n- **可利用路線**：御堂筋線、堺筋線、長堀鶴見緑地線\n- **房型**：雙人床房 × 4 晚\n- **早餐**：不含（附近有 LAWSON / 7-11 / 咖啡店）\n\n## 交通優勢\n- **御堂筋線「心齋橋站」**：直達梅田、難波、天王寺、關西機場（轉乘）\n- **堺筋線「長堀橋站」**：直達天王寺、動物園前、新世界\n- **長堀鶴見緑地線「長堀橋站」**：直達通天閣方向\n\n## 周邊\n- 步行可達心齋橋筋商店街、道頓堀、難波\n- 生活機能強，附近有便利商店、藥妝店、餐廳密集\n\n## 來源\n- 已確認行程",
+  "area": "心齋橋",
+  "rating": null
+ },
+ {
+  "id": "區域/天王寺",
+  "category": "區域",
+  "name": "天王寺",
+  "tags": [
+   "區域",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "天王寺是本地人愛逛的高性價比商圈，適合親子家庭與小資女。",
+  "body": "# 天王寺 Tennoji\n\n天王寺是本地人愛逛的高性價比商圈，適合親子家庭與小資女。\n\n## 主要商場\n\n### 近鐵百貨（阿倍野 HARUKAS）\n日本第一高樓，景色無敵。可登頂展望台後下樓購物，高端品牌齊全，推薦仙貝/和果子等老字號伴手禮。\n\n### Q's Mall\n超大購物中心，帶娃家庭首選。有阿卡醬母嬰、伊藤洋華堂超市、Bic Camera、優衣庫/GU 大型店、兒童樂園。\n\n### Hoop\n年輕人的潮流聚集地，與近鐵百貨通過天橋連接，風格更街頭。推薦 Harbs 蛋糕與時尚買手店。\n\n### MIO\n就在車站樓上，年輕女裝超多。品牌風格比梅田更親民，折扣力度常有驚喜。推薦日系少女牌與雜貨鋪。",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "區域/心齋橋",
+  "category": "區域",
+  "name": "心齋橋",
+  "tags": [
+   "區域",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "心齋橋是橫跨道頓堀的繁華商店街，遊客必打卡的購物聖地，集潮流、二次元、美食於一身。",
+  "body": "# 心齋橋 Shinsaibashi\n\n心齋橋是橫跨道頓堀的繁華商店街，遊客必打卡的購物聖地，集潮流、二次元、美食於一身。\n\n## 交通\n- **御堂筋線「心齋橋站」**：直達梅田、難波、天王寺、關西機場（轉乘）\n- **堺筋線、長堀鶴見緑地線「長堀橋站」**：步行 5 分\n- 已確認住宿 大阪心齋橋格蘭多酒店 位於此區，長堀橋站步行 5 分 / 心齋橋站步行 10 分\n\n## 主要商場\n\n### 大丸心齋橋\n古典與現代的結合，建築本身即為藝術（Vories 建築風格）。1F 國際大牌、B1 美食街（Shake Shack）、**9F 寶可夢咖啡廳**（需預約）。\n\n### Parco\n年輕人的潮流聖地，二次元天堂。與大丸本館有連廊可直通。6F 有吉卜力/寶可夢/卡普空專區，B2 心齋橋霓虹食堂街是喝酒聚餐好去處。",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "區域/梅田",
+  "category": "區域",
+  "name": "梅田",
+  "tags": [
+   "區域",
+   "大阪",
+   "購物"
+  ],
+  "updated": "2026-06-15",
+  "favorite": false,
+  "fields": {},
+  "summary": "梅田是大阪北部商業核心，以 **JR大阪站** 為中心，周邊百貨商場錯綜複雜宛如迷宮，是高級百貨與美妝甜點的激戰區。一天根本逛不完，建議選自己有興趣的商場。",
+  "body": "# 梅田 Umeda\n\n梅田是大阪北部商業核心，以 **JR大阪站** 為中心，周邊百貨商場錯綜複雜宛如迷宮，是高級百貨與美妝甜點的激戰區。一天根本逛不完，建議選自己有興趣的商場。\n\n## 主要商場\n\n### Grand Front Osaka\n極具設計感的現代空間，好逛不壓抑。分南北兩館：南館有 MUJI 旗艦店、4F 始祖鳥、5F 北面（梅田最大）；北館有 4F 丸善書店、B1 全家超市。從 LUCUA 2F 連廊可直接步行抵達。\n\n### 阪急百貨\n關西百貨之王，櫥窗設計絕美。1F 國際大牌、2F 日系美妝專櫃（SUQQU、ADDICTION、Three）；3–5F 輕奢到高端女裝（45R、川久保玲、MHL）；B1 層限定甜點（流心芝士蛋糕、然花抄院抹茶卷、Frantz 草莓松露巧克力）；另有獨立男士館。\n\n### LUCUA / LUCUA 1100\n日系女裝最全。LUCUA 偏年輕潮流（B1–2F 生活方式雜貨、2F Lululemon、3F Beams）；LUCUA 1100 偏輕熟質感，3F 有關西最大 Cosme 美妝集合店。4F Barbour / TEN 飾品 / 拉夫勞倫；6F Montbell；7–9F 餐廳 + 空中花園（壽喜燒「はり重」）。\n\n### HEP FIVE\n關西奢華地標，1F 美妝區品牌極全，B1 甜點區是伴手禮天堂。\n\n### 大丸百貨\n就在車站樓上，帶長輩逛街首選。6F 任天堂官方商店、13F 寶可夢中心；B1 老舖和菓子（文明堂蜂蜜蛋糕）。\n\n### 阪急三番街\n藏在車站地下的寶藏街區。Kiddy Land（兩層樓動漫周邊），平價美食聚集。\n\n### 阪神百貨\n美食愛好者的天堂。B1 層小吃極其豐富，必吃名物「烤魷魚」；2F 西太后。與大丸百貨相鄰，可順路逛。\n\n### 友都八喜\n電子產品 + 各類玩具，閉店時間較晚，可排在最後逛。",
+  "area": "",
+  "rating": null
+ },
+ {
+  "id": "區域/難波",
+  "category": "區域",
+  "name": "難波",
+  "tags": [
+   "區域",
+   "大阪"
+  ],
+  "updated": "Tue Jun 09 2026 08:00:00 GMT+0800 (台北標準時間)",
+  "favorite": false,
+  "fields": {},
+  "summary": "難波以 **南海難波站** 為軸心，往下直達關西機場，是回國前掃貨與買伴手禮的終點站。",
+  "body": "# 難波 Namba\n\n難波以 **南海難波站** 為軸心，往下直達關西機場，是回國前掃貨與買伴手禮的終點站。\n\n## 主要商場\n\n### 高島屋（Takashimaya）\n南海難波站直結，老牌百貨底蘊。B1層堪稱甜點博物館，退稅櫃檯服務好，化妝品品牌極全，回國前掃貨最方便。\n\n### 難波丸井 0101（OIOI）\n年輕潮流，主要面向大學生和職場新人。有影院、動漫快閃活動，推薦 Seria 百元店與日系女鞋品牌。\n\n### 難波 CITY（Namba City）\n連接南海電鐵，生活雜貨多。推薦 Afternoon Tea Living、3COINS、精緻廚具店。",
+  "area": "",
+  "rating": null
+ }
+]
