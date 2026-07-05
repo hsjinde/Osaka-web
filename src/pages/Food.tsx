@@ -3,6 +3,7 @@ import { byCategory } from '../data';
 import Chip from '../components/Chip';
 import Heart from '../components/Heart';
 import Stamp from '../components/Stamp';
+import MapLink from '../components/MapLink';
 import { useTripState } from '../state/store';
 
 export default function Food() {
@@ -53,6 +54,7 @@ export default function Food() {
                   <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--navy)', border: '1px solid rgba(46,58,82,.4)', borderRadius: 4, padding: '1.5px 7px' }}>{r.fields['類型'] ?? '未分類'}</span>
                   <span style={{ fontSize: 12, color: 'var(--brown)' }}>{r.fields['價位'] && r.fields['價位'] !== '-' ? r.fields['價位'] : '價位未記'}</span>
                   {r.area && <span style={{ fontSize: 12, color: 'var(--brown)' }}>{r.area}</span>}
+                  <MapLink name={r.name} area={r.area} />
                 </div>
                 {note && (
                   <div style={{ fontSize: 12.5, color: 'var(--brown-dk)', marginTop: 7, borderTop: '1px dashed rgba(41,35,26,.16)', paddingTop: 7 }}>{note}</div>

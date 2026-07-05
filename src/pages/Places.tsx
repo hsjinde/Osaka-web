@@ -1,6 +1,7 @@
 import { byCategory } from '../data';
 import Heart from '../components/Heart';
 import Stamp from '../components/Stamp';
+import MapLink from '../components/MapLink';
 
 export default function Places() {
   const spots = byCategory('景點');
@@ -24,6 +25,7 @@ export default function Places() {
                   <span style={{ fontSize: 12, color: 'var(--brown)' }}>
                     {[p.fields['位置'], p.fields['門票']].filter(Boolean).join('・')}
                   </span>
+                  <MapLink name={p.name} area={p.area} />
                 </div>
                 {p.summary && (
                   <div style={{ fontSize: 12.5, color: 'var(--brown-dk)', marginTop: 7, borderTop: '1px dashed rgba(41,35,26,.16)', paddingTop: 7 }}>{p.summary}</div>
@@ -50,6 +52,7 @@ export default function Places() {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 7, alignItems: 'center' }}>
                   {p.area && <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--navy)', border: '1px solid rgba(46,58,82,.4)', borderRadius: 4, padding: '1.5px 7px' }}>{p.area}</span>}
                   <span style={{ fontSize: 12, color: 'var(--brown)' }}>{p.fields['類型'] ?? ''}</span>
+                  <MapLink name={p.name} area={p.area} />
                 </div>
                 <div style={{ fontSize: 12.5, color: 'var(--brown-dk)', marginTop: 7 }}>{p.summary}</div>
               </div>
