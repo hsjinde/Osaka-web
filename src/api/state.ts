@@ -1,4 +1,4 @@
-function apiBase(): string | undefined { return import.meta.env.VITE_API_BASE as string | undefined; }
+export function apiBase(): string | undefined { return import.meta.env.VITE_API_BASE as string | undefined; }
 const TOKEN_KEY = 'osaka-dash-token';
 const QUEUE_KEY = 'osaka-state-queue';
 

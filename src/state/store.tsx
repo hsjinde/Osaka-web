@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { entities, todos } from '../data';
-import { configured, fetchState, flushQueue, putState, queuePut } from '../api/state';
+import { apiBase, configured, fetchState, flushQueue, getToken, putState, queuePut } from '../api/state';
 
 const LS_KEY = 'osaka-trip-state';
 const SYNC_MIN_INTERVAL_MS = 15000;
@@ -34,9 +34,11 @@ export function TripStateProvider({ children }: { children: ReactNode }) {
 
   // 補送離線佇列 → 拉遠端狀態合併（遠端優先）。啟動與切回前景共用。
   const syncRemote = useCallback(async () => {
-    if (!configured()) { setOffline(true); return; }
+    if (!apiBase()) { setOffline(true); return; }
     try {
-      await flushQueue();
+      if (getToken()) {
+        await flushQueue();
+      }
       const remote = await fetchState();
       setState((s) => { const merged = { ...s, ...remote }; saveLocal(merged); return merged; });
       setOffline(false);
@@ -68,8 +70,6 @@ export function TripStateProvider({ children }: { children: ReactNode }) {
       saveLocal(next);
       if (configured()) {
         putState(key, value).then(() => setOffline(false)).catch(() => { queuePut(key, value); setOffline(true); });
-      } else {
-        setOffline(true);
       }
       return next;
     });

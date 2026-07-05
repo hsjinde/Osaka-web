@@ -11,8 +11,10 @@ app.use('/api/*', cors({
 }));
 
 app.use('/api/*', async (c, next) => {
-  if (c.req.header('Authorization') !== `Bearer ${c.env.DASH_TOKEN}`) {
-    return c.json({ error: 'unauthorized' }, 401);
+  if (c.req.method !== 'GET' && c.req.method !== 'OPTIONS') {
+    if (c.req.header('Authorization') !== `Bearer ${c.env.DASH_TOKEN}`) {
+      return c.json({ error: 'unauthorized' }, 401);
+    }
   }
   await next();
 });

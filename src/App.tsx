@@ -3,7 +3,7 @@ import { meta, overview, byCategory } from './data';
 import Chip from './components/Chip';
 import Home from './pages/Home';
 import { useTripState } from './state/store';
-import { configured, getToken, setToken, setupLink } from './api/state';
+import { apiBase, getToken, setToken, setupLink } from './api/state';
 import DailyPlan from './pages/DailyPlan';
 import Food from './pages/Food';
 import Places from './pages/Places';
@@ -88,10 +88,16 @@ export default function App() {
               if (t) { setToken(t.trim()); location.reload(); }
             }
           }}>⚙</button>
-        {offline && (
-          <span style={{ fontSize: 11, color: 'var(--brown)', border: '1px dashed var(--brown)', borderRadius: 4, padding: '2px 8px' }}>
-            {configured() ? '離線模式・變更暫存本機' : '尚未同步・點 ⚙ 設定'}
-          </span>
+        {apiBase() && (
+          !getToken() ? (
+            <span style={{ fontSize: 11, color: 'var(--brown)', border: '1px dashed var(--brown)', borderRadius: 4, padding: '2px 8px' }}>
+              唯讀模式・點 ⚙ 同步
+            </span>
+          ) : offline ? (
+            <span style={{ fontSize: 11, color: 'var(--brown)', border: '1px dashed var(--brown)', borderRadius: 4, padding: '2px 8px' }}>
+              離線模式・變更暫存本機
+            </span>
+          ) : null
         )}
         <nav style={{ maxWidth: 1120, margin: '0 auto', padding: '10px 20px 12px', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           {TABS.map(([k, label]) => (
