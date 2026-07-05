@@ -7,6 +7,7 @@ import { parseEntity } from './lib/parse-entity';
 import { parseItinerary } from './lib/parse-itinerary';
 import { parseTodos } from './lib/parse-todos';
 import { parseGuide } from './lib/parse-guide';
+import { resolveGuideImage, guideImageKey, rewriteImageUrls } from './lib/guide-images';
 
 export function buildOverview(raw: string): {
   fields: Record<string, string>;
@@ -63,10 +64,17 @@ function main() {
   // 別人推薦攻略（補充內容：best-effort，解析失敗只警告不擋建置）
   const guides: Guide[] = [];
   const guidesDir = path.join(vault, '原始資料/別人行程');
+  const r2Base = (process.env.R2_PUBLIC_URL_PREFIX || 'https://img.19980803.xyz').replace(/\/+$/, '');
+  const assetRoots = [path.join(vault, 'assets'), path.join(vault, '原始資料/attachments')];
   if (fs.existsSync(guidesDir)) {
     for (const f of fs.readdirSync(guidesDir).filter((f) => f.endsWith('.md'))) {
       try {
-        guides.push(parseGuide(f, fs.readFileSync(path.join(guidesDir, f), 'utf8')));
+        const g = parseGuide(f, fs.readFileSync(path.join(guidesDir, f), 'utf8'));
+        g.body = rewriteImageUrls(g.body, (src) => {
+          const abs = resolveGuideImage(src, guidesDir, assetRoots);
+          return abs ? `${r2Base}/${guideImageKey(abs)}` : null;
+        });
+        guides.push(g);
       } catch (e) {
         console.warn(`⚠ 攻略略過 ${f}：${e instanceof Error ? e.message : e}`);
       }

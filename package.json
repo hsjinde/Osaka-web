@@ -7,6 +7,7 @@
     "dev": "npm run build:data && vite",
     "build": "tsc -b && vite build",
     "build:data": "tsx scripts/build-data.ts",
+    "sync:images": "tsx scripts/sync-guide-images.ts",
     "lint": "oxlint",
     "test": "vitest run",
     "preview": "vite preview"
