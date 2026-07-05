@@ -50,3 +50,20 @@ export async function flushQueue(): Promise<number> {
   else localStorage.setItem(QUEUE_KEY, JSON.stringify(q));
   return sent;
 }
+
+/** 讀取網址 ?setup=<token>：存入本機並從網址移除（避免留在瀏覽紀錄）。回傳是否有處理。 */
+export function consumeSetupToken(): boolean {
+  const params = new URLSearchParams(location.search);
+  const t = params.get('setup');
+  if (!t) return false;
+  setToken(t);
+  params.delete('setup');
+  const qs = params.toString();
+  history.replaceState(null, '', `${location.pathname}${qs ? `?${qs}` : ''}${location.hash}`);
+  return true;
+}
+
+/** 產生給新裝置用的設定連結（點一次即完成同步設定）。 */
+export function setupLink(token: string): string {
+  return `${location.origin}${location.pathname}?setup=${encodeURIComponent(token)}`;
+}
