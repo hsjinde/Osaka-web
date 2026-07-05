@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { countdownDays } from '../App';
-import { byCategory, meta, overview, todos } from '../data';
+import { byCategory, entities, meta, overview, todos } from '../data';
 import { useTripState } from '../state/store';
+import WishList from '../components/WishList';
 
 export default function Home() {
-  const { todosState, toggleTodo, favCount } = useTripState();
+  const { todosState, toggleTodo, favCount, favs } = useTripState();
+  const [wishOpen, setWishOpen] = useState(false);
+  const favEntities = entities.filter((e) => favs[`fav:${e.id}`]);
   const f = overview.fields;
   const cd = countdownDays(meta.tripStart);
   const done = todos.filter((t) => todosState[t.key]).length;
@@ -106,8 +110,9 @@ export default function Home() {
               </button>
             ))}
           </div>
-          {/* 收藏統計橫幅 */}
-          <div className="banner-dark" style={{ display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center' }}>
+          {/* 收藏統計橫幅（點擊展開想去清單） */}
+          <button className="banner-dark btn-plain" style={{ display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center', cursor: 'pointer', textAlign: 'left', width: '100%' }}
+            onClick={() => setWishOpen((o) => !o)}>
             <div className="serif" style={{ writingMode: 'vertical-rl', fontSize: 14, fontWeight: 700, letterSpacing: '.3em', borderRight: '1px solid rgba(239,233,218,.3)', paddingRight: 10 }}>已標記</div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
               <span className="serif" style={{ fontSize: 40, fontWeight: 800, color: 'var(--gold)' }}>{favCount}</span>
@@ -116,7 +121,9 @@ export default function Home() {
             <div style={{ flex: 1, fontSize: 12, color: 'rgba(239,233,218,.72)', minWidth: 150 }}>
               在美食庫、景點與購物頁按 ♡ 標記，地圖頁會依區域統計。
             </div>
-          </div>
+            <span style={{ fontSize: 12, color: 'var(--gold)', whiteSpace: 'nowrap' }}>{wishOpen ? '▲ 收合' : '▼ 展開清單'}</span>
+          </button>
+          {wishOpen && <WishList items={favEntities} />}
         </div>
       </div>
     </div>
