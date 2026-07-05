@@ -1,8 +1,9 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { entities, todos } from '../data';
 import { configured, fetchState, flushQueue, putState, queuePut } from '../api/state';
 
 const LS_KEY = 'osaka-trip-state';
+const SYNC_MIN_INTERVAL_MS = 15000;
 type StateMap = Record<string, boolean>;
 
 function defaults(): StateMap {
@@ -29,23 +30,36 @@ export function TripStateProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<StateMap>(() => ({ ...defaults(), ...loadLocal() }));
   const [offline, setOffline] = useState(false);
 
-  // 啟動：拉遠端狀態合併（遠端優先），並補送離線佇列
-  useEffect(() => {
+  const lastSyncRef = useRef(0);
+
+  // 補送離線佇列 → 拉遠端狀態合併（遠端優先）。啟動與切回前景共用。
+  const syncRemote = useCallback(async () => {
     if (!configured()) { setOffline(true); return; }
-    let cancelled = false;
-    (async () => {
-      try {
-        await flushQueue();
-        const remote = await fetchState();
-        if (cancelled) return;
-        setState((s) => { const merged = { ...s, ...remote }; saveLocal(merged); return merged; });
-        setOffline(false);
-      } catch { if (!cancelled) setOffline(true); }
-    })();
-    const onOnline = () => { flushQueue().then((n) => { if (n > 0) setOffline(false); }); };
-    window.addEventListener('online', onOnline);
-    return () => { cancelled = true; window.removeEventListener('online', onOnline); };
+    try {
+      await flushQueue();
+      const remote = await fetchState();
+      setState((s) => { const merged = { ...s, ...remote }; saveLocal(merged); return merged; });
+      setOffline(false);
+    } catch { setOffline(true); }
   }, []);
+
+  useEffect(() => {
+    lastSyncRef.current = Date.now();
+    void syncRemote();
+    const onVisible = () => {
+      if (document.visibilityState !== 'visible') return;
+      if (Date.now() - lastSyncRef.current < SYNC_MIN_INTERVAL_MS) return;
+      lastSyncRef.current = Date.now();
+      void syncRemote();
+    };
+    const onOnline = () => { flushQueue().then((n) => { if (n > 0) setOffline(false); }); };
+    document.addEventListener('visibilitychange', onVisible);
+    window.addEventListener('online', onOnline);
+    return () => {
+      document.removeEventListener('visibilitychange', onVisible);
+      window.removeEventListener('online', onOnline);
+    };
+  }, [syncRemote]);
 
   const toggle = useCallback((key: string) => {
     setState((s) => {
