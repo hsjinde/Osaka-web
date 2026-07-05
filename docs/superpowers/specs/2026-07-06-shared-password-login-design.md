@@ -27,6 +27,7 @@
 | 未登入 UX | 愛心/勾選框照常顯示但鎖住（變灰、不切換），點下去彈出登入視窗 |
 | 登入後生效方式 | 登入成功後 `location.reload()`（沿用現有 ⚙ 流程做法）→ store 自動同步、入口解鎖 |
 | 向後相容 | 既有 `?setup=` 連結與 hex token 完全照舊可用，不移除 |
+| 手機優化 | 旅遊多用手機：LoginModal 手機優先——數字鍵盤、大字易讀、近滿版置中、大按鈕（範圍聚焦登入 UI，不動整站版型） |
 
 ## A. Worker（後端）
 
@@ -75,6 +76,7 @@
 
 - 和風紙質風格的密碼登入框：密碼輸入、送出、錯誤提示（密碼錯誤）、送出中狀態。
 - 由 `useAuth()` 的 `loginOpen` 驅動；成功後模組會 reload，失敗顯示「密碼錯誤」。
+- **手機優先**設計細節見 §E。
 
 ## C. 前端 — 把編輯入口上鎖
 
@@ -89,6 +91,29 @@
 - **已登入**：顯示「登出」按鈕（`logout()`）；保留 ⚙ 供已登入者複製新裝置設定連結；
   離線 badge 邏輯不變。
 - 原 ⚙ 內未設定時的「輸入通行密碼」prompt 由 LoginModal 取代（不再要求貼 hex）。
+
+## E. Mobile 優化（手機優先）
+
+旅遊情境以手機瀏覽為主，登入體驗以手機為第一優先。範圍聚焦登入 UI 與相關按鈕，不改動整站版型。
+
+### 1. 密碼輸入（好輸入）
+
+- `inputmode="numeric"` + `pattern="[0-9]*"` → 手機直接彈數字鍵盤（密碼 `0509` 為純數字）。
+- `autocomplete="one-time-code"`、`enterKeyHint="go"`；LoginModal 開啟時自動 `focus` 輸入框。
+- 以 `<form>` 包裹，Enter／鍵盤「前往」即送出。
+- `type="password"` 遮罩；可加「顯示密碼」切換（👁）為非必要增強，預設不做（YAGNI）。
+
+### 2. 版面（好閱讀）
+
+- Modal 寬度 `min(360px, 92vw)`，窄螢幕近乎滿版、置中、留足 padding、圓角紙質風格。
+- 垂直定位偏上（例如 `align-items: flex-start` + 適當 `margin-top`），避免被虛擬鍵盤蓋住輸入框。
+- 標題與說明文字字級足夠（標題 ≥18px、輸入框 ≥18px 並拉開 `letter-spacing`），數字清楚易讀。
+- 半透明遮罩背景（overlay），點遮罩或 Esc 可關閉。
+
+### 3. 觸控目標（好點）
+
+- 「登入」主按鈕與 Header 的「登入／登出」按鈕最小觸控高度 ≥44px、字級足夠。
+- 鎖住的愛心維持既有大小即可點擊觸發登入（不縮小，避免難點）。
 
 ## 實作範圍
 
@@ -121,6 +146,7 @@
   - `clearToken()` 清掉 token。
   - `canEdit === false` 時 `Heart` 呈鎖住樣式、點擊呼叫 `openLogin` 而非 `toggleFav`（不寫本機）。
   - `canEdit === true` 時 `Heart` 可正常 `toggleFav`。
+  - LoginModal 密碼輸入具 `inputmode="numeric"`、`autocomplete="one-time-code"`（手機數字鍵盤）。
 - 依專案現有 vitest 模式撰寫。
 
 ## 部署
