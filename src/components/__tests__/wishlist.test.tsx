@@ -1,9 +1,12 @@
 // @vitest-environment jsdom
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import { TripStateProvider } from '../../state/store';
 import WishList from '../WishList';
 import type { Entity } from '../../data/schema';
+
+// WishList 內含 Heart，Heart 需要 auth context；以已登入（canEdit）情境驗證 WishList 本身行為
+vi.mock('../../state/auth', () => ({ useAuth: () => ({ canEdit: true, openLogin: vi.fn() }) }));
 
 const ent = (id: string, category: Entity['category'], name: string, area = '難波'): Entity => ({
   id, category, name, tags: [], updated: '', favorite: false, fields: {}, summary: '', body: '', area, rating: null,
