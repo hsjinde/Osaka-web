@@ -2,10 +2,11 @@ import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { CATEGORIES, MetaSchema, type Entity } from '../src/data/schema';
+import { CATEGORIES, MetaSchema, type Entity, type Guide } from '../src/data/schema';
 import { parseEntity } from './lib/parse-entity';
 import { parseItinerary } from './lib/parse-itinerary';
 import { parseTodos } from './lib/parse-todos';
+import { parseGuide } from './lib/parse-guide';
 
 export function buildOverview(raw: string): {
   fields: Record<string, string>;
@@ -59,6 +60,19 @@ function main() {
     }
   }
 
+  // 別人推薦攻略（補充內容：best-effort，解析失敗只警告不擋建置）
+  const guides: Guide[] = [];
+  const guidesDir = path.join(vault, '原始資料/別人行程');
+  if (fs.existsSync(guidesDir)) {
+    for (const f of fs.readdirSync(guidesDir).filter((f) => f.endsWith('.md'))) {
+      try {
+        guides.push(parseGuide(f, fs.readFileSync(path.join(guidesDir, f), 'utf8')));
+      } catch (e) {
+        console.warn(`⚠ 攻略略過 ${f}：${e instanceof Error ? e.message : e}`);
+      }
+    }
+  }
+
   let days, todos, overview;
   try {
     days = parseItinerary(fs.readFileSync(path.join(vault, 'wiki/dashboard/每日行程.md'), 'utf8'));
@@ -89,8 +103,9 @@ function main() {
   write('todos.json', todos);
   write('overview.json', overview);
   write('meta.json', meta);
+  write('guides.json', guides);
   console.log(
-    `✅ 建置完成：${entities.length} 實體、${days.length} 天行程、${todos.length} 待辦`,
+    `✅ 建置完成：${entities.length} 實體、${days.length} 天行程、${todos.length} 待辦、${guides.length} 攻略`,
   );
 }
 

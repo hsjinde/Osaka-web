@@ -40,6 +40,15 @@ export const TodoItemSchema = z.object({
 });
 export type TodoItem = z.infer<typeof TodoItemSchema>;
 
+export const GuideSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  source: z.string(),
+  sourceUrl: z.string(),
+  body: z.string().min(1),
+});
+export type Guide = z.infer<typeof GuideSchema>;
+
 export const MetaSchema = z.object({
   builtAt: z.string(),
   tripStart: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),

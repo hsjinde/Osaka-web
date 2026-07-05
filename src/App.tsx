@@ -9,8 +9,9 @@ import Food from './pages/Food';
 import Places from './pages/Places';
 import Transport from './pages/Transport';
 import AreaMap from './pages/AreaMap';
+import Guides from './pages/Guides';
 
-export type TabKey = 'home' | 'plan' | 'food' | 'places' | 'trans' | 'map';
+export type TabKey = 'home' | 'plan' | 'food' | 'places' | 'trans' | 'map' | 'guides';
 
 export function countdownDays(tripStart: string, now = new Date()): number {
   const dep = new Date(`${tripStart}T00:00:00+09:00`).getTime();
@@ -19,11 +20,11 @@ export function countdownDays(tripStart: string, now = new Date()): number {
 
 const TABS: [TabKey, string][] = [
   ['home', '總覽'], ['plan', '每日行程'], ['food', '美食庫'],
-  ['places', '景點・購物'], ['trans', '交通票券'], ['map', '地圖'],
+  ['places', '景點・購物'], ['trans', '交通票券'], ['map', '地圖'], ['guides', '攻略'],
 ];
 
 const PAGES: Record<TabKey, () => JSX.Element> = {
-  home: Home, plan: DailyPlan, food: Food, places: Places, trans: Transport, map: AreaMap,
+  home: Home, plan: DailyPlan, food: Food, places: Places, trans: Transport, map: AreaMap, guides: Guides,
 };
 
 function tabFromHash(): TabKey {
