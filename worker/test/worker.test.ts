@@ -23,17 +23,28 @@ function fakeD1() {
   };
 }
 
-const env = { DB: fakeD1() as unknown, DASH_TOKEN: 'secret123' };
+const env = { DB: fakeD1() as unknown, DASH_TOKEN: 'secret123', DASH_PASSWORD: '0509' };
 const auth = { Authorization: 'Bearer secret123' };
 
 describe('worker API', () => {
-  it('無 token 拒絕', async () => {
+  it('GET 免驗證，公開讀取', async () => {
     const res = await app.request('/api/state', {}, env);
+    expect(res.status).toBe(200);
+  });
+
+  it('PUT 無 token 拒絕', async () => {
+    const res = await app.request('/api/state/x', {
+      method: 'PUT', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ value: true }),
+    }, env);
     expect(res.status).toBe(401);
   });
 
-  it('錯 token 拒絕', async () => {
-    const res = await app.request('/api/state', { headers: { Authorization: 'Bearer wrong' } }, env);
+  it('PUT 錯 token 拒絕', async () => {
+    const res = await app.request('/api/state/x', {
+      method: 'PUT', headers: { Authorization: 'Bearer wrong', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ value: true }),
+    }, env);
     expect(res.status).toBe(401);
   });
 
@@ -56,5 +67,23 @@ describe('worker API', () => {
     const res = await app.request('/api/state', { headers: auth }, env);
     const map = await res.json() as Record<string, boolean>;
     expect(map['fav:餐廳/測試']).toBe(false);
+  });
+
+  it('POST /api/login 密碼正確回傳 token', async () => {
+    const res = await app.request('/api/login', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: '0509' }),
+    }, env);
+    expect(res.status).toBe(200);
+    const body = await res.json() as { token: string };
+    expect(body.token).toBe('secret123');
+  });
+
+  it('POST /api/login 密碼錯誤回 401', async () => {
+    const res = await app.request('/api/login', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: '9999' }),
+    }, env);
+    expect(res.status).toBe(401);
   });
 });
