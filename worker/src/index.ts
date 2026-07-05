@@ -5,7 +5,7 @@ type Bindings = { DB: D1Database; DASH_TOKEN: string };
 const app = new Hono<{ Bindings: Bindings }>();
 
 app.use('/api/*', cors({
-  origin: ['https://hsjinde.github.io', 'http://localhost:5173'],
+  origin: ['https://osaka.19980803.xyz', 'https://hsjinde.github.io', 'http://localhost:5173'],
   allowMethods: ['GET', 'PUT', 'OPTIONS'],
   allowHeaders: ['Authorization', 'Content-Type'],
 }));
