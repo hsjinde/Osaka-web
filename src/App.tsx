@@ -3,7 +3,7 @@ import { meta, overview, byCategory } from './data';
 import Chip from './components/Chip';
 import Home from './pages/Home';
 import { useTripState } from './state/store';
-import { getToken, setToken } from './api/state';
+import { configured, getToken, setToken, setupLink } from './api/state';
 import DailyPlan from './pages/DailyPlan';
 import Food from './pages/Food';
 import Places from './pages/Places';
@@ -78,14 +78,19 @@ export default function App() {
             <span style={{ fontSize: 12, fontWeight: 600 }}>日</span>
           </div>
         </div>
-        <button className="btn-plain" title="設定通行密碼" style={{ fontSize: 18, cursor: 'pointer' }}
+        <button className="btn-plain" title="同步設定" style={{ fontSize: 18, cursor: 'pointer' }}
           onClick={() => {
-            const t = window.prompt('輸入儀表板通行密碼（存在此裝置）', getToken() ?? '');
-            if (t) { setToken(t); location.reload(); }
+            const cur = getToken();
+            if (cur) {
+              window.prompt('把這條設定連結存好；新裝置點開一次即完成同步設定：', setupLink(cur));
+            } else {
+              const t = window.prompt('輸入通行密碼；或在已設定過的裝置按 ⚙ 取得設定連結', '');
+              if (t) { setToken(t.trim()); location.reload(); }
+            }
           }}>⚙</button>
         {offline && (
           <span style={{ fontSize: 11, color: 'var(--brown)', border: '1px dashed var(--brown)', borderRadius: 4, padding: '2px 8px' }}>
-            離線模式・變更暫存本機
+            {configured() ? '離線模式・變更暫存本機' : '尚未同步・點 ⚙ 設定'}
           </span>
         )}
         <nav style={{ maxWidth: 1120, margin: '0 auto', padding: '10px 20px 12px', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
