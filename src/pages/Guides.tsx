@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { guides } from '../data';
 import MarkdownBody from '../components/MarkdownBody';
+import { useScrollHighlight } from '../lib/useScrollHighlight';
 
-export default function Guides() {
+export default function Guides({ highlightId }: { highlightId?: string }) {
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const toggle = (id: string) => setOpen((s) => ({ ...s, [id]: !s[id] }));
+
+  useEffect(() => {
+    if (highlightId?.startsWith('guide-')) {
+      const id = highlightId.slice('guide-'.length);
+      setOpen((s) => ({ ...s, [id]: true }));
+    }
+  }, [highlightId]);
+  useScrollHighlight(highlightId);
 
   return (
     <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', gap: 14, maxWidth: 820 }}>
@@ -14,7 +23,7 @@ export default function Guides() {
       {guides.map((g) => {
         const isOpen = !!open[g.id];
         return (
-          <div key={g.id} className="card" style={{ padding: 0, overflow: 'hidden' }}>
+          <div key={g.id} id={`guide-${g.id}`} className="card" style={{ padding: 0, overflow: 'hidden' }}>
             <div onClick={() => toggle(g.id)} style={{
               display: 'flex', alignItems: 'center', gap: 12, padding: '16px 22px', cursor: 'pointer',
             }}>
