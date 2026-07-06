@@ -13,19 +13,20 @@ export default function DailyPlan() {
   return (
     <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
-        {days.map((d, i) => (
-          <button key={d.label} className="btn-plain" onClick={() => setDayIdx(i)} style={{
-            background: dayIdx === i ? 'var(--ink)' : 'transparent',
-            color: dayIdx === i ? '#F7F2E6' : 'var(--ink)',
-            border: dayIdx === i ? '1px solid var(--ink)' : '1px solid rgba(41,35,26,.3)',
-            borderRadius: 8, padding: '7px 14px', cursor: 'pointer',
-          }}>
-            <span style={{ display: 'block', fontSize: 11, letterSpacing: '.08em', opacity: .75 }}>{d.date}</span>
-            <span className="serif" style={{ display: 'block', fontSize: 15, fontWeight: 700 }}>{d.label}</span>
-          </button>
-        ))}
-        <div style={{ flex: 1 }} />
-        <div style={{ display: 'flex', border: '1px solid var(--line-dark)', borderRadius: 8, overflow: 'hidden' }}>
+        <div className="hscroll" style={{ flex: 1, minWidth: 0 }}>
+          {days.map((d, i) => (
+            <button key={d.label} className="btn-plain" onClick={() => setDayIdx(i)} style={{
+              background: dayIdx === i ? 'var(--ink)' : 'transparent',
+              color: dayIdx === i ? '#F7F2E6' : 'var(--ink)',
+              border: dayIdx === i ? '1px solid var(--ink)' : '1px solid rgba(41,35,26,.3)',
+              borderRadius: 8, padding: '7px 14px', cursor: 'pointer',
+            }}>
+              <span style={{ display: 'block', fontSize: 11, letterSpacing: '.08em', opacity: .75 }}>{d.date}</span>
+              <span className="serif" style={{ display: 'block', fontSize: 15, fontWeight: 700 }}>{d.label}</span>
+            </button>
+          ))}
+        </div>
+        <div style={{ display: 'flex', border: '1px solid var(--line-dark)', borderRadius: 8, overflow: 'hidden', flex: 'none' }}>
           {VIEWS.map(([k, label]) => (
             <button key={k} className="btn-plain" onClick={() => setView(k)} style={{
               background: view === k ? 'var(--red)' : 'transparent',

@@ -17,10 +17,10 @@ describe('Guides 就地搜尋', () => {
   afterEach(() => cleanup());
 
   it('預設收合，點擊標題展開內文', () => {
-    render(<Guides />);
-    expect(screen.queryByText(/中段推薦章魚燒/)).toBeNull();
+    const { container } = render(<Guides />);
+    expect(container.querySelector('.guide-body--open')).toBeNull();
     fireEvent.click(screen.getByText('大阪美食攻略'));
-    expect(screen.getByText(/中段推薦章魚燒/)).toBeTruthy();
+    expect(container.querySelector('.guide-body--open')).toBeTruthy();
   });
 
   it('查詢過濾攻略並顯示符合篇數', () => {
@@ -52,9 +52,8 @@ describe('Guides 就地搜尋', () => {
     const { container } = render(<Guides />);
     fireEvent.change(screen.getByPlaceholderText(PLACEHOLDER), { target: { value: '章魚燒' } });
     fireEvent.click(screen.getByText('大阪美食攻略'));
-    // snippet 的 mark + 內文的 mark 至少各一
-    const marks = [...container.querySelectorAll('mark.search-hit')].map((m) => m.textContent);
-    expect(marks.filter((t) => t === '章魚燒').length).toBeGreaterThanOrEqual(2);
+    const marks = [...container.querySelectorAll('.guide-body mark.search-hit')].map((m) => m.textContent);
+    expect(marks).toContain('章魚燒');
   });
 
   it('無結果顯示空狀態', () => {

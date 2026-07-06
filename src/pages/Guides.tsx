@@ -16,7 +16,7 @@ function GuideCard({ g, tokens, isOpen, onToggle }: {
 
   return (
     <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-      <div onClick={onToggle} style={{
+      <div className="card-tap" onClick={onToggle} style={{
         display: 'flex', alignItems: 'center', gap: 12, padding: '16px 22px', cursor: 'pointer',
       }}>
         <div style={{ flex: 1, minWidth: 0 }}>
@@ -42,11 +42,13 @@ function GuideCard({ g, tokens, isOpen, onToggle }: {
           {isOpen ? '收合 ▲' : '展開 ▼'}
         </span>
       </div>
-      {isOpen && (
-        <div ref={bodyRef} className="dash-top" style={{ padding: '2px 22px 18px' }}>
-          <MarkdownBody>{g.body}</MarkdownBody>
+      <div className={`guide-body${isOpen ? ' guide-body--open' : ''}`}>
+        <div>
+          <div ref={bodyRef} className="dash-top" style={{ padding: '2px 22px 18px' }}>
+            <MarkdownBody>{g.body}</MarkdownBody>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
