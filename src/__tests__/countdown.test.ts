@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { countdownDays } from '../App';
+import { countdownDays } from '../lib/countdown';
 
 describe('countdownDays', () => {
   it('以 JST 零時起算、無條件進位', () => {

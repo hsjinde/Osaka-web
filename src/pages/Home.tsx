@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { countdownDays } from '../App';
+import { countdownDays } from '../lib/countdown';
 import { byCategory, entities, meta, overview, todos } from '../data';
 import { useTripState } from '../state/store';
 import { useAuth } from '../state/auth';
@@ -104,7 +104,7 @@ export default function Home() {
           {/* 快速連結 */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12 }}>
             {quick.map((q) => (
-              <button key={q.label} className="card btn-plain" style={{ padding: 16, display: 'flex', flexDirection: 'column', gap: 4, cursor: 'pointer' }}
+              <button key={q.label} className="card btn-plain card-tap" style={{ padding: 16, display: 'flex', flexDirection: 'column', gap: 4, cursor: 'pointer' }}
                 onClick={() => { location.hash = q.hash; }}>
                 <span className="serif" style={{ fontSize: 26, fontWeight: 800, color: 'var(--red)' }}>{q.count}</span>
                 <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: '.06em' }}>{q.label}</span>

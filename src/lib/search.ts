@@ -1,33 +1,121 @@
-import { entities, guides } from '../data';
-import type { Entity, Guide } from '../data/schema';
+import { entities } from '../data';
+import type { Entity } from '../data/schema';
 
-const SEARCHABLE_CATEGORIES: readonly Entity['category'][] = ['餐廳', '景點', '購物', '交通'];
-const MAX_ENTITIES = 6;
-const MAX_GUIDES = 4;
+export type Segment = { text: string; hit: boolean };
 
-function entityHaystack(e: Entity): string {
-  return [e.name, e.summary, e.area, e.tags.join(' '), Object.values(e.fields).join(' ')]
-    .join(' ')
-    .toLowerCase();
+export function tokenize(query: string): string[] {
+  return query.toLowerCase().split(/[\s　]+/).filter(Boolean);
 }
 
-function guideHaystack(g: Guide): string {
-  return `${g.title} ${g.body}`.toLowerCase();
+export function matchesTokens(haystack: string, tokens: string[]): boolean {
+  const lower = haystack.toLowerCase();
+  return tokens.every((t) => lower.includes(t));
 }
 
-export function searchAll(query: string): { entities: Entity[]; guides: Guide[] } {
-  const q = query.trim().toLowerCase();
-  if (!q) return { entities: [], guides: [] };
+const ENTITY_WEIGHTS: [(e: Entity) => string, number][] = [
+  [(e) => e.name, 100],
+  [(e) => e.tags.join(' '), 60],
+  [(e) => e.area, 50],
+  [(e) => e.summary, 30],
+  [(e) => Object.values(e.fields).join(' '), 20],
+];
 
-  const matchedEntities = entities
-    .filter((e) => SEARCHABLE_CATEGORIES.includes(e.category))
-    .filter((e) => entityHaystack(e).includes(q))
-    .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0))
-    .slice(0, MAX_ENTITIES);
+export function scoreEntity(e: Entity, tokens: string[]): number {
+  if (tokens.length === 0) return 0;
+  const parts = ENTITY_WEIGHTS.map(([get, w]) => [get(e).toLowerCase(), w] as const);
+  let total = 0;
+  for (const t of tokens) {
+    let best = 0;
+    for (const [s, w] of parts) {
+      if (w > best && s.includes(t)) best = w;
+    }
+    if (best === 0) return 0;
+    total += best;
+  }
+  return total;
+}
 
-  const matchedGuides = guides
-    .filter((g) => guideHaystack(g).includes(q))
-    .slice(0, MAX_GUIDES);
+export function suggestFoodTypes(query: string): { type: string; count: number }[] {
+  const tokens = tokenize(query);
+  if (tokens.length === 0) return [];
+  const counts = new Map<string, number>();
+  for (const e of entities) {
+    if (e.category !== '餐廳') continue;
+    const type = e.fields['類型'];
+    if (!type) continue;
+    counts.set(type, (counts.get(type) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .filter(([type]) => matchesTokens(type, tokens))
+    .map(([type, count]) => ({ type, count }))
+    .sort((a, b) => b.count - a.count);
+}
 
-  return { entities: matchedEntities, guides: matchedGuides };
+export function makeSegments(text: string, tokens: string[]): Segment[] {
+  if (!text || tokens.length === 0) return [{ text, hit: false }];
+  const lower = text.toLowerCase();
+  const ranges: [number, number][] = [];
+  for (const t of tokens) {
+    let i = lower.indexOf(t);
+    while (i !== -1) {
+      ranges.push([i, i + t.length]);
+      i = lower.indexOf(t, i + t.length);
+    }
+  }
+  if (ranges.length === 0) return [{ text, hit: false }];
+  ranges.sort((a, b) => a[0] - b[0]);
+  const merged: [number, number][] = [ranges[0].slice() as [number, number]];
+  for (const r of ranges.slice(1)) {
+    const last = merged[merged.length - 1];
+    if (r[0] <= last[1]) last[1] = Math.max(last[1], r[1]);
+    else merged.push(r.slice() as [number, number]);
+  }
+  const out: Segment[] = [];
+  let pos = 0;
+  for (const [s, e] of merged) {
+    if (s > pos) out.push({ text: text.slice(pos, s), hit: false });
+    out.push({ text: text.slice(s, e), hit: true });
+    pos = e;
+  }
+  if (pos < text.length) out.push({ text: text.slice(pos), hit: false });
+  return out;
+}
+
+const plainCache = new Map<string, string>();
+
+function plainify(md: string): string {
+  const cached = plainCache.get(md);
+  if (cached !== undefined) return cached;
+  const plain = md
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/^#{1,6}\s*/gm, '')
+    .replace(/[|`*_>#]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  plainCache.set(md, plain);
+  return plain;
+}
+
+export function makeSnippet(text: string, tokens: string[], radius = 18): Segment[] | null {
+  if (tokens.length === 0) return null;
+  const plain = plainify(text);
+  const lower = plain.toLowerCase();
+  let first = -1;
+  let firstLen = 0;
+  for (const t of tokens) {
+    const i = lower.indexOf(t);
+    if (i !== -1 && (first === -1 || i < first)) {
+      first = i;
+      firstLen = t.length;
+    }
+  }
+  if (first === -1) return null;
+  const start = Math.max(0, first - radius);
+  const end = Math.min(plain.length, first + firstLen + radius);
+  const out: Segment[] = [];
+  if (start > 0) out.push({ text: '…', hit: false });
+  out.push(...makeSegments(plain.slice(start, end), tokens));
+  if (end < plain.length) out.push({ text: '…', hit: false });
+  return out;
 }
