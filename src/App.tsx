@@ -3,7 +3,9 @@ import { meta, overview, byCategory } from './data';
 import Chip from './components/Chip';
 import Home from './pages/Home';
 import { useTripState } from './state/store';
-import { apiBase, getToken, setToken, setupLink } from './api/state';
+import { apiBase, getToken, setupLink } from './api/state';
+import { useAuth } from './state/auth';
+import LoginModal from './components/LoginModal';
 import DailyPlan from './pages/DailyPlan';
 import Food from './pages/Food';
 import Places from './pages/Places';
@@ -35,6 +37,7 @@ function tabFromHash(): TabKey {
 export default function App() {
   const [tab, setTab] = useState<TabKey>(tabFromHash);
   const { offline } = useTripState();
+  const { canEdit, openLogin, logout } = useAuth();
   useEffect(() => {
     const onHash = () => setTab(tabFromHash());
     window.addEventListener('hashchange', onHash);
@@ -78,27 +81,28 @@ export default function App() {
             <span style={{ fontSize: 12, fontWeight: 600 }}>日</span>
           </div>
         </div>
-        <button className="btn-plain" title="同步設定" style={{ fontSize: 18, cursor: 'pointer' }}
-          onClick={() => {
-            const cur = getToken();
-            if (cur) {
-              window.prompt('把這條設定連結存好；新裝置點開一次即完成同步設定：', setupLink(cur));
-            } else {
-              const t = window.prompt('輸入通行密碼；或在已設定過的裝置按 ⚙ 取得設定連結', '');
-              if (t) { setToken(t.trim()); location.reload(); }
-            }
-          }}>⚙</button>
-        {apiBase() && (
-          !getToken() ? (
-            <span style={{ fontSize: 11, color: 'var(--brown)', border: '1px dashed var(--brown)', borderRadius: 4, padding: '2px 8px' }}>
-              唯讀模式・點 ⚙ 同步
-            </span>
-          ) : offline ? (
-            <span style={{ fontSize: 11, color: 'var(--brown)', border: '1px dashed var(--brown)', borderRadius: 4, padding: '2px 8px' }}>
-              離線模式・變更暫存本機
-            </span>
-          ) : null
-        )}
+        {apiBase() && (canEdit ? (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 20px 4px' }}>
+            <button className="btn-plain" title="複製新裝置設定連結" style={{ fontSize: 18, cursor: 'pointer' }}
+              onClick={() => { const cur = getToken(); if (cur) window.prompt('新裝置設定連結（點一次即完成同步）：', setupLink(cur)); }}>⚙</button>
+            <button className="btn-plain" style={{
+              fontSize: 12.5, color: 'var(--brown-dk)', border: '1px solid var(--line-dark)',
+              borderRadius: 6, padding: '6px 12px', minHeight: 34, cursor: 'pointer',
+            }} onClick={logout}>登出</button>
+            {offline && (
+              <span style={{ fontSize: 11, color: 'var(--brown)', border: '1px dashed var(--brown)', borderRadius: 4, padding: '2px 8px' }}>
+                離線模式・變更暫存本機
+              </span>
+            )}
+          </div>
+        ) : (
+          <div style={{ padding: '0 20px 4px' }}>
+            <button className="btn-plain" style={{
+              fontSize: 13, color: 'var(--red)', border: '1px solid var(--red)',
+              borderRadius: 6, padding: '7px 16px', minHeight: 38, fontWeight: 600, cursor: 'pointer',
+            }} onClick={openLogin}>登入編輯</button>
+          </div>
+        ))}
         <nav style={{ maxWidth: 1120, margin: '0 auto', padding: '10px 20px 12px', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           {TABS.map(([k, label]) => (
             <Chip key={k} on={tab === k} red onClick={() => go(k)}>
@@ -107,6 +111,7 @@ export default function App() {
           ))}
         </nav>
       </header>
+      <LoginModal />
       <main style={{ maxWidth: 1120, margin: '0 auto', padding: '24px 20px 64px' }}>
         <Page key={tab} />
       </main>
