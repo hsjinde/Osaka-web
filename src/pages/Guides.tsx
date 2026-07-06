@@ -42,7 +42,7 @@ function GuideCard({ g, tokens, isOpen, onToggle }: {
           {isOpen ? '收合 ▲' : '展開 ▼'}
         </span>
       </div>
-      <div className={`guide-body${isOpen ? ' guide-body--open' : ''}`}>
+      <div className={`guide-body${isOpen ? ' guide-body--open' : ''}`} aria-hidden={!isOpen}>
         <div>
           <div ref={bodyRef} className="dash-top" style={{ padding: '2px 22px 18px' }}>
             <MarkdownBody>{g.body}</MarkdownBody>
