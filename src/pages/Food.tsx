@@ -5,11 +5,9 @@ import Heart from '../components/Heart';
 import Stamp from '../components/Stamp';
 import MapLink from '../components/MapLink';
 import { useTripState } from '../state/store';
-import { useScrollHighlight } from '../lib/useScrollHighlight';
 
-export default function Food({ highlightId }: { highlightId?: string }) {
+export default function Food() {
   const { favs } = useTripState();
-  useScrollHighlight(highlightId);
   const all = useMemo(() => byCategory('餐廳'), []);
   const [cat, setCat] = useState('全部');
   const [q, setQ] = useState('');
@@ -48,7 +46,7 @@ export default function Food({ highlightId }: { highlightId?: string }) {
         {list.map((r) => {
           const note = r.fields['備註'] && r.fields['備註'] !== '-' ? r.fields['備註'] : r.summary;
           return (
-            <div key={r.id} id={`entity-${r.id}`} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+            <div key={r.id} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
               <Stamp rating={r.rating} />
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className="serif" style={{ fontSize: 15.5, fontWeight: 700, lineHeight: 1.35 }}>{r.name}</div>

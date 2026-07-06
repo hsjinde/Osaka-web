@@ -51,5 +51,3 @@ a { color: var(--red); }
 .md-body code { background: rgba(41,35,26,.06); border-radius: 4px; padding: 1px 5px; }
 .md-body ul { padding-left: 20px; margin: 6px 0; }
 .md-body img { max-width: 100%; height: auto; display: block; margin: 12px 0; border-radius: 8px; border: 1px solid var(--line); }
-@keyframes searchFlash { 0%, 100% { box-shadow: none; } 30% { box-shadow: 0 0 0 3px rgba(178,58,30,.35); } }
-.search-highlight { animation: searchFlash 1.6s ease; }
