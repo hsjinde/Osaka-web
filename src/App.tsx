@@ -12,6 +12,7 @@ import Places from './pages/Places';
 import Transport from './pages/Transport';
 import AreaMap from './pages/AreaMap';
 import Guides from './pages/Guides';
+import SearchBar from './components/SearchBar';
 
 export type TabKey = 'home' | 'plan' | 'food' | 'places' | 'trans' | 'map' | 'guides';
 
@@ -25,21 +26,28 @@ const TABS: [TabKey, string][] = [
   ['places', '景點・購物'], ['trans', '交通票券'], ['map', '地圖'], ['guides', '攻略'],
 ];
 
-const PAGES: Record<TabKey, () => JSX.Element> = {
+const PAGES: Record<TabKey, (props: { highlightId?: string }) => JSX.Element> = {
   home: Home, plan: DailyPlan, food: Food, places: Places, trans: Transport, map: AreaMap, guides: Guides,
 };
 
-function tabFromHash(): TabKey {
-  const h = location.hash.replace('#', '') as TabKey;
-  return TABS.some(([k]) => k === h) ? h : 'home';
+export function parseHash(hash: string): { tab: TabKey; anchor?: string } {
+  const raw = hash.replace('#', '');
+  const [tabPart, anchorPart] = raw.split(':');
+  const tab = (TABS.some(([k]) => k === tabPart) ? tabPart : 'home') as TabKey;
+  return anchorPart ? { tab, anchor: decodeURIComponent(anchorPart) } : { tab };
 }
 
 export default function App() {
-  const [tab, setTab] = useState<TabKey>(tabFromHash);
+  const [tab, setTab] = useState<TabKey>(() => parseHash(location.hash).tab);
+  const [anchor, setAnchor] = useState<string | undefined>(() => parseHash(location.hash).anchor);
   const { offline } = useTripState();
   const { canEdit, openLogin, logout } = useAuth();
   useEffect(() => {
-    const onHash = () => setTab(tabFromHash());
+    const onHash = () => {
+      const parsed = parseHash(location.hash);
+      setTab(parsed.tab);
+      setAnchor(parsed.anchor);
+    };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
@@ -81,6 +89,7 @@ export default function App() {
             <span style={{ fontSize: 12, fontWeight: 600 }}>日</span>
           </div>
         </div>
+        <SearchBar />
         {apiBase() && (canEdit ? (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 20px 4px' }}>
             <button className="btn-plain" title="複製新裝置設定連結" style={{ fontSize: 18, cursor: 'pointer' }}
@@ -113,7 +122,7 @@ export default function App() {
       </header>
       <LoginModal />
       <main style={{ maxWidth: 1120, margin: '0 auto', padding: '24px 20px 64px' }}>
-        <Page key={tab} />
+        <Page key={tab} highlightId={anchor} />
       </main>
       <footer style={{
         borderTop: '1px solid var(--line)', padding: '18px 20px', textAlign: 'center',
