@@ -9,9 +9,15 @@
   ],
   "slots": [
    {
+    "time": "上午",
+    "title": "去程航班",
+    "note": "樂桃航空 MM024・09:30 起飛 → 13:20 抵達關西機場",
+    "pending": false
+   },
+   {
     "time": "下午",
     "title": "關西機場 → 難波",
-    "note": "南海 Rapi:t 最快 34 分（見交通頁），航班時段待確認",
+    "note": "南海 Rapi:t 最快 34 分（見交通頁）",
     "pending": false
    },
    {
@@ -142,14 +148,14 @@
    },
    {
     "time": "中午",
-    "title": "（待安排）",
-    "note": "",
-    "pending": true
+    "title": "難波 → 關西機場",
+    "note": "Rapi:t 或空港急行（¥970 最省）",
+    "pending": false
    },
    {
     "time": "下午",
-    "title": "難波 → 關西機場",
-    "note": "Rapi:t 或空港急行（¥970 最省）",
+    "title": "回程航班",
+    "note": "樂桃航空 MM027・15:35 起飛 → 17:50 抵達",
     "pending": false
    }
   ]
