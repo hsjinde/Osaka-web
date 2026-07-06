@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildOverview } from '../../build-data';
+import { buildOverview, isEntityFile } from '../../build-data';
 
 const OV = `---
 title: 總覽
@@ -24,5 +24,24 @@ describe('buildOverview', () => {
   });
   it('缺出發日期報錯', () => {
     expect(() => buildOverview(OV.replace('- 出發：2026-09-30', ''))).toThrow(/出發/);
+  });
+});
+
+describe('isEntityFile', () => {
+  it('排除分類總覽索引頁（如 餐廳總覽.md、住宿總覽.md）', () => {
+    expect(isEntityFile('餐廳', '餐廳總覽.md')).toBe(false);
+    expect(isEntityFile('住宿', '住宿總覽.md')).toBe(false);
+  });
+
+  it('一般實體檔案照樣通過', () => {
+    expect(isEntityFile('餐廳', '一蘭.md')).toBe(true);
+  });
+
+  it('非 md 檔案排除', () => {
+    expect(isEntityFile('餐廳', 'notes.txt')).toBe(false);
+  });
+
+  it('其他分類的總覽檔名不會誤判（跨分類不比對）', () => {
+    expect(isEntityFile('餐廳', '住宿總覽.md')).toBe(true);
   });
 });

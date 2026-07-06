@@ -9,6 +9,10 @@ import { parseTodos } from './lib/parse-todos';
 import { parseGuide } from './lib/parse-guide';
 import { resolveGuideImage, guideImageKey, rewriteImageUrls } from './lib/guide-images';
 
+export function isEntityFile(cat: string, filename: string): boolean {
+  return filename.endsWith('.md') && filename !== `${cat}總覽.md`;
+}
+
 export function buildOverview(raw: string): {
   fields: Record<string, string>;
   transportNotes: string[];
@@ -52,7 +56,7 @@ function main() {
   for (const cat of CATEGORIES) {
     const dir = path.join(vault, 'wiki/entities', cat);
     if (!fs.existsSync(dir)) continue;
-    for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.md'))) {
+    for (const f of fs.readdirSync(dir).filter((f) => isEntityFile(cat, f))) {
       try {
         entities.push(parseEntity(cat, f, fs.readFileSync(path.join(dir, f), 'utf8')));
       } catch (e) {
