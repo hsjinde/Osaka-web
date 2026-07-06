@@ -58,3 +58,8 @@ a { color: var(--red); }
   font-family: inherit; color: var(--ink);
 }
 @media (max-width: 640px) { .search-field { font-size: 16px; } }
+.hscroll { display: flex; gap: 8px; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
+.hscroll::-webkit-scrollbar { display: none; }
+.hscroll > * { flex: none; }
+.hdr-collapse { max-height: 320px; opacity: 1; overflow: hidden; transition: max-height .2s ease, opacity .2s ease; }
+.hdr-collapse--hidden { max-height: 0; opacity: 0; pointer-events: none; }

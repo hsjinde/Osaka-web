@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { countdownDays } from '../App';
+import { countdownDays } from '../lib/countdown';
 import { byCategory, entities, meta, overview, todos } from '../data';
 import { useTripState } from '../state/store';
 import { useAuth } from '../state/auth';
