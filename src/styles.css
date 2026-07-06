@@ -51,3 +51,10 @@ a { color: var(--red); }
 .md-body code { background: rgba(41,35,26,.06); border-radius: 4px; padding: 1px 5px; }
 .md-body ul { padding-left: 20px; margin: 6px 0; }
 .md-body img { max-width: 100%; height: auto; display: block; margin: 12px 0; border-radius: 8px; border: 1px solid var(--line); }
+.search-hit { background: rgba(232,180,74,.28); border-radius: 3px; padding: 0 1px; color: inherit; }
+.search-field {
+  width: 100%; background: var(--card); border: 1px solid var(--line-dark);
+  border-radius: 8px; padding: 10px 34px 10px 14px; font-size: 14px;
+  font-family: inherit; color: var(--ink);
+}
+@media (max-width: 640px) { .search-field { font-size: 16px; } }
