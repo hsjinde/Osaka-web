@@ -2,10 +2,12 @@ import { byCategory } from '../data';
 import Heart from '../components/Heart';
 import Stamp from '../components/Stamp';
 import MapLink from '../components/MapLink';
+import { useScrollHighlight } from '../lib/useScrollHighlight';
 
-export default function Places() {
+export default function Places({ highlightId }: { highlightId?: string }) {
   const spots = byCategory('景點');
   const shops = byCategory('購物');
+  useScrollHighlight(highlightId);
 
   return (
     <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
@@ -16,7 +18,7 @@ export default function Places() {
         </div>
         <div className="cards-grid">
           {spots.map((p) => (
-            <div key={p.id} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+            <div key={p.id} id={`entity-${p.id}`} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
               <Stamp rating={p.rating} />
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className="serif" style={{ fontSize: 15.5, fontWeight: 700, lineHeight: 1.35 }}>{p.name}</div>
@@ -43,7 +45,7 @@ export default function Places() {
         </div>
         <div className="cards-grid">
           {shops.map((p) => (
-            <div key={p.id} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+            <div key={p.id} id={`entity-${p.id}`} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
                   <span className="serif" style={{ fontSize: 15.5, fontWeight: 700 }}>{p.name}</span>
