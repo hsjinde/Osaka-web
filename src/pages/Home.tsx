@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { countdownDays } from '../App';
 import { byCategory, entities, meta, overview, todos } from '../data';
 import { useTripState } from '../state/store';
+import { useAuth } from '../state/auth';
 import WishList from '../components/WishList';
 
 export default function Home() {
   const { todosState, toggleTodo, favCount, favs } = useTripState();
+  const { canEdit, openLogin } = useAuth();
   const [wishOpen, setWishOpen] = useState(false);
   const favEntities = entities.filter((e) => favs[`fav:${e.id}`]);
   const f = overview.fields;
@@ -84,8 +86,8 @@ export default function Home() {
               const on = !!todosState[t.key];
               return (
                 <button key={t.key} className="btn-plain dash-bottom"
-                  style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 4px' }}
-                  onClick={() => toggleTodo(t.key)}>
+                  style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 4px', opacity: canEdit ? 1 : 0.6 }}
+                  onClick={() => (canEdit ? toggleTodo(t.key) : openLogin())}>
                   <span style={{
                     flex: 'none', width: 20, height: 20, borderRadius: 4,
                     border: `1.6px solid ${on ? 'var(--green)' : 'rgba(41,35,26,.4)'}`,

@@ -1,22 +1,31 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 
-type Bindings = { DB: D1Database; DASH_TOKEN: string };
+type Bindings = { DB: D1Database; DASH_TOKEN: string; DASH_PASSWORD: string };
 const app = new Hono<{ Bindings: Bindings }>();
 
 app.use('/api/*', cors({
   origin: ['https://osaka.19980803.xyz', 'https://hsjinde.github.io', 'http://localhost:5173'],
-  allowMethods: ['GET', 'PUT', 'OPTIONS'],
+  allowMethods: ['GET', 'PUT', 'POST', 'OPTIONS'],
   allowHeaders: ['Authorization', 'Content-Type'],
 }));
 
 app.use('/api/*', async (c, next) => {
-  if (c.req.method !== 'GET' && c.req.method !== 'OPTIONS') {
-    if (c.req.header('Authorization') !== `Bearer ${c.env.DASH_TOKEN}`) {
-      return c.json({ error: 'unauthorized' }, 401);
-    }
+  // 公開：讀取(GET)、預檢(OPTIONS)、登入(POST /api/login)；其餘寫入需 DASH_TOKEN。
+  const open = c.req.method === 'GET' || c.req.method === 'OPTIONS' || c.req.path === '/api/login';
+  if (!open && c.req.header('Authorization') !== `Bearer ${c.env.DASH_TOKEN}`) {
+    return c.json({ error: 'unauthorized' }, 401);
   }
   await next();
+});
+
+// 以共用密碼換取寫入用的 token。
+app.post('/api/login', async (c) => {
+  const { password } = await c.req.json<{ password: string }>();
+  if (password !== c.env.DASH_PASSWORD) {
+    return c.json({ error: 'invalid password' }, 401);
+  }
+  return c.json({ token: c.env.DASH_TOKEN });
 });
 
 app.get('/api/state', async (c) => {

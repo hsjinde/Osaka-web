@@ -4,7 +4,22 @@ const QUEUE_KEY = 'osaka-state-queue';
 
 export function getToken(): string | null { return localStorage.getItem(TOKEN_KEY); }
 export function setToken(t: string): void { localStorage.setItem(TOKEN_KEY, t); }
+export function clearToken(): void { localStorage.removeItem(TOKEN_KEY); }
 export function configured(): boolean { return !!apiBase() && !!getToken(); }
+
+/** 以共用密碼向 Worker 換取寫入 token；成功存入本機回 true，密碼錯誤回 false。 */
+export async function login(password: string): Promise<boolean> {
+  const res = await fetch(`${apiBase()}/api/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password }),
+  });
+  if (res.status === 401) return false;
+  if (!res.ok) throw new Error(`POST login ${res.status}`);
+  const { token } = await res.json() as { token: string };
+  setToken(token);
+  return true;
+}
 
 function headers(): HeadersInit {
   return { Authorization: `Bearer ${getToken() ?? ''}`, 'Content-Type': 'application/json' };
