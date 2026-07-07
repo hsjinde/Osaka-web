@@ -7,7 +7,7 @@ import { parseEntity } from './lib/parse-entity';
 import { parseItinerary } from './lib/parse-itinerary';
 import { parseTodos } from './lib/parse-todos';
 import { parseGuide } from './lib/parse-guide';
-import { resolveGuideImage, guideImageKey, rewriteImageUrls } from './lib/guide-images';
+import { resolveGuideImage, guideImageKey, rewriteImageUrls, entityImageUrl } from './lib/guide-images';
 
 export function isEntityFile(cat: string, filename: string): boolean {
   return filename.endsWith('.md') && filename !== `${cat}總覽.md`;
@@ -51,6 +51,9 @@ function main() {
   const write = (name: string, data: unknown) =>
     fs.writeFileSync(path.join(out, name), JSON.stringify(data, null, 1), 'utf8');
 
+  const r2Base = (process.env.R2_PUBLIC_URL_PREFIX || 'https://img.19980803.xyz').replace(/\/+$/, '');
+  const assetRoots = [path.join(vault, 'assets'), path.join(vault, '原始資料/attachments')];
+
   const errors: string[] = [];
   const entities: Entity[] = [];
   for (const cat of CATEGORIES) {
@@ -58,7 +61,9 @@ function main() {
     if (!fs.existsSync(dir)) continue;
     for (const f of fs.readdirSync(dir).filter((f) => isEntityFile(cat, f))) {
       try {
-        entities.push(parseEntity(cat, f, fs.readFileSync(path.join(dir, f), 'utf8')));
+        const ent = parseEntity(cat, f, fs.readFileSync(path.join(dir, f), 'utf8'));
+        ent.body = rewriteImageUrls(ent.body, (src) => entityImageUrl(src, dir, assetRoots, r2Base));
+        entities.push(ent);
       } catch (e) {
         errors.push(e instanceof Error ? e.message : String(e));
       }
@@ -68,8 +73,6 @@ function main() {
   // 別人推薦攻略（補充內容：best-effort，解析失敗只警告不擋建置）
   const guides: Guide[] = [];
   const guidesDir = path.join(vault, '原始資料/別人行程');
-  const r2Base = (process.env.R2_PUBLIC_URL_PREFIX || 'https://img.19980803.xyz').replace(/\/+$/, '');
-  const assetRoots = [path.join(vault, 'assets'), path.join(vault, '原始資料/attachments')];
   if (fs.existsSync(guidesDir)) {
     for (const f of fs.readdirSync(guidesDir).filter((f) => f.endsWith('.md'))) {
       try {
