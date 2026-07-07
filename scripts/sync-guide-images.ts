@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
-import { resolveGuideImage, guideImageKey, extractImageSrcs } from './lib/guide-images';
+import { resolveGuideImage, guideImageKey, extractImageSrcs, collectEntityImageFiles } from './lib/guide-images';
 
 const vault = process.env.NOTES_DIR;
 if (!vault || !fs.existsSync(vault)) {
@@ -37,8 +37,11 @@ if (fs.existsSync(guidesDir)) {
   }
 }
 
+// entity 圖片（交通等分類）一併上傳
+for (const [key, abs] of collectEntityImageFiles(vault, assetRoots)) files.set(key, abs);
+
 if (files.size === 0) {
-  console.log('沒有可上傳的攻略圖片。');
+  console.log('沒有可上傳的圖片。');
   process.exit(0);
 }
 
