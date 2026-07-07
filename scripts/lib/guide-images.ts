@@ -1,10 +1,30 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { CATEGORIES } from '../../src/data/schema';
 
-/** 由圖片檔的絕對路徑算出 R2 key：`osaka/guides/<父資料夾>/<檔名>`（父資料夾為 ASCII、不撞名）。 */
-export function guideImageKey(absPath: string): string {
+/** 由圖片檔絕對路徑算出 R2 key：`osaka/<prefix>/<父資料夾>/<檔名>`。 */
+export function imageKey(absPath: string, prefix: 'guides' | 'entities'): string {
   const folder = path.basename(path.dirname(absPath));
-  return `osaka/guides/${folder}/${path.basename(absPath)}`;
+  return `osaka/${prefix}/${folder}/${path.basename(absPath)}`;
+}
+
+/** 保留原簽名，內部改用 imageKey（輸出不變）。 */
+export function guideImageKey(absPath: string): string {
+  return imageKey(absPath, 'guides');
+}
+
+/** 由 base + key 組公開網址；key 逐段 encodeURIComponent（中文安全，`/` 不編）。 */
+export function toPublicUrl(base: string, key: string): string {
+  return `${base}/${key.split('/').map(encodeURIComponent).join('/')}`;
+}
+
+/** 把 Obsidian 圖片嵌入 `![[檔.副檔名]]`（可含 |尺寸 或 #anchor）轉成標準 markdown `![](檔.副檔名)`。
+ *  非圖片副檔名的嵌入（如 `![[某筆記]]`）不動。 */
+export function embedsToImageMarkdown(s: string): string {
+  return s.replace(
+    /!\[\[([^\]|#]+?\.(?:png|jpe?g|gif|webp|avif|svg))(?:[|#][^\]]*)?\]\]/gi,
+    '![]($1)',
+  );
 }
 
 /** 解析 markdown 圖片 src 到 vault 內實際檔案的絕對路徑；已是 http 或找不到回 null。 */
@@ -50,4 +70,32 @@ export function rewriteImageUrls(body: string, srcToUrl: (src: string) => string
     const url = srcToUrl(src.trim());
     return url ? `${pre}${url}${post}` : whole;
   });
+}
+
+/** entity 圖片 src → R2 encode 公開網址；解析不到回 null。 */
+export function entityImageUrl(
+  src: string,
+  entityDir: string,
+  assetRoots: string[],
+  r2Base: string,
+): string | null {
+  const abs = resolveGuideImage(src, entityDir, assetRoots);
+  return abs ? toPublicUrl(r2Base, imageKey(abs, 'entities')) : null;
+}
+
+/** 掃 vault 各分類 entity 檔，回傳可上傳的圖片（R2 key → 絕對路徑，已去重）。 */
+export function collectEntityImageFiles(vault: string, assetRoots: string[]): Map<string, string> {
+  const files = new Map<string, string>();
+  for (const cat of CATEGORIES) {
+    const dir = path.join(vault, 'wiki/entities', cat);
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.md'))) {
+      const body = embedsToImageMarkdown(fs.readFileSync(path.join(dir, f), 'utf8'));
+      for (const src of extractImageSrcs(body)) {
+        const abs = resolveGuideImage(src, dir, assetRoots);
+        if (abs) files.set(imageKey(abs, 'entities'), abs);
+      }
+    }
+  }
+  return files;
 }
