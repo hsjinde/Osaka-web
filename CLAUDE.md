@@ -33,6 +33,13 @@ npm run deploy  # wrangler deploy
 `.env`（repo root，勿提交）欄位見 `.env.example`：`NOTES_DIR`（本機 vault 路徑）、
 `VITE_API_BASE`（Worker URL，留白則前端純 localStorage 離線模式）、Cloudflare 部署憑證。
 
+**GitHub Actions 憑證**（repo `hsjinde/Osaka-web` → Settings → Secrets and variables → Actions）：
+Cloudflare 憑證放在 GitHub，**本機取不到**（只在 workflow 執行時注入）：
+- Secrets：`CLOUDFLARE_API_TOKEN`、`CLOUDFLARE_ACCOUNT_ID`（`deploy.yml` 的 `deploy-cf-pages` job 用來 `pages deploy`）
+- Variables：`VITE_API_BASE`（build 時注入前端）
+- 尚**未**設 `CLOUDFLARE_R2_BUCKET_NAME`（`sync:images` 目前吃程式預設 bucket）。
+- `npm run sync:images`（R2 圖片上傳）**只在本機跑、CI 不上傳**；本機需 `.env` 的 `CLOUDFLARE_API_TOKEN`（且該 token 要有 R2 寫入權限）。
+
 ## Architecture
 
 **三段管線：** vault markdown → (`build:data` + Zod 驗證) → `src/data/*.json` → Vite build → 靜態網站。
@@ -81,3 +88,7 @@ CORS 白名單寫死在程式碼裡（`osaka.19980803.xyz` / GitHub Pages / loca
 - `worker/` 是獨立 npm 專案（有自己的 `package.json`/`tsconfig.json`/`vitest.config.ts`），
   不算在 root 的 `npm test` 範圍內，要單獨 `cd worker && npm test`。
 - 專案內有 `.claude/skills/cloudflare-use` 技能，操作 D1 / R2 前應該優先使用它。
+
+## 偏好
+
+- 與使用者溝通一律使用**繁體中文**（程式碼、識別字、檔名維持原文）。
