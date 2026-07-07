@@ -1,5 +1,6 @@
 import { byCategory } from '../data';
 import MarkdownBody from '../components/MarkdownBody';
+import { stripEntityCardBody } from '../lib/entity-body';
 
 const HEADER_COLORS = ['var(--navy)', 'var(--red)', 'var(--green)'];
 
@@ -14,7 +15,7 @@ export default function Transport() {
             <span style={{ fontSize: 12, opacity: .78 }}>{t.summary.slice(0, 60)}</span>
           </div>
           <div style={{ padding: '10px 22px 18px' }}>
-            <MarkdownBody>{t.body.replace(/## 基本資訊[\s\S]*?(?=\n## |$)/, '').replace(/## 來源[\s\S]*$/, '')}</MarkdownBody>
+            <MarkdownBody>{stripEntityCardBody(t.body)}</MarkdownBody>
           </div>
         </div>
       ))}
