@@ -1,11 +1,24 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { CATEGORIES } from '../../src/data/schema';
 
-/** 由圖片檔絕對路徑算出 R2 key：`osaka/<prefix>/<父資料夾>/<檔名>`。 */
+/** 由圖片檔絕對路徑算出 R2 key。
+ *  guides：`osaka/guides/<父資料夾>/<檔名>`（既有 ASCII 命名，維持不變）。
+ *  entities：R2 公開網域無法穩定服務「含中文的 key」（實測 404），故轉成**純 ASCII** key
+ *  ——保留檔名中的 ASCII 片段 + 8 碼雜湊 + 副檔名（雜湊取自「父資料夾/檔名」，穩定且唯一）。 */
 export function imageKey(absPath: string, prefix: 'guides' | 'entities'): string {
   const folder = path.basename(path.dirname(absPath));
-  return `osaka/${prefix}/${folder}/${path.basename(absPath)}`;
+  const file = path.basename(absPath);
+  if (prefix === 'guides') return `osaka/guides/${folder}/${file}`;
+  const ext = path.extname(file);
+  const slug = path
+    .basename(file, ext)
+    .replace(/[^\x20-\x7E]+/g, '') // 去掉非 ASCII
+    .replace(/[^a-zA-Z0-9._-]+/g, '-') // 其餘非安全字元轉 -
+    .replace(/^-+|-+$/g, '');
+  const hash = createHash('sha1').update(`${folder}/${file}`).digest('hex').slice(0, 8);
+  return `osaka/entities/${slug ? `${slug}-${hash}` : hash}${ext}`;
 }
 
 /** 保留原簽名，內部改用 imageKey（輸出不變）。 */

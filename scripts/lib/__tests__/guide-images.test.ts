@@ -64,9 +64,18 @@ describe('embedsToImageMarkdown', () => {
 });
 
 describe('imageKey', () => {
-  it('entities 前綴＋父資料夾＋檔名', () => {
-    expect(imageKey('/v/assets/交通/JR-HARUKA-路線圖.jpg', 'entities'))
-      .toBe('osaka/entities/交通/JR-HARUKA-路線圖.jpg');
+  it('entities key 為純 ASCII（保留 ASCII 片段 + 8 碼雜湊 + 副檔名）', () => {
+    const k = imageKey('/v/assets/交通/JR-HARUKA-路線圖.jpg', 'entities');
+    expect(k).toMatch(/^osaka\/entities\/JR-HARUKA-[0-9a-f]{8}\.jpg$/);
+    expect(k).toMatch(/^[\x20-\x7E]+$/); // 全 ASCII
+  });
+  it('entities key 穩定（不因路徑前綴而變）、不同檔名不同；純中文檔名只剩雜湊', () => {
+    const a = imageKey('/x/assets/交通/大阪地鐵-路線圖.gif', 'entities');
+    const b = imageKey('/y/z/assets/交通/大阪地鐵-路線圖.gif', 'entities');
+    const c = imageKey('/x/assets/交通/近鐵周遊券-範圍地圖.png', 'entities');
+    expect(a).toBe(b);
+    expect(a).not.toBe(c);
+    expect(a).toMatch(/^osaka\/entities\/[0-9a-f]{8}\.gif$/);
   });
   it('guideImageKey 等於 imageKey(…, guides)（輸出不回歸）', () => {
     const abs = '/v/原始資料/attachments/threads-zsf4315/image_01.webp';
@@ -101,12 +110,13 @@ describe('entityImageUrl / collectEntityImageFiles（暫存 vault）', () => {
     return root;
   }
 
-  it('entityImageUrl 解析到 assets 內的圖並組 encode 網址', () => {
+  it('entityImageUrl 解析到 assets 內的圖並組純 ASCII 網址', () => {
     const root = makeVault();
     const assetRoots = [path.join(root, 'assets'), path.join(root, '原始資料/attachments')];
     const dir = path.join(root, 'wiki/entities/交通');
-    expect(entityImageUrl('foo.png', dir, assetRoots, 'https://img.19980803.xyz'))
-      .toBe('https://img.19980803.xyz/osaka/entities/' + encodeURIComponent('交通') + '/foo.png');
+    const url = entityImageUrl('foo.png', dir, assetRoots, 'https://img.19980803.xyz');
+    expect(url).toMatch(/^https:\/\/img\.19980803\.xyz\/osaka\/entities\/foo-[0-9a-f]{8}\.png$/);
+    expect(url).toMatch(/^[\x20-\x7E]+$/); // 全 ASCII
     fs.rmSync(root, { recursive: true, force: true });
   });
 
@@ -117,11 +127,14 @@ describe('entityImageUrl / collectEntityImageFiles（暫存 vault）', () => {
     fs.rmSync(root, { recursive: true, force: true });
   });
 
-  it('collectEntityImageFiles 掃出 entity 圖片（key→絕對路徑）', () => {
+  it('collectEntityImageFiles 掃出 entity 圖片（ASCII key → 絕對路徑）', () => {
     const root = makeVault();
     const assetRoots = [path.join(root, 'assets'), path.join(root, '原始資料/attachments')];
     const files = collectEntityImageFiles(root, assetRoots);
-    expect(files.get('osaka/entities/交通/foo.png')).toBe(path.join(root, 'assets/交通/foo.png'));
+    const abs = path.join(root, 'assets/交通/foo.png');
+    const key = imageKey(abs, 'entities');
+    expect(key).toMatch(/^osaka\/entities\/foo-[0-9a-f]{8}\.png$/);
+    expect(files.get(key)).toBe(abs);
     fs.rmSync(root, { recursive: true, force: true });
   });
 });
