@@ -1,6 +1,7 @@
 import matter from 'gray-matter';
 import { EntitySchema, type Entity } from '../../src/data/schema';
 import { stripWikilinks, extractArea } from './text';
+import { embedsToImageMarkdown } from './guide-images';
 
 export function parseEntity(
   category: Entity['category'],
@@ -10,7 +11,7 @@ export function parseEntity(
   const id = `${category}/${filename.replace(/\.md$/, '')}`;
   try {
     const { data, content } = matter(raw);
-    const body = stripWikilinks(content.trim());
+    const body = stripWikilinks(embedsToImageMarkdown(content.trim()));
 
     const fields: Record<string, string> = {};
     const section = body.match(/## 基本資訊\n([\s\S]*?)(?=\n## |$)/);

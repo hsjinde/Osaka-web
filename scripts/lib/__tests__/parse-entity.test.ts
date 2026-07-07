@@ -63,4 +63,15 @@ describe('parseEntity', () => {
     const raw = REST.replace('updated: 2026-06-09', 'updated: 2026-06-09\nfavorite: true');
     expect(parseEntity('餐廳', 'X.md', raw).favorite).toBe(true);
   });
+
+  it('圖片嵌入 ![[圖.jpg]] 轉標準 markdown 且不被 stripWikilinks 破壞', () => {
+    const raw = REST.replace(
+      '道頓堀區域的鰻魚飯專賣店。',
+      '道頓堀區域的鰻魚飯專賣店。\n\n![[招牌.jpg]]',
+    );
+    const e = parseEntity('餐廳', 'X.md', raw);
+    expect(e.body).toContain('![](招牌.jpg)');
+    expect(e.body).not.toContain('![[招牌.jpg]]');
+    expect(e.summary).toBe('道頓堀區域的鰻魚飯專賣店。');
+  });
 });
