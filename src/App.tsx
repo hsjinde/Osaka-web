@@ -39,7 +39,7 @@ export default function App() {
       <Header tab={tab} onNavigate={(k) => { location.hash = k; }} />
       <LoginModal />
       <main style={{ maxWidth: 1120, margin: '0 auto', padding: '24px 20px 64px' }}>
-        <Page key={tab} />
+        <div className="page-enter" key={tab}><Page /></div>
       </main>
       <footer style={{
         borderTop: '1px solid var(--line)', padding: '18px 20px', textAlign: 'center',
