@@ -1,10 +1,10 @@
 import { useState, type CSSProperties } from 'react';
-import { entities } from '../data';
 import { useItinerary } from '../state/itinerary';
 import { configured } from '../api/state';
 import type { DaySlot } from '../data/schema';
 import AreaRail from '../components/AreaRail';
 import Reveal from '../components/Reveal';
+import EntityPicker from '../components/EntityPicker';
 
 type View = 'timeline' | 'cards' | 'map';
 const VIEWS: [View, string][] = [['timeline', '時間軸'], ['cards', '卡片'], ['map', '地圖']];
@@ -181,9 +181,6 @@ function EditableSlots({ dayIdx, slots, onUpdate, onAdd, onRemove, onMove }: {
   };
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 14 }}>
-      <datalist id="entity-options">
-        {entities.map((e) => <option key={e.id} value={e.name}>{e.category}・{e.area}</option>)}
-      </datalist>
       {slots.map((s, i) => (
         <div key={i} style={{
           display: 'grid', gridTemplateColumns: '80px 1fr 1fr auto', gap: 8, alignItems: 'center',
@@ -191,14 +188,13 @@ function EditableSlots({ dayIdx, slots, onUpdate, onAdd, onRemove, onMove }: {
         }}>
           <input style={field} value={s.time} placeholder="時段"
             onChange={(e) => onUpdate(dayIdx, i, { time: e.target.value })} />
-          <input style={{ ...field, opacity: s.pending ? .5 : 1 }} list="entity-options"
-            value={s.pending ? '' : s.title} placeholder={s.pending ? '待安排' : '標題（可打字或選單）'}
+          <EntityPicker
+            value={s.pending ? '' : s.title}
+            placeholder={s.pending ? '待安排' : '標題（可打字或選單）'}
             disabled={s.pending}
-            onChange={(e) => {
-              const v = e.target.value;
-              const match = entities.find((x) => x.name === v);
-              onUpdate(dayIdx, i, { title: v, ...(match && !s.note.trim() ? { note: match.area } : {}) });
-            }} />
+            onChangeTitle={(title) => onUpdate(dayIdx, i, { title })}
+            onPick={(entity) => onUpdate(dayIdx, i, { title: entity.name, ...(!s.note.trim() ? { note: entity.area } : {}) })}
+          />
           <input style={{ ...field, opacity: s.pending ? .5 : 1 }} value={s.pending ? '' : s.note} placeholder="備註"
             disabled={s.pending}
             onChange={(e) => onUpdate(dayIdx, i, { note: e.target.value })} />

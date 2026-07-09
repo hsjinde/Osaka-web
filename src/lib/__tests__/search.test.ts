@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import {
-  tokenize, matchesTokens, scoreEntity, suggestFoodTypes, makeSegments, makeSnippet,
+  tokenize, matchesTokens, scoreEntity, suggestFoodTypes, makeSegments, makeSnippet, rankEntities,
 } from '../search';
 import type { Entity } from '../../data/schema';
 
@@ -105,6 +105,32 @@ describe('makeSegments', () => {
   });
   it('空 tokens 回單一非 hit 片段', () => {
     expect(makeSegments('大阪城', [])).toEqual([{ text: '大阪城', hit: false }]);
+  });
+});
+
+describe('rankEntities', () => {
+  const pool = [
+    ent({ id: 'a', name: '一蘭拉麵', area: '難波' }),
+    ent({ id: 'b', name: '二蘭拉麵', area: '梅田' }),
+    ent({ id: 'c', name: '大阪城', area: '大阪城' }),
+  ];
+  it('無查詢時，已標記的排最前面', () => {
+    const favIds = new Set(['c']);
+    const result = rankEntities('', favIds, pool);
+    expect(result[0].id).toBe('c');
+    expect(result.map((e) => e.id)).toEqual(['c', 'a', 'b']);
+  });
+  it('有查詢時，標記且命中的排最前，未命中的濾除', () => {
+    const favIds = new Set(['b']);
+    const result = rankEntities('拉麵', favIds, pool);
+    expect(result.map((e) => e.id)).toEqual(['b', 'a']);
+  });
+  it('查無結果回空陣列', () => {
+    expect(rankEntities('燒肉', new Set(), pool)).toEqual([]);
+  });
+  it('限制回傳筆數上限', () => {
+    const big = Array.from({ length: 60 }, (_, i) => ent({ id: `x${i}`, name: `店${i}` }));
+    expect(rankEntities('', new Set(), big).length).toBe(40);
   });
 });
 

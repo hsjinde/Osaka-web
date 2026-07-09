@@ -35,6 +35,24 @@ export function scoreEntity(e: Entity, tokens: string[]): number {
   return total;
 }
 
+const RANK_MAX_RESULTS = 40;
+
+/** 已標記的排最前面，其餘依 scoreEntity 分數排序；無查詢字時不濾除、只排序。 */
+export function rankEntities(query: string, favIds: ReadonlySet<string>, pool: Entity[] = entities): Entity[] {
+  const tokens = tokenize(query);
+  return pool
+    .map((e) => ({ e, score: tokens.length ? scoreEntity(e, tokens) : 0 }))
+    .filter(({ score }) => tokens.length === 0 || score > 0)
+    .sort((a, b) => {
+      const favA = favIds.has(a.e.id) ? 1 : 0;
+      const favB = favIds.has(b.e.id) ? 1 : 0;
+      if (favA !== favB) return favB - favA;
+      return b.score - a.score;
+    })
+    .map(({ e }) => e)
+    .slice(0, RANK_MAX_RESULTS);
+}
+
 export function suggestFoodTypes(query: string): { type: string; count: number }[] {
   const tokens = tokenize(query);
   if (tokens.length === 0) return [];
