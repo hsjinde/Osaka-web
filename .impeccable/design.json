@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-10T00:00:00.000Z",
+  "title": "Design System: 大阪旅券 OSAKA TRIP",
+  "extensions": {
+    "colorMeta": {
+      "seal-red": { "role": "primary", "displayName": "朱印紅 Seal Red", "canonical": "oklch(0.53 0.15 39)", "tonalRamp": ["oklch(0.20 0.07 39)", "oklch(0.28 0.10 39)", "oklch(0.37 0.13 39)", "oklch(0.45 0.15 39)", "oklch(0.53 0.15 39)", "oklch(0.66 0.13 39)", "oklch(0.80 0.09 39)", "oklch(0.93 0.04 39)"] },
+      "ai-navy": { "role": "secondary", "displayName": "藍 Ai Navy", "canonical": "oklch(0.35 0.05 260)", "tonalRamp": ["oklch(0.18 0.04 260)", "oklch(0.26 0.05 260)", "oklch(0.35 0.05 260)", "oklch(0.44 0.05 260)", "oklch(0.54 0.05 260)", "oklch(0.66 0.04 260)", "oklch(0.80 0.03 260)", "oklch(0.93 0.015 260)"] },
+      "matcha-green": { "role": "secondary", "displayName": "綠 Matcha Green", "canonical": "oklch(0.50 0.06 150)", "tonalRamp": ["oklch(0.22 0.04 150)", "oklch(0.30 0.05 150)", "oklch(0.40 0.06 150)", "oklch(0.50 0.06 150)", "oklch(0.60 0.06 150)", "oklch(0.72 0.05 150)", "oklch(0.84 0.03 150)", "oklch(0.94 0.015 150)"] },
+      "kin-gold": { "role": "tertiary", "displayName": "金 Kin Gold", "canonical": "oklch(0.79 0.12 82)", "tonalRamp": ["oklch(0.30 0.06 82)", "oklch(0.42 0.08 82)", "oklch(0.55 0.10 82)", "oklch(0.67 0.12 82)", "oklch(0.79 0.12 82)", "oklch(0.86 0.10 82)", "oklch(0.92 0.06 82)", "oklch(0.97 0.03 82)"] },
+      "sumi-ink": { "role": "neutral", "displayName": "墨 Sumi Ink", "canonical": "oklch(0.24 0.015 68)", "tonalRamp": ["oklch(0.20 0.015 68)", "oklch(0.28 0.015 68)", "oklch(0.38 0.014 68)", "oklch(0.50 0.013 68)", "oklch(0.62 0.020 68)", "oklch(0.74 0.020 68)", "oklch(0.86 0.018 68)", "oklch(0.95 0.012 68)"] },
+      "washi-paper": { "role": "neutral", "displayName": "和紙米 Washi Paper", "canonical": "oklch(0.93 0.018 78)", "tonalRamp": ["oklch(0.30 0.015 78)", "oklch(0.44 0.017 78)", "oklch(0.58 0.018 78)", "oklch(0.70 0.018 78)", "oklch(0.82 0.018 78)", "oklch(0.90 0.018 78)", "oklch(0.94 0.016 78)", "oklch(0.97 0.012 78)"] },
+      "cha-brown": { "role": "neutral", "displayName": "茶 Cha Brown", "canonical": "oklch(0.58 0.03 74)", "tonalRamp": ["oklch(0.30 0.02 74)", "oklch(0.40 0.028 74)", "oklch(0.49 0.03 74)", "oklch(0.58 0.03 74)", "oklch(0.68 0.028 74)", "oklch(0.78 0.022 74)", "oklch(0.87 0.016 74)", "oklch(0.95 0.010 74)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display 明朝大數字", "purpose": "一眼焦點的英雄數字（首頁倒數 72px），朱印紅、Shippori Mincho 800。" },
+      "headline": { "displayName": "Headline 明朝主標", "purpose": "頁面／卡片主標題，Shippori Mincho 700、字距 0.12em。" },
+      "title": { "displayName": "Title 明朝區塊標", "purpose": "區塊標題（如「出發前待辦」），Shippori Mincho 700 18px。" },
+      "body": { "displayName": "Body 黑體正文", "purpose": "正文與攻略內文，Noto Sans TC 400、行高 1.75，長文 65–75ch。" },
+      "label": { "displayName": "Label 英文小標籤", "purpose": "英文標籤（OSAKA TRIP／HOTEL），Noto Sans TC 600、字距 0.25em、常大寫、走茶色。" }
+    },
+    "shadows": [
+      { "name": "stamp-offset", "value": "2px 2px 0 rgba(41,35,26,.18)", "purpose": "印章／logo 的蓋章硬影：硬邊無模糊，模擬紙上蓋章位移。" },
+      { "name": "card-lift", "value": "0 6px 18px rgba(41,35,26,.16)", "purpose": "可點卡片 hover 時的一次性抬升；休息態無影。" }
+    ],
+    "motion": [
+      { "name": "ease-reveal", "value": "cubic-bezier(.22,.9,.35,1)", "purpose": "頁面進場與 reveal 的 ease-out 曲線。" },
+      { "name": "ease-stamp", "value": "cubic-bezier(.2,1.4,.4,1)", "purpose": "印章蓋章落定的輕微過衝。" },
+      { "name": "dur-tap", "value": "150ms", "purpose": "hover／按壓等狀態過場的預設時長。" },
+      { "name": "seal-pulse", "value": "sealPulse 1.1s ease-in-out infinite", "purpose": "同步中的印章呼吸（旋轉+縮放+透明度）。" }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" },
+      { "name": "content-max", "value": "1120px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Nav Chip (current)",
+      "kind": "chip",
+      "refersTo": "chip-on-red",
+      "description": "頂部分頁導航的膠囊按鈕；當前分頁填朱印紅底。",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\">景點</button><button class=\"ds-chip ds-chip--on\">美食庫 42</button><button class=\"ds-chip\">交通</button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; font-family: 'Noto Sans TC', sans-serif; } .ds-chip { min-height: 36px; background: transparent; color: #29231A; border: 1px solid rgba(41,35,26,.3); border-radius: 999px; padding: 7px 16px; font-size: 13px; font-weight: 500; letter-spacing: .05em; cursor: pointer; transition: background .15s, color .15s, border-color .15s; } .ds-chip:hover { border-color: #B23A1E; color: #B23A1E; } .ds-chip:focus-visible { outline: 2px solid #B23A1E; outline-offset: 2px; } .ds-chip--on { background: #B23A1E; color: #F7F2E6; border-color: #B23A1E; font-weight: 600; }"
+    },
+    {
+      "name": "Info Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "資訊卡：卡紙底、1px 界線、虛線內分隔；可點版本 hover 抬升。",
+      "html": "<div class=\"ds-card\"><div class=\"ds-label\">HOTEL</div><div class=\"ds-card-title\">心齋橋 Cross Hotel</div><div class=\"ds-card-sub\">大阪市中央區・近道頓堀</div><div class=\"ds-card-divider\"><span>已確認 · 兩晚</span></div></div>",
+      "css": ".ds-card { background: #FBF7EC; border: 1px solid rgba(41,35,26,.14); border-radius: 10px; padding: 22px 24px; font-family: 'Noto Sans TC', sans-serif; color: #29231A; max-width: 340px; transition: transform .15s, box-shadow .15s; } .ds-card:hover { transform: translateY(-2px) rotate(-.2deg); box-shadow: 0 6px 18px rgba(41,35,26,.16); } .ds-label { font-size: 12px; letter-spacing: .25em; color: #8A7C64; font-weight: 600; } .ds-card-title { font-family: 'Shippori Mincho', serif; font-size: 21px; font-weight: 700; margin-top: 8px; } .ds-card-sub { font-size: 12px; color: #6E6350; margin-top: 2px; } .ds-card-divider { border-top: 1px dashed rgba(41,35,26,.22); margin-top: 14px; padding-top: 12px; font-size: 13px; color: #4A6B4F; font-weight: 600; }"
+    },
+    {
+      "name": "Edit Button (primary action)",
+      "kind": "button",
+      "refersTo": "button-edit",
+      "description": "主行動按鈕：透明底、朱印紅描邊與紅字。遵守 One Seal Rule 不做整片實心紅。",
+      "html": "<button class=\"ds-btn-edit\">登入編輯</button>",
+      "css": ".ds-btn-edit { font-family: 'Noto Sans TC', sans-serif; font-size: 13px; font-weight: 600; color: #B23A1E; background: transparent; border: 1px solid #B23A1E; border-radius: 6px; padding: 7px 16px; min-height: 38px; cursor: pointer; transition: background .15s, color .15s; } .ds-btn-edit:hover { background: rgba(178,58,30,.06); } .ds-btn-edit:active { background: rgba(178,58,30,.12); } .ds-btn-edit:focus-visible { outline: 2px solid #B23A1E; outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "搜尋輸入框：卡紙底、界線描邊、放大鏡圖示，佔位字用茶淺色而非淺灰。",
+      "html": "<div class=\"ds-search\"><input class=\"ds-search-input\" placeholder=\"搜尋店名、區域、標籤…\" /><svg class=\"ds-search-icon\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"#8A7C64\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><line x1=\"16.5\" y1=\"16.5\" x2=\"21\" y2=\"21\"/></svg></div>",
+      "css": ".ds-search { position: relative; max-width: 340px; font-family: 'Noto Sans TC', sans-serif; } .ds-search-input { width: 100%; background: #FBF7EC; border: 1px solid rgba(41,35,26,.25); border-radius: 8px; padding: 10px 34px 10px 14px; font-size: 14px; color: #29231A; } .ds-search-input::placeholder { color: #A2957F; } .ds-search-input:focus-visible { outline: 2px solid #B23A1E; outline-offset: 2px; } .ds-search-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); }"
+    },
+    {
+      "name": "Dark Banner",
+      "kind": "custom",
+      "refersTo": "banner-dark",
+      "description": "深色橫幅（收藏統計）：藍底、金色高光數字，把亮色系拉出深錨點。",
+      "html": "<div class=\"ds-banner\"><div class=\"ds-banner-tab\">已標記</div><div class=\"ds-banner-num\">17</div><div class=\"ds-banner-text\">個想去的地方 · 點擊展開清單</div></div>",
+      "css": ".ds-banner { display: flex; align-items: center; gap: 14px; background: #2E3A52; color: #EFE9DA; border-radius: 10px; padding: 18px 22px; font-family: 'Noto Sans TC', sans-serif; max-width: 380px; } .ds-banner-tab { writing-mode: vertical-rl; font-family: 'Shippori Mincho', serif; font-size: 14px; font-weight: 700; letter-spacing: .3em; border-right: 1px solid rgba(239,233,218,.3); padding-right: 10px; } .ds-banner-num { font-family: 'Shippori Mincho', serif; font-size: 40px; font-weight: 800; color: #E8B44A; line-height: 1; } .ds-banner-text { font-size: 12px; color: rgba(239,233,218,.72); }"
+    },
+    {
+      "name": "Stamp (visited state)",
+      "kind": "custom",
+      "refersTo": "stamp",
+      "description": "招牌元件——朱印圓章，「去過／辦好」的核心狀態語彙；歪斜旋轉、蓋章進場。",
+      "html": "<div class=\"ds-stamps\"><span class=\"ds-stamp\">済</span><span class=\"ds-stamp ds-stamp--off\">未</span></div>",
+      "css": ".ds-stamps { display: flex; gap: 16px; } .ds-stamp { width: 42px; height: 42px; border-radius: 50%; border: 1.6px solid #B23A1E; color: #B23A1E; display: flex; align-items: center; justify-content: center; font-family: 'Shippori Mincho', serif; font-size: 15px; font-weight: 800; transform: rotate(-6deg); background: rgba(178,58,30,.04); } .ds-stamp--off { border-color: rgba(41,35,26,.25); color: #A2957F; font-size: 13px; background: transparent; }"
+    },
+    {
+      "name": "Sync Seal (syncing)",
+      "kind": "custom",
+      "refersTo": "stamp",
+      "description": "招牌元件——同步印章，同步中以呼吸動畫傳達「正在跨裝置同步」。",
+      "html": "<span class=\"ds-seal\">同</span>",
+      "css": ".ds-seal { width: 26px; height: 26px; border-radius: 50%; border: 1.4px solid #B23A1E; color: #B23A1E; display: inline-flex; align-items: center; justify-content: center; font-family: 'Shippori Mincho', serif; font-size: 12px; font-weight: 800; background: rgba(178,58,30,.05); animation: ds-seal-pulse 1.1s ease-in-out infinite; } @keyframes ds-seal-pulse { 0% { transform: rotate(-6deg) scale(1); opacity: .55; } 50% { transform: rotate(-2deg) scale(1.08); opacity: 1; } 100% { transform: rotate(-6deg) scale(1); opacity: .55; } } @media (prefers-reduced-motion: reduce) { .ds-seal { animation: none; } }"
+    },
+    {
+      "name": "Favorite Heart",
+      "kind": "custom",
+      "refersTo": "chip",
+      "description": "收藏愛心開關，開啟態朱印紅、彈跳回饋，觸控命中區加大。",
+      "html": "<div class=\"ds-hearts\"><button class=\"ds-heart ds-heart--on\" aria-label=\"已收藏\">♥</button><button class=\"ds-heart\" aria-label=\"收藏\">♡</button></div>",
+      "css": ".ds-hearts { display: flex; gap: 8px; } .ds-heart { background: none; border: none; cursor: pointer; font-size: 20px; line-height: 1; padding: 12px; margin: -10px; color: rgba(41,35,26,.35); transition: transform .15s; } .ds-heart:hover { transform: scale(1.1); } .ds-heart:focus-visible { outline: 2px solid #B23A1E; outline-offset: 2px; border-radius: 4px; } .ds-heart--on { color: #B23A1E; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "大阪旅券・御朱印帳",
+    "overview": "這個介面是一本蓋滿朱印的旅遊手帳。不是行銷頁、不是冷淡的效率工具，而是一本全家共同維護、期待出發的關西通行證——有和紙的質感、有襯線標題的儀式感、有一枚枚朱印章記錄「這裡去過、這件辦好了」。系統以朱印紅為唯一主聲音，落在主行動、當前分頁、警示與收藏動作上；其餘和風色（藍、綠、金）各守一種狀態語意，絕不整頁齊放。底色是溫潤的和紙米疊一層極淡的橫向紙紋，卡片用更亮一階。字體是 Shippori Mincho 襯線 + Noto Sans TC 黑體的對比配對——襯線扛標題與大數字的儀式感，黑體扛正文與密集資訊的可讀性。方向上，這套系統正往更明亮活潑推：色彩更飽和、對比更清楚、留白更透氣。它明確拒絕沉悶灰撲撲的安靜和風、淡化和風的中性產品 UI、以及無個性的 AI 暖白樣板。",
+    "keyCharacteristics": [
+      "和紙米底 + 極淡橫向紙紋，卡片亮一階，層次靠色調不靠陰影",
+      "朱印紅是唯一主聲音；藍／綠／金各守一種狀態語意",
+      "Shippori Mincho 襯線扛標題與大數字，Noto Sans TC 黑體扛正文",
+      "印章／圓戳／歪斜旋轉／虛線分隔的手作紙品儀式感",
+      "行動優先：橫向捲動分頁、觸控目標 ≥36px、單手可用"
+    ],
+    "rules": [
+      { "name": "The One Seal Rule", "body": "朱印紅是唯一的主聲音，任一畫面上作為填色的面積 ≤10%。它可以描邊、可以做小徽章、可以蓋一枚章，但不可以整片鋪。它的稀有就是它的力量。", "section": "colors" },
+      { "name": "The No-Grey Rule", "body": "禁止任何為了優雅而發灰的低飽和色。文字走墨／茶梯度或和風彩色；色塊上的文字用該色調深階或文字色透明度，絕不用中性灰。往更亮推時飽和度只增不減。", "section": "colors" },
+      { "name": "The Serif-for-Ceremony Rule", "body": "襯線 Shippori Mincho 只給標題、大數字、印章這類有儀式感的角色；正文、按鈕文字、密集資料一律 Noto Sans TC 黑體。", "section": "typography" },
+      { "name": "The Flat-Paper Rule", "body": "表面預設全平，靠紙色與界線分層。陰影是狀態的回應（hover、蓋章），不是裝飾。禁止在休息態卡片／按鈕上疊柔散大陰影的幽靈卡組合。", "section": "elevation" }
+    ],
+    "dos": [
+      "Do 把朱印紅當唯一主聲音，填色面積 ≤10%：主行動、當前分頁、警示、收藏開啟態。",
+      "Do 用色調分層＋1px 界線／虛線做深度，休息態全平。",
+      "Do 讓襯線只扛標題、大數字、印章；正文與 UI 標籤一律黑體。",
+      "Do 往更明亮活潑推時只增飽和度與對比，讓朱印紅、金、藍綠跳出來。",
+      "Do 用印章／圓戳／歪斜旋轉／蓋章硬影／虛線分隔承載和風識別度。",
+      "Do 行動優先：橫向捲動分頁、觸控目標 ≥36–44px、輸入框 ≤640px 升 16px、focus-visible 朱紅外框。",
+      "Do 每個狀態都給清楚一致的視覺回饋：已收藏、待辦已辦、同步中、離線、唯讀。"
+    ],
+    "donts": [
+      "Don't 把和風做成沉悶灰撲撲的安靜和風——低飽和、昏黃、褪色老照片感。",
+      "Don't 淡化和風改走 Linear／Notion 那種乾淨中性的產品 UI，抹平襯線／印章／紙紋／朱印紅。",
+      "Don't 落入無個性的 AI 暖白樣板：米底＋灰字＋圓角卡片無限複製、沒印章沒襯線沒紙感。",
+      "Don't 用中性灰做色塊上的文字或佔位字；用該色調深階或文字色透明度。",
+      "Don't 在休息態卡片／按鈕上疊 1px 邊框＋大模糊柔散陰影的幽靈卡。",
+      "Don't 把 chip／卡片圓角推到 16px 以上；膠囊只給 chip／印章。",
+      "Don't 為了塞滿而塞滿造成資訊超載；密度服務旅途中快速查。"
+    ]
+  }
+}

@@ -36,3 +36,9 @@ untitled/
 
 # tool artifacts
 .playwright-mcp/
+
+# impeccable live-mode local session journals (config/design are committed, sessions are not)
+.impeccable/live/sessions/
+
+# Obsidian workspace (this is the web-app repo, not the vault)
+.obsidian/

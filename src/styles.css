@@ -1,8 +1,10 @@
 :root {
-  --paper: #F1EBDD; --card: #FBF7EC; --ink: #29231A;
-  --red: #B23A1E; --red-lt: #C24A2A; --navy: #2E3A52;
-  --green: #4A6B4F; --gold: #E8B44A;
-  --brown: #8A7C64; --brown-lt: #A2957F; --brown-dk: #6E6350;
+  /* 和風紙質・更明亮活潑：底色維持和紙識別，朱印紅／藍／綠／金提高飽和度讓色彩跳出來，
+     茶色次要文字加深以達 WCAG AA（原 #8A7C64 在紙底僅 ~3.4:1，不合格）。 */
+  --paper: #F2ECDE; --card: #FCF8EF; --ink: #29231A;
+  --red: #BE3A18; --red-lt: #D24A29; --navy: #2C3A57;
+  --green: #3E794B; --gold: #EEB23A;
+  --brown: #6F6349; --brown-lt: #796D54; --brown-dk: #574E3A;
   --line: rgba(41, 35, 26, .14); --line-dark: rgba(41, 35, 26, .25);
   --serif: 'Shippori Mincho', serif;
 }
