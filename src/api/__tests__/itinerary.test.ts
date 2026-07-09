@@ -10,14 +10,14 @@ afterEach(() => { vi.unstubAllGlobals(); vi.unstubAllEnvs(); localStorage.clear(
 
 describe('putItinerary', () => {
   it('成功時帶 Bearer token 與正確 body', async () => {
-    const fetchMock = vi.fn(async () => new Response('{}', { status: 200 }));
+    const fetchMock = vi.fn(async (_url: string, _init?: RequestInit) => new Response('{}', { status: 200 }));
     vi.stubGlobal('fetch', fetchMock);
     await putItinerary('## Day 0｜a｜b\n- t｜x\n');
     const [url, init] = fetchMock.mock.calls[0];
     expect(url).toBe('https://api.test/api/itinerary');
-    expect((init as RequestInit).method).toBe('PUT');
-    expect((init as any).headers.Authorization).toBe('Bearer tok');
-    expect(JSON.parse((init as any).body).daySectionsMarkdown).toContain('## Day 0');
+    expect(init!.method).toBe('PUT');
+    expect((init!.headers as Record<string, string>).Authorization).toBe('Bearer tok');
+    expect(JSON.parse(init!.body as string).daySectionsMarkdown).toContain('## Day 0');
   });
 
   it('409 拋出重新整理訊息', async () => {
