@@ -80,7 +80,10 @@ app.put('/api/itinerary', async (c) => {
   };
 
   const getRes = await fetch(`${api}?ref=${GH_BRANCH}`, { headers: ghHeaders });
-  if (!getRes.ok) return c.json({ error: 'github get failed' }, 502);
+  if (!getRes.ok) {
+    console.log('[itinerary] GET', getRes.status, await getRes.text());
+    return c.json({ error: 'github get failed' }, 502);
+  }
   const file = await getRes.json<{ content: string; sha: string }>();
   const next = spliceItinerary(fromBase64(file.content), daySectionsMarkdown);
 
@@ -95,7 +98,10 @@ app.put('/api/itinerary', async (c) => {
     }),
   });
   if (putRes.status === 409) return c.json({ error: 'sha conflict' }, 409);
-  if (!putRes.ok) return c.json({ error: 'github put failed' }, 502);
+  if (!putRes.ok) {
+    console.log('[itinerary] PUT', putRes.status, await putRes.text());
+    return c.json({ error: 'github put failed' }, 502);
+  }
   return c.json({ ok: true });
 });
 
