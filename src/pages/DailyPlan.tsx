@@ -1,5 +1,8 @@
-import { useState } from 'react';
-import { days } from '../data';
+import { useState, type CSSProperties } from 'react';
+import { entities } from '../data';
+import { useItinerary } from '../state/itinerary';
+import { configured } from '../api/state';
+import type { DaySlot } from '../data/schema';
 import AreaRail from '../components/AreaRail';
 import Reveal from '../components/Reveal';
 
@@ -7,9 +10,20 @@ type View = 'timeline' | 'cards' | 'map';
 const VIEWS: [View, string][] = [['timeline', '時間軸'], ['cards', '卡片'], ['map', '地圖']];
 
 export default function DailyPlan() {
+  const { days, saving, updateSlot, addSlot, removeSlot, moveSlot, save, reset } = useItinerary();
   const [dayIdx, setDayIdx] = useState(0);
   const [view, setView] = useState<View>('timeline');
+  const [editing, setEditing] = useState(false);
+  const [msg, setMsg] = useState<string | null>(null);
   const day = days[dayIdx] ?? days[0];
+  const canEdit = configured();
+
+  const onSave = async () => {
+    setMsg(null);
+    try { await save(); setMsg('已提交，網站將於重建後更新'); setEditing(false); }
+    catch (e) { setMsg(e instanceof Error ? e.message : '提交失敗'); }
+  };
+  const onCancel = () => { reset(); setEditing(false); setMsg(null); };
 
   return (
     <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -44,37 +58,63 @@ export default function DailyPlan() {
             <span className="serif" style={{ fontSize: 24, fontWeight: 800, color: 'var(--red)' }}>{day.label}</span>
             <span className="serif" style={{ fontSize: 18, fontWeight: 700 }}>{day.theme}</span>
             <span style={{ fontSize: 12, color: 'var(--brown)', letterSpacing: '.06em' }}>活動區域：{day.areas.join('・')}</span>
+            <div style={{ marginLeft: 'auto', display: 'flex', gap: 8, alignItems: 'center' }}>
+              {canEdit ? (
+                editing ? (
+                  <>
+                    <button className="btn-plain" onClick={onCancel} disabled={saving} style={editBtn(false)}>取消</button>
+                    <button className="btn-plain" onClick={onSave} disabled={saving} style={editBtn(true)}>
+                      {saving ? '提交中…' : '儲存並提交'}
+                    </button>
+                  </>
+                ) : (
+                  <button className="btn-plain" onClick={() => setEditing(true)} style={editBtn(false)}>編輯</button>
+                )
+              ) : (
+                <span style={{ fontSize: 11.5, color: 'var(--brown-lt)' }}>登入後可編輯</span>
+              )}
+            </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', marginTop: 6 }}>
-            {day.slots.map((s, i) => (
-              <div key={i} style={{ display: 'flex', gap: 16 }}>
-                <div className="serif" style={{ width: 52, flex: 'none', textAlign: 'right', fontSize: 13, fontWeight: 700, color: 'var(--brown)', paddingTop: 18 }}>{s.time}</div>
-                <div style={{ flex: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <div style={{ width: 1, flex: 1, background: 'rgba(41,35,26,.18)' }} />
-                  <div style={{
-                    flex: 'none', width: 12, height: 12, borderRadius: '50%',
-                    border: `2.5px solid ${s.pending ? 'rgba(41,35,26,.3)' : 'var(--red)'}`,
-                    background: s.pending ? 'transparent' : 'rgba(178,58,30,.1)',
-                  }} />
-                  <div style={{ width: 1, flex: 1, background: 'rgba(41,35,26,.18)' }} />
-                </div>
-                <div style={{ flex: 1, padding: '8px 0' }}>
-                  <div style={{
-                    borderRadius: 8, padding: '12px 16px',
-                    border: s.pending ? '1.5px dashed rgba(41,35,26,.3)' : '1px solid var(--line)',
-                    background: s.pending ? 'transparent' : 'rgba(255,255,255,.5)',
-                  }}>
-                    <div className="serif" style={{ fontSize: 15, fontWeight: 700, color: s.pending ? 'var(--brown-lt)' : 'var(--ink)' }}>
-                      {s.pending ? '待安排' : s.title}
-                    </div>
-                    <div style={{ fontSize: 12.5, color: 'var(--brown-dk)', marginTop: 3 }}>
-                      {s.pending ? '空白時段，到 Obsidian 填 — 或從美食庫挑一間' : s.note || ' '}
+
+          {msg && (
+            <div style={{ marginTop: 12, fontSize: 12.5, color: 'var(--brown-dk)' }}>{msg}</div>
+          )}
+
+          {editing ? (
+            <EditableSlots dayIdx={dayIdx} slots={day.slots}
+              onUpdate={updateSlot} onAdd={addSlot} onRemove={removeSlot} onMove={moveSlot} />
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', marginTop: 6 }}>
+              {day.slots.map((s, i) => (
+                <div key={i} style={{ display: 'flex', gap: 16 }}>
+                  <div className="serif" style={{ width: 52, flex: 'none', textAlign: 'right', fontSize: 13, fontWeight: 700, color: 'var(--brown)', paddingTop: 18 }}>{s.time}</div>
+                  <div style={{ flex: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <div style={{ width: 1, flex: 1, background: 'rgba(41,35,26,.18)' }} />
+                    <div style={{
+                      flex: 'none', width: 12, height: 12, borderRadius: '50%',
+                      border: `2.5px solid ${s.pending ? 'rgba(41,35,26,.3)' : 'var(--red)'}`,
+                      background: s.pending ? 'transparent' : 'rgba(178,58,30,.1)',
+                    }} />
+                    <div style={{ width: 1, flex: 1, background: 'rgba(41,35,26,.18)' }} />
+                  </div>
+                  <div style={{ flex: 1, padding: '8px 0' }}>
+                    <div style={{
+                      borderRadius: 8, padding: '12px 16px',
+                      border: s.pending ? '1.5px dashed rgba(41,35,26,.3)' : '1px solid var(--line)',
+                      background: s.pending ? 'transparent' : 'rgba(255,255,255,.5)',
+                    }}>
+                      <div className="serif" style={{ fontSize: 15, fontWeight: 700, color: s.pending ? 'var(--brown-lt)' : 'var(--ink)' }}>
+                        {s.pending ? '待安排' : s.title}
+                      </div>
+                      <div style={{ fontSize: 12.5, color: 'var(--brown-dk)', marginTop: 3 }}>
+                        {s.pending ? '空白時段，到 Obsidian 填 — 或從美食庫挑一間' : s.note || ' '}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
@@ -118,3 +158,70 @@ export default function DailyPlan() {
     </div>
   );
 }
+
+function editBtn(primary: boolean): CSSProperties {
+  return {
+    padding: '6px 14px', fontSize: 12.5, fontWeight: 700, cursor: 'pointer', borderRadius: 8,
+    background: primary ? 'var(--red)' : 'transparent',
+    color: primary ? '#F7F2E6' : 'var(--ink)',
+    border: `1px solid ${primary ? 'var(--red)' : 'rgba(41,35,26,.3)'}`,
+  };
+}
+
+function EditableSlots({ dayIdx, slots, onUpdate, onAdd, onRemove, onMove }: {
+  dayIdx: number; slots: DaySlot[];
+  onUpdate: (di: number, si: number, patch: Partial<DaySlot>) => void;
+  onAdd: (di: number) => void;
+  onRemove: (di: number, si: number) => void;
+  onMove: (di: number, si: number, dir: -1 | 1) => void;
+}) {
+  const field: CSSProperties = {
+    fontFamily: 'inherit', fontSize: 13, padding: '6px 8px',
+    border: '1px solid var(--line-dark)', borderRadius: 6, background: 'var(--card)', color: 'var(--ink)',
+  };
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 14 }}>
+      <datalist id="entity-options">
+        {entities.map((e) => <option key={e.id} value={e.name}>{e.category}・{e.area}</option>)}
+      </datalist>
+      {slots.map((s, i) => (
+        <div key={i} style={{
+          display: 'grid', gridTemplateColumns: '80px 1fr 1fr auto', gap: 8, alignItems: 'center',
+          border: '1px solid var(--line)', borderRadius: 8, padding: '10px 12px', background: 'rgba(255,255,255,.4)',
+        }}>
+          <input style={field} value={s.time} placeholder="時段"
+            onChange={(e) => onUpdate(dayIdx, i, { time: e.target.value })} />
+          <input style={{ ...field, opacity: s.pending ? .5 : 1 }} list="entity-options"
+            value={s.pending ? '' : s.title} placeholder={s.pending ? '待安排' : '標題（可打字或選單）'}
+            disabled={s.pending}
+            onChange={(e) => {
+              const v = e.target.value;
+              const match = entities.find((x) => x.name === v);
+              onUpdate(dayIdx, i, { title: v, ...(match && !s.note.trim() ? { note: match.area } : {}) });
+            }} />
+          <input style={{ ...field, opacity: s.pending ? .5 : 1 }} value={s.pending ? '' : s.note} placeholder="備註"
+            disabled={s.pending}
+            onChange={(e) => onUpdate(dayIdx, i, { note: e.target.value })} />
+          <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+            <label style={{ fontSize: 11, color: 'var(--brown)', display: 'flex', alignItems: 'center', gap: 3 }}>
+              <input type="checkbox" checked={s.pending}
+                onChange={(e) => onUpdate(dayIdx, i, { pending: e.target.checked })} />待安排
+            </label>
+            <button className="btn-plain" title="上移" onClick={() => onMove(dayIdx, i, -1)} style={iconBtn}>↑</button>
+            <button className="btn-plain" title="下移" onClick={() => onMove(dayIdx, i, 1)} style={iconBtn}>↓</button>
+            <button className="btn-plain" title="刪除" onClick={() => onRemove(dayIdx, i)} style={{ ...iconBtn, color: 'var(--red)' }}>✕</button>
+          </div>
+        </div>
+      ))}
+      <button className="btn-plain" onClick={() => onAdd(dayIdx)} style={{
+        alignSelf: 'flex-start', padding: '6px 14px', fontSize: 12.5, fontWeight: 700, cursor: 'pointer',
+        borderRadius: 8, border: '1px dashed rgba(41,35,26,.4)', background: 'transparent', color: 'var(--ink)',
+      }}>＋ 新增時段</button>
+    </div>
+  );
+}
+
+const iconBtn: CSSProperties = {
+  width: 26, height: 26, cursor: 'pointer', borderRadius: 6,
+  border: '1px solid rgba(41,35,26,.25)', background: 'var(--card)', color: 'var(--ink)', fontSize: 13,
+};
