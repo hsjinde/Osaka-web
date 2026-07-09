@@ -6,6 +6,7 @@ import { useAuth } from '../state/auth';
 import { countdownDays } from '../lib/countdown';
 import { TABS, type TabKey } from '../lib/tabs';
 import { useCondensedHeader } from '../lib/useCondensedHeader';
+import SyncSeal from './SyncSeal';
 
 export default function Header({ tab, onNavigate }: { tab: TabKey; onNavigate: (k: TabKey) => void }) {
   const condensed = useCondensedHeader();
@@ -42,6 +43,7 @@ export default function Header({ tab, onNavigate }: { tab: TabKey; onNavigate: (
             </div>
           </div>
           <div style={{ flex: 1 }} />
+          <SyncSeal />
           <div style={{
             display: 'flex', alignItems: 'baseline', gap: 7, border: '1.5px solid var(--red)',
             color: 'var(--red)', borderRadius: 999, padding: '6px 16px', background: 'rgba(178,58,30,.05)',

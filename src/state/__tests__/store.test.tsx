@@ -67,6 +67,28 @@ describe('切回前景重抓', () => {
   });
 });
 
+describe('同步中旗標', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    vi.stubEnv('VITE_API_BASE', 'http://api.test');
+  });
+  afterEach(() => {
+    cleanup();
+    vi.unstubAllEnvs();
+    vi.unstubAllGlobals();
+  });
+
+  it('syncRemote 進行中 syncing 為 true，結束後為 false', async () => {
+    let release!: (r: Response) => void;
+    vi.stubGlobal('fetch', vi.fn(() => new Promise<Response>((r) => { release = r; })));
+    const { result } = renderHook(() => useTripState(), { wrapper });
+    await act(async () => {}); // 啟動同步開跑，fetch 尚未 resolve
+    expect(result.current.syncing).toBe(true);
+    await act(async () => { release(new Response('{}', { status: 200 })); });
+    expect(result.current.syncing).toBe(false);
+  });
+});
+
 describe('無 token 唯讀模式', () => {
   beforeEach(() => {
     localStorage.clear();

@@ -23,18 +23,21 @@ interface TripState {
   favs: StateMap; todosState: StateMap;
   toggleFav(entityId: string): void; toggleTodo(key: string): void;
   isFav(entityId: string): boolean; favCount: number; offline: boolean;
+  syncing: boolean;
 }
 const Ctx = createContext<TripState | null>(null);
 
 export function TripStateProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<StateMap>(() => ({ ...defaults(), ...loadLocal() }));
   const [offline, setOffline] = useState(false);
+  const [syncing, setSyncing] = useState(false);
 
   const lastSyncRef = useRef(0);
 
   // 補送離線佇列 → 拉遠端狀態合併（遠端優先）。啟動與切回前景共用。
   const syncRemote = useCallback(async () => {
     if (!apiBase()) { setOffline(true); return; }
+    setSyncing(true);
     try {
       if (getToken()) {
         await flushQueue();
@@ -43,6 +46,7 @@ export function TripStateProvider({ children }: { children: ReactNode }) {
       setState((s) => { const merged = { ...s, ...remote }; saveLocal(merged); return merged; });
       setOffline(false);
     } catch { setOffline(true); }
+    finally { setSyncing(false); }
   }, []);
 
   useEffect(() => {
@@ -88,8 +92,9 @@ export function TripStateProvider({ children }: { children: ReactNode }) {
       isFav: (id) => !!state[`fav:${id}`],
       favCount: Object.entries(favs).filter(([, v]) => v).length,
       offline,
+      syncing,
     };
-  }, [state, toggle, offline]);
+  }, [state, toggle, offline, syncing]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
