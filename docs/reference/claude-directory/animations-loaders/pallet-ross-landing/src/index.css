@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Self-hosted Inter Tight (variable, latin subset) — vendored under /public/fonts. */
+@font-face {
+	font-family: "Inter Tight";
+	font-style: normal;
+	font-weight: 300 900;
+	font-display: swap;
+	src: url("/fonts/inter-tight-latin.woff2") format("woff2");
+}
+
+/* Map font-heading, font-body, and font-sans all to "Inter Tight", sans-serif. */
+@theme {
+	--font-sans: "Inter Tight", sans-serif;
+	--font-heading: "Inter Tight", sans-serif;
+	--font-body: "Inter Tight", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* Off-white page background also applied to the outermost container in JS. */
+	background: #f2f2f0;
+	font-family: "Inter Tight", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* No native horizontal scroll from absolutely-positioned overlay cards. */
+body {
+	overflow-x: hidden;
+}
