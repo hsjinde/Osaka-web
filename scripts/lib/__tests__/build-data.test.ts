@@ -25,6 +25,12 @@ describe('buildOverview', () => {
   it('缺出發日期報錯', () => {
     expect(() => buildOverview(OV.replace('- 出發：2026-09-30', ''))).toThrow(/出發/);
   });
+  it('CRLF 換行（Windows 簽出常見）也能正確解析', () => {
+    const o = buildOverview(OV.replace(/\n/g, '\r\n'));
+    expect(o.fields['出發']).toBe('2026-09-30');
+    expect(o.fields['飯店']).toBe('大阪心齋橋格蘭多酒店');
+    expect(o.transportNotes).toEqual(['駅｜長堀橋站 步行 5 分', '早｜LAWSON']);
+  });
 });
 
 describe('isEntityFile', () => {

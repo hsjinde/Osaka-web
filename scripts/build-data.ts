@@ -17,7 +17,7 @@ export function buildOverview(raw: string): {
   fields: Record<string, string>;
   transportNotes: string[];
 } {
-  const { content } = matter(raw);
+  const { content } = matter(raw.replace(/\r\n/g, '\n'));
   const fields: Record<string, string> = {};
   const base = content.match(/## 基本資訊\n([\s\S]*?)(?=\n## |$)/);
   if (base) {
