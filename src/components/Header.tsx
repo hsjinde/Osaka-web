@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { byCategory, meta, overview } from '../data';
 import Chip from './Chip';
 import { useTripState } from '../state/store';
@@ -9,7 +10,8 @@ import { useCondensedHeader } from '../lib/useCondensedHeader';
 import SyncSeal from './SyncSeal';
 
 export default function Header({ tab, onNavigate }: { tab: TabKey; onNavigate: (k: TabKey) => void }) {
-  const condensed = useCondensedHeader();
+  const collapseRef = useRef<HTMLDivElement>(null);
+  const condensed = useCondensedHeader(collapseRef);
   const { offline } = useTripState();
   const { canEdit, openLogin, logout } = useAuth();
   const cd = countdownDays(meta.tripStart);
@@ -26,7 +28,7 @@ export default function Header({ tab, onNavigate }: { tab: TabKey; onNavigate: (
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(241,235,221,.94)',
       backdropFilter: 'blur(10px)', borderBottom: '1px solid var(--line)',
     }}>
-      <div className={`hdr-collapse${condensed ? ' hdr-collapse--hidden' : ''}`}>
+      <div ref={collapseRef} className={`hdr-collapse${condensed ? ' hdr-collapse--hidden' : ''}`}>
         <div style={{ maxWidth: 1120, margin: '0 auto', padding: '14px 20px 0', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14 }}>
           <div className="serif" style={{
             width: 44, height: 44, background: 'var(--red)', color: '#F7F2E6',
