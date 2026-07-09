@@ -78,6 +78,11 @@ a { color: var(--red); }
   font-family: inherit; color: var(--ink);
 }
 @media (max-width: 640px) { .search-field { font-size: 16px; } }
+.slot-edit-row {
+  display: grid; grid-template-columns: 80px 1fr 1fr auto; gap: 8px; align-items: center;
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: rgba(255,255,255,.4);
+}
+@media (max-width: 640px) { .slot-edit-row { grid-template-columns: 1fr; } }
 .hscroll { display: flex; gap: 8px; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
 .hscroll::-webkit-scrollbar { display: none; }
 .hscroll > * { flex: none; }

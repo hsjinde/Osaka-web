@@ -182,10 +182,7 @@ function EditableSlots({ dayIdx, slots, onUpdate, onAdd, onRemove, onMove }: {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 14 }}>
       {slots.map((s, i) => (
-        <div key={i} style={{
-          display: 'grid', gridTemplateColumns: '80px 1fr 1fr auto', gap: 8, alignItems: 'center',
-          border: '1px solid var(--line)', borderRadius: 8, padding: '10px 12px', background: 'rgba(255,255,255,.4)',
-        }}>
+        <div key={i} className="slot-edit-row">
           <input style={field} value={s.time} placeholder="時段"
             onChange={(e) => onUpdate(dayIdx, i, { time: e.target.value })} />
           <EntityPicker
