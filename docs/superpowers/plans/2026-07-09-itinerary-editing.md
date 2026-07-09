@@ -336,6 +336,7 @@ Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
 
 ```ts
 // src/api/__tests__/itinerary.test.ts
+// @vitest-environment jsdom
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { putItinerary } from '../itinerary';
 
