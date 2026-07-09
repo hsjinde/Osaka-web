@@ -1,5 +1,6 @@
 import { useEffect, useState, type JSX } from 'react';
 import { meta } from './data';
+import { ItineraryProvider } from './state/itinerary';
 import Home from './pages/Home';
 import LoginModal from './components/LoginModal';
 import Header from './components/Header';
@@ -38,9 +39,11 @@ export default function App() {
     <div style={{ minHeight: '100vh' }}>
       <Header tab={tab} onNavigate={(k) => { location.hash = k; }} />
       <LoginModal />
-      <main style={{ maxWidth: 1120, margin: '0 auto', padding: '24px 20px 64px' }}>
-        <div className="page-enter" key={tab}><Page /></div>
-      </main>
+      <ItineraryProvider>
+        <main style={{ maxWidth: 1120, margin: '0 auto', padding: '24px 20px 64px' }}>
+          <div className="page-enter" key={tab}><Page /></div>
+        </main>
+      </ItineraryProvider>
       <footer style={{
         borderTop: '1px solid var(--line)', padding: '18px 20px', textAlign: 'center',
         fontSize: 11.5, color: 'var(--brown)', letterSpacing: '.08em',
