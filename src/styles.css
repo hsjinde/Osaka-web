@@ -15,6 +15,8 @@ body {
 input::placeholder { color: var(--brown-lt); }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .fade-up { animation: fadeUp .4s ease both; }
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal--in { opacity: 1; transform: none; transition: opacity .5s ease, transform .5s cubic-bezier(.22,.9,.35,1); transition-delay: var(--reveal-delay, 0s); }
 .serif { font-family: var(--serif); }
 .muted { color: var(--brown); }
 .label-en { font-size: 12px; letter-spacing: .25em; color: var(--brown); font-weight: 600; }
@@ -74,4 +76,6 @@ a { color: var(--red); }
 @media (prefers-reduced-motion: reduce) {
   .fade-up { animation: none; }
   .hdr-collapse, .card-tap, .guide-body { transition: none; }
+  .reveal { opacity: 1; transform: none; }
+  .reveal--in { transition: none; }
 }
