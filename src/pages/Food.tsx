@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { byCategory } from '../data';
 import Chip from '../components/Chip';
 import Heart from '../components/Heart';
+import Reveal from '../components/Reveal';
 import Stamp from '../components/Stamp';
 import MapLink from '../components/MapLink';
 import SearchField from '../components/SearchField';
@@ -96,10 +97,11 @@ export default function Food() {
         </div>
       )}
       <div className="cards-grid">
-        {list.map((r) => {
+        {list.map((r, i) => {
           const note = r.fields['備註'] && r.fields['備註'] !== '-' ? r.fields['備註'] : r.summary;
           return (
-            <div key={r.id} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+            <Reveal key={r.id} index={i}>
+            <div className="card" style={{ padding: '16px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
               <Stamp rating={r.rating} />
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className="serif" style={{ fontSize: 15.5, fontWeight: 700, lineHeight: 1.35 }}>
@@ -119,6 +121,7 @@ export default function Food() {
               </div>
               <Heart entityId={r.id} />
             </div>
+            </Reveal>
           );
         })}
       </div>

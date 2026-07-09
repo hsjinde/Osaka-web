@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { byCategory } from '../data';
 import type { Entity } from '../data/schema';
 import Heart from '../components/Heart';
+import Reveal from '../components/Reveal';
 import Stamp from '../components/Stamp';
 import MapLink from '../components/MapLink';
 import SearchField from '../components/SearchField';
@@ -48,8 +49,9 @@ export default function Places() {
               <div style={{ fontSize: 12.5, color: 'var(--brown)' }}>沒有符合的景點</div>
             )}
             <div className="cards-grid">
-              {fSpots.map((p) => (
-                <div key={p.id} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+              {fSpots.map((p, i) => (
+                <Reveal key={p.id} index={i}>
+                <div className="card" style={{ padding: '16px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
                   <Stamp rating={p.rating} />
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div className="serif" style={{ fontSize: 15.5, fontWeight: 700, lineHeight: 1.35 }}>
@@ -70,6 +72,7 @@ export default function Places() {
                   </div>
                   <Heart entityId={p.id} />
                 </div>
+                </Reveal>
               ))}
             </div>
           </section>
@@ -82,8 +85,9 @@ export default function Places() {
               <div style={{ fontSize: 12.5, color: 'var(--brown)' }}>沒有符合的購物點</div>
             )}
             <div className="cards-grid">
-              {fShops.map((p) => (
-                <div key={p.id} className="card" style={{ padding: '16px 18px', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+              {fShops.map((p, i) => (
+                <Reveal key={p.id} index={i}>
+                <div className="card" style={{ padding: '16px 18px', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
                       <span className="serif" style={{ fontSize: 15.5, fontWeight: 700 }}>
@@ -102,6 +106,7 @@ export default function Places() {
                   </div>
                   <Heart entityId={p.id} />
                 </div>
+                </Reveal>
               ))}
             </div>
           </section>

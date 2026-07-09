@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { days } from '../data';
 import AreaRail from '../components/AreaRail';
+import Reveal from '../components/Reveal';
 
 type View = 'timeline' | 'cards' | 'map';
 const VIEWS: [View, string][] = [['timeline', '時間軸'], ['cards', '卡片'], ['map', '地圖']];
@@ -80,7 +81,8 @@ export default function DailyPlan() {
       {view === 'cards' && (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(205px, 1fr))', gap: 12 }}>
           {days.map((d, i) => (
-            <div key={d.label} className="card" style={{ padding: '16px 18px', borderColor: i === dayIdx ? 'var(--red)' : undefined }}>
+            <Reveal key={d.label} index={i}>
+            <div className="card" style={{ padding: '16px 18px', borderColor: i === dayIdx ? 'var(--red)' : undefined }}>
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', borderBottom: '2px solid var(--ink)', paddingBottom: 8 }}>
                 <span className="serif" style={{ fontSize: 17, fontWeight: 800 }}>{d.label}</span>
                 <span style={{ fontSize: 11, color: 'var(--brown)', letterSpacing: '.06em' }}>{d.date}</span>
@@ -99,6 +101,7 @@ export default function DailyPlan() {
                 ))}
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       )}
