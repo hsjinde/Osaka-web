@@ -36,4 +36,14 @@ describe('Heart 依登入狀態上鎖', () => {
     expect(openLogin).not.toHaveBeenCalled();
     expect(btn.textContent).toBe('♥');
   });
+
+  it('點擊收藏時加上 heart--pop 動畫 class，動畫結束後移除', () => {
+    canEdit = true;
+    renderHeart();
+    const btn = screen.getByRole('button', { name: '收藏' });
+    fireEvent.click(btn);
+    expect(btn.className).toContain('heart--pop');
+    fireEvent.animationEnd(btn);
+    expect(btn.className).not.toContain('heart--pop');
+  });
 });

@@ -41,6 +41,10 @@ input::placeholder { color: var(--brown-lt); }
 .stamp--off { border-color: var(--line-dark); color: var(--brown-lt); font-size: 13px; background: transparent; }
 .heart { flex: none; background: none; border: none; cursor: pointer; font-size: 20px; line-height: 1; padding: 12px; margin: -10px; color: rgba(41,35,26,.35); }
 .heart--on { color: var(--red); }
+@keyframes heartPop { 0% { transform: scale(1); } 40% { transform: scale(1.45); } 70% { transform: scale(.92); } 100% { transform: scale(1); } }
+.heart--pop { animation: heartPop .35s ease; }
+@keyframes stampIn { from { opacity: 0; transform: rotate(-14deg) scale(1.5); } to { opacity: 1; transform: rotate(-6deg) scale(1); } }
+.stamp { animation: stampIn .35s cubic-bezier(.2,1.4,.4,1) both; }
 .ov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; }
 .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 12px; }
 .banner-dark { background: var(--navy); color: #EFE9DA; border-radius: 10px; padding: 18px 22px; }
@@ -68,7 +72,7 @@ a { color: var(--red); }
 .chip { min-height: 36px; }
 :focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 .card-tap { transition: transform .15s ease, box-shadow .15s ease; }
-.card-tap:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(41,35,26,.12); }
+.card-tap:hover { transform: translateY(-2px) rotate(-.2deg); box-shadow: 0 6px 18px rgba(41,35,26,.16); }
 .card-tap:active { transform: scale(.98); }
 .guide-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .2s ease; }
 .guide-body--open { grid-template-rows: 1fr; }
@@ -78,4 +82,5 @@ a { color: var(--red); }
   .hdr-collapse, .card-tap, .guide-body { transition: none; }
   .reveal { opacity: 1; transform: none; }
   .reveal--in { transition: none; }
+  .heart--pop, .stamp { animation: none; }
 }
