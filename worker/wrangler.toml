@@ -6,3 +6,9 @@ compatibility_date = "2026-07-01"
 binding = "DB"
 database_name = "osaka-trip"
 database_id = "6acd0a4c-0705-48db-b864-eda1ac7b4354"
+
+[vars]
+GH_OWNER = "hsjinde"
+GH_REPO = "Osaka-vault"
+GH_BRANCH = "main"
+GH_ITINERARY_PATH = "wiki/dashboard/每日行程.md"
