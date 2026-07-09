@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import { byCategory, meta, overview } from '../data';
 import Chip from './Chip';
 import { useTripState } from '../state/store';
@@ -6,12 +5,9 @@ import { apiBase, getToken, setupLink } from '../api/state';
 import { useAuth } from '../state/auth';
 import { countdownDays } from '../lib/countdown';
 import { TABS, type TabKey } from '../lib/tabs';
-import { useCondensedHeader } from '../lib/useCondensedHeader';
 import SyncSeal from './SyncSeal';
 
 export default function Header({ tab, onNavigate }: { tab: TabKey; onNavigate: (k: TabKey) => void }) {
-  const collapseRef = useRef<HTMLDivElement>(null);
-  const condensed = useCondensedHeader(collapseRef);
   const { offline } = useTripState();
   const { canEdit, openLogin, logout } = useAuth();
   const cd = countdownDays(meta.tripStart);
@@ -28,8 +24,8 @@ export default function Header({ tab, onNavigate }: { tab: TabKey; onNavigate: (
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(241,235,221,.94)',
       backdropFilter: 'blur(10px)', borderBottom: '1px solid var(--line)',
     }}>
-      <div ref={collapseRef} className={`hdr-collapse${condensed ? ' hdr-collapse--hidden' : ''}`}>
-        <div style={{ maxWidth: 1120, margin: '0 auto', padding: '14px 20px 0', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14 }}>
+      <div>
+        <div style={{ maxWidth: 1120, margin: '0 auto', padding: '10px 20px 0', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14 }}>
           <div className="serif" style={{
             width: 44, height: 44, background: 'var(--red)', color: '#F7F2E6',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -55,8 +51,17 @@ export default function Header({ tab, onNavigate }: { tab: TabKey; onNavigate: (
             <span style={{ fontSize: 12, fontWeight: 600 }}>日</span>
           </div>
         </div>
+      </div>
+      <div style={{ maxWidth: 1120, margin: '0 auto', padding: '8px 20px 10px', display: 'flex', alignItems: 'center', gap: 14 }}>
+        <nav className="hscroll" style={{ flex: 1, alignItems: 'center' }}>
+          {TABS.map(([k, label]) => (
+            <Chip key={k} on={tab === k} red onClick={() => go(k)}>
+              {k === 'food' ? `${label} ${foodCount}` : label}
+            </Chip>
+          ))}
+        </nav>
         {apiBase() && (canEdit ? (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '6px 20px 0' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <button className="btn-plain" title="複製新裝置設定連結" style={{ fontSize: 18, cursor: 'pointer' }}
               onClick={() => { const cur = getToken(); if (cur) window.prompt('新裝置設定連結（點一次即完成同步）：', setupLink(cur)); }}>⚙</button>
             <button className="btn-plain" style={{
@@ -70,30 +75,12 @@ export default function Header({ tab, onNavigate }: { tab: TabKey; onNavigate: (
             )}
           </div>
         ) : (
-          <div style={{ padding: '6px 20px 0' }}>
-            <button className="btn-plain" style={{
-              fontSize: 13, color: 'var(--red)', border: '1px solid var(--red)',
-              borderRadius: 6, padding: '7px 16px', minHeight: 38, fontWeight: 600, cursor: 'pointer',
-            }} onClick={openLogin}>登入編輯</button>
-          </div>
+          <button className="btn-plain" style={{
+            fontSize: 13, color: 'var(--red)', border: '1px solid var(--red)',
+            borderRadius: 6, padding: '7px 16px', minHeight: 38, fontWeight: 600, cursor: 'pointer',
+          }} onClick={openLogin}>登入編輯</button>
         ))}
       </div>
-      <nav className="hscroll" style={{ maxWidth: 1120, margin: '0 auto', padding: '10px 20px 12px', alignItems: 'center' }}>
-        {condensed && (
-          <button className="btn-plain serif" aria-label="回到頂部"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            style={{
-              flex: 'none', width: 30, height: 30, background: 'var(--red)', color: '#F7F2E6',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 16, fontWeight: 700, borderRadius: 5, transform: 'rotate(-3deg)', cursor: 'pointer',
-            }}>阪</button>
-        )}
-        {TABS.map(([k, label]) => (
-          <Chip key={k} on={tab === k} red onClick={() => go(k)}>
-            {k === 'food' ? `${label} ${foodCount}` : label}
-          </Chip>
-        ))}
-      </nav>
     </header>
   );
 }

@@ -81,8 +81,6 @@ a { color: var(--red); }
 .hscroll { display: flex; gap: 8px; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
 .hscroll::-webkit-scrollbar { display: none; }
 .hscroll > * { flex: none; }
-.hdr-collapse { max-height: 320px; opacity: 1; overflow: hidden; transition: max-height .2s ease, opacity .2s ease; }
-.hdr-collapse--hidden { max-height: 0; opacity: 0; pointer-events: none; }
 .chip { min-height: 36px; }
 :focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 .card-tap { transition: transform .15s ease, box-shadow .15s ease; }
@@ -93,7 +91,7 @@ a { color: var(--red); }
 .guide-body > div { min-height: 0; overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .fade-up, .page-enter { animation: none; }
-  .hdr-collapse, .card-tap, .guide-body { transition: none; }
+  .card-tap, .guide-body { transition: none; }
   .reveal { opacity: 1; transform: none; }
   .reveal--in { transition: none; }
   .heart--pop, .stamp { animation: none; }
