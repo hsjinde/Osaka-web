@@ -24,6 +24,12 @@ jobs:
         with:
           repository: hsjinde/Osaka-vault
           path: vault
+          # Clippings/ 的檔名取自網頁標題，中文＋emoji 常超過 Linux 的 255-byte
+          # 檔名上限，會讓整個 checkout 失敗。建置不讀這個資料夾，故排除。
+          sparse-checkout: |
+            /*
+            !/Clippings/
+          sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -60,6 +66,12 @@ jobs:
         with:
           repository: hsjinde/Osaka-vault
           path: vault
+          # Clippings/ 的檔名取自網頁標題，中文＋emoji 常超過 Linux 的 255-byte
+          # 檔名上限，會讓整個 checkout 失敗。建置不讀這個資料夾，故排除。
+          sparse-checkout: |
+            /*
+            !/Clippings/
+          sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
