@@ -4,6 +4,7 @@ import { byCategory, entities, meta, overview, todos } from '../data';
 import { useTripState } from '../state/store';
 import { useAuth } from '../state/auth';
 import WishList from '../components/WishList';
+import GuideFavCard from '../components/GuideFavCard';
 
 export default function Home() {
   const { todosState, toggleTodo, favCount, favs } = useTripState();
@@ -112,6 +113,7 @@ export default function Home() {
               </button>
             ))}
           </div>
+          <GuideFavCard />
           {/* 收藏統計橫幅（點擊展開想去清單） */}
           <button className="banner-dark btn-plain" style={{ display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center', cursor: 'pointer', textAlign: 'left', width: '100%' }}
             onClick={() => setWishOpen((o) => !o)}>
