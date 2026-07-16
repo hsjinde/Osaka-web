@@ -25,6 +25,24 @@ describe('useTripState (localStorage)', () => {
     expect(result.current.todosState['todo:abc']).toBe(true);
   });
 
+  it('toggleGuideFav 切換並持久化，反映在 guideFavs', () => {
+    const { result } = renderHook(() => useTripState(), { wrapper });
+    act(() => result.current.toggleGuideFav('大阪美食攻略'));
+    expect(result.current.isGuideFav('大阪美食攻略')).toBe(true);
+    expect(result.current.guideFavs['guide:大阪美食攻略']).toBe(true);
+    expect(JSON.parse(localStorage.getItem('osaka-trip-state')!)['guide:大阪美食攻略']).toBe(true);
+    act(() => result.current.toggleGuideFav('大阪美食攻略'));
+    expect(result.current.isGuideFav('大阪美食攻略')).toBe(false);
+  });
+
+  it('guide: 前綴不影響 favCount 與 favs', () => {
+    const { result } = renderHook(() => useTripState(), { wrapper });
+    const before = result.current.favCount;
+    act(() => result.current.toggleGuideFav('大阪美食攻略'));
+    expect(result.current.favCount).toBe(before);
+    expect(result.current.favs['guide:大阪美食攻略']).toBeUndefined();
+  });
+
   it('vault favorite: true 作為預設收藏', () => {
     localStorage.setItem('osaka-trip-state', JSON.stringify({ 'fav:餐廳/A': true }));
     const { result } = renderHook(() => useTripState(), { wrapper });

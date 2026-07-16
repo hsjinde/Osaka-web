@@ -20,9 +20,11 @@ function saveLocal(s: StateMap) {
 }
 
 interface TripState {
-  favs: StateMap; todosState: StateMap;
+  favs: StateMap; todosState: StateMap; guideFavs: StateMap;
   toggleFav(entityId: string): void; toggleTodo(key: string): void;
-  isFav(entityId: string): boolean; favCount: number; offline: boolean;
+  toggleGuideFav(guideId: string): void;
+  isFav(entityId: string): boolean; isGuideFav(guideId: string): boolean;
+  favCount: number; offline: boolean;
   syncing: boolean;
 }
 const Ctx = createContext<TripState | null>(null);
@@ -80,16 +82,19 @@ export function TripStateProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo<TripState>(() => {
-    const favs: StateMap = {}; const todosState: StateMap = {};
+    const favs: StateMap = {}; const todosState: StateMap = {}; const guideFavs: StateMap = {};
     for (const [k, v] of Object.entries(state)) {
       if (k.startsWith('fav:')) favs[k] = v;
       else if (k.startsWith('todo:')) todosState[k] = v;
+      else if (k.startsWith('guide:')) guideFavs[k] = v;
     }
     return {
-      favs, todosState,
+      favs, todosState, guideFavs,
       toggleFav: (id) => toggle(`fav:${id}`),
       toggleTodo: (key) => toggle(key),
+      toggleGuideFav: (id) => toggle(`guide:${id}`),
       isFav: (id) => !!state[`fav:${id}`],
+      isGuideFav: (id) => !!state[`guide:${id}`],
       favCount: Object.entries(favs).filter(([, v]) => v).length,
       offline,
       syncing,
